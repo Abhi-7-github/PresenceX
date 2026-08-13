@@ -57,6 +57,16 @@ export const presenceAPI = {
     return res.json();
   },
 
+  // Validate admin login key against server
+  async loginAdmin(key) {
+    const res = await fetch(`${API_BASE_URL}/api/admin/login`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ key }),
+    });
+    return res.json();
+  },
+
   // Health check
   async healthCheck() {
     try {

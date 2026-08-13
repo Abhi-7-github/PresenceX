@@ -227,6 +227,38 @@ app.post('/api/presence', async (req, res) => {
   }
 });
 
+// Step 6.5: Admin Login Validation endpoint
+app.post('/api/admin/login', (req, res) => {
+  const { key } = req.body || {};
+  const expectedKey = process.env.ADMIN_KEY || process.env.VITE_ADMIN_KEY;
+
+  if (!key || !key.trim()) {
+    return res.status(400).json({
+      success: false,
+      message: 'Admin key is required.',
+    });
+  }
+
+  if (!expectedKey) {
+    return res.status(500).json({
+      success: false,
+      message: 'ADMIN_KEY is not configured in server environment variables.',
+    });
+  }
+
+  if (key.trim() === expectedKey.trim()) {
+    return res.json({
+      success: true,
+      message: 'Admin authentication successful.',
+    });
+  } else {
+    return res.status(401).json({
+      success: false,
+      message: 'Invalid admin security key.',
+    });
+  }
+});
+
 // Step 7: Admin endpoint - Retrieves presence records from MongoDB and stats
 app.get('/api/admin/presence', async (req, res) => {
   try {
