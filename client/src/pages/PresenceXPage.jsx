@@ -377,10 +377,6 @@ export default function PresenceXPage() {
                   </button>
                 </div>
               </div>
-
-              <button onClick={handleReset} className="btn-glow-primary margin-top-lg">
-                Mark Another Student
-              </button>
             </div>
           )}
 
