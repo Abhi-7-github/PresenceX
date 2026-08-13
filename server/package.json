@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "engine": "node engine-server.js",
     "server:1": "PORT=5001 node normal-server.js",
     "server:2": "PORT=5002 node normal-server.js",

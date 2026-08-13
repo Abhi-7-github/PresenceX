@@ -68,11 +68,9 @@ export default function PresenceXPage() {
     setError('');
   };
 
-  const navigateToAdmin = () => {
-    window.history.pushState({}, '', '/hero/master');
-    window.dispatchEvent(new PopStateEvent('popstate'));
-  };
 
+
+  
   return (
     <div className="presencex-page">
       <div className="presencex-card">
@@ -102,9 +100,6 @@ export default function PresenceXPage() {
               </button>
             </form>
 
-            <button onClick={navigateToAdmin} className="admin-link">
-              Admin
-            </button>
           </div>
         )}
 

@@ -16,7 +16,7 @@ async function connectDB() {
   }
 
   if (!MONGO_URI) {
-    console.error('❌ MONGO_URI is not defined in environment variables.');
+    console.error('MONGO_URI is not defined in environment variables.');
     return null;
   }
 
@@ -41,7 +41,7 @@ async function connectDB() {
     console.log(`✓ Connected to MongoDB Presence collection`);
     return presenceCollection;
   } catch (err) {
-    console.error(`❌ MongoDB Connection Error: ${err.message}`);
+    console.error(`MongoDB Connection Error: ${err.message}`);
     isConnected = false;
     db = null;
     presenceCollection = null;
