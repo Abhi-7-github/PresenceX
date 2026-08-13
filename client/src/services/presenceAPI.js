@@ -1,0 +1,61 @@
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
+
+export const presenceAPI = {
+  // Get presence status
+  async getStatus() {
+    const res = await fetch(`${API_BASE_URL}/presence/status`);
+    return res.json();
+  },
+
+  // Update user presence
+  async updatePresence(userId, status) {
+    const res = await fetch(`${API_BASE_URL}/presence/update`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ userId, status }),
+    });
+    return res.json();
+  },
+
+  // Get specific user presence
+  async getUserPresence(userId) {
+    const res = await fetch(`${API_BASE_URL}/presence/${userId}`);
+    return res.json();
+  },
+
+  // Verify student by registration number
+  async verifyStudent(regno) {
+    const res = await fetch(`${API_BASE_URL}/api/verify`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ regno }),
+    });
+    return res.json();
+  },
+
+  // Mark presence
+  async markPresence(regno) {
+    const res = await fetch(`${API_BASE_URL}/api/presence`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ regno }),
+    });
+    return res.json();
+  },
+
+  // Get admin presence data
+  async getAdminPresence() {
+    const res = await fetch(`${API_BASE_URL}/api/admin/presence`);
+    return res.json();
+  },
+
+  // Health check
+  async healthCheck() {
+    try {
+      const res = await fetch(`${API_BASE_URL}/health`);
+      return res.ok;
+    } catch (err) {
+      return false;
+    }
+  },
+};
