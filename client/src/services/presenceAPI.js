@@ -67,6 +67,11 @@ export const presenceAPI = {
     return res.json();
   },
 
+  // Get CSV Export URL
+  getExportCSVUrl(type = 'present') {
+    return `${API_BASE_URL}/api/admin/export/csv?type=${encodeURIComponent(type)}`;
+  },
+
   // Health check
   async healthCheck() {
     try {

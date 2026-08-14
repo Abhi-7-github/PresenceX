@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { presenceAPI } from '../services/presenceAPI.js';
 import './AdminPage.css';
 
@@ -8,10 +8,33 @@ export default function AdminPage({ onLogout }) {
   const [error, setError] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedTeam, setSelectedTeam] = useState('all');
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [toastMessage, setToastMessage] = useState(null);
+  const dropdownRef = useRef(null);
 
   useEffect(() => {
     fetchAdminData();
   }, []);
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setDropdownOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  const showToast = (message) => {
+    setToastMessage(message);
+    setTimeout(() => {
+      setToastMessage((prev) => (prev === message ? null : prev));
+    }, 4000);
+  };
 
   const fetchAdminData = async () => {
     try {
@@ -74,6 +97,9 @@ export default function AdminPage({ onLogout }) {
 
   const totalRegistered = data?.stats?.totalRegistered || 0;
   const totalPresent = data?.stats?.totalPresent || 0;
+  const totalAbsent = data?.stats?.totalAbsent !== undefined
+    ? data.stats.totalAbsent
+    : Math.max(0, totalRegistered - totalPresent);
   const attendanceRate = totalRegistered > 0 ? Math.round((totalPresent / totalRegistered) * 100) : 0;
 
   const teams = Array.from(
@@ -91,32 +117,123 @@ export default function AdminPage({ onLogout }) {
     return matchesSearch && matchesTeam;
   });
 
-  const handleExportCSV = () => {
-    if (!filteredStudents || filteredStudents.length === 0) {
-      alert('No attendance records available to export.');
-      return;
+  const downloadCSV = (type = 'filtered') => {
+    const presentStudents = data?.presentStudents || [];
+    const allStudents = data?.allStudents || [];
+    const dateStr = new Date().toISOString().split('T')[0];
+
+    // Helper map of registered present students
+    const presentMap = new Map();
+    presentStudents.forEach((s) => {
+      if (s.regno) {
+        presentMap.set(String(s.regno).trim().toLowerCase(), s);
+      }
+    });
+
+    let headers = [];
+    let rows = [];
+    let filename = `presencex_attendance_${dateStr}.csv`;
+    let recordCount = 0;
+
+    if (type === 'filtered') {
+      if (!filteredStudents || filteredStudents.length === 0) {
+        alert('No attendance records match your current filter to export.');
+        return;
+      }
+      headers = ['S.No', 'Registration Number', 'Student Name', 'Team Name', 'Attendance Status', 'Check-in Time'];
+      rows = filteredStudents.map((s, index) => [
+        index + 1,
+        `"${String(s.regno || '').replace(/"/g, '""')}"`,
+        `"${String(s.name || '').replace(/"/g, '""')}"`,
+        `"${String(s.teamname || 'N/A').replace(/"/g, '""')}"`,
+        'PRESENT',
+        `"${s.timestamp ? new Date(s.timestamp).toLocaleString().replace(/"/g, '""') : 'Recorded'}"`
+      ]);
+      filename = `presencex_filtered_attendance_${dateStr}.csv`;
+      recordCount = filteredStudents.length;
+    } else if (type === 'present') {
+      if (!presentStudents || presentStudents.length === 0) {
+        alert('No present students recorded yet.');
+        return;
+      }
+      headers = ['S.No', 'Registration Number', 'Student Name', 'Team Name', 'Attendance Status', 'Check-in Time'];
+      rows = presentStudents.map((s, index) => [
+        index + 1,
+        `"${String(s.regno || '').replace(/"/g, '""')}"`,
+        `"${String(s.name || '').replace(/"/g, '""')}"`,
+        `"${String(s.teamname || 'N/A').replace(/"/g, '""')}"`,
+        'PRESENT',
+        `"${s.timestamp ? new Date(s.timestamp).toLocaleString().replace(/"/g, '""') : 'Recorded'}"`
+      ]);
+      filename = `presencex_present_students_${dateStr}.csv`;
+      recordCount = presentStudents.length;
+    } else if (type === 'all') {
+      if (!allStudents || allStudents.length === 0) {
+        if (presentStudents.length === 0) {
+          alert('No student records available.');
+          return;
+        }
+        headers = ['S.No', 'Registration Number', 'Student Name', 'Team Name', 'Attendance Status', 'Check-in Time'];
+        rows = presentStudents.map((s, index) => [
+          index + 1,
+          `"${String(s.regno || '').replace(/"/g, '""')}"`,
+          `"${String(s.name || '').replace(/"/g, '""')}"`,
+          `"${String(s.teamname || 'N/A').replace(/"/g, '""')}"`,
+          'PRESENT',
+          `"${s.timestamp ? new Date(s.timestamp).toLocaleString().replace(/"/g, '""') : 'Recorded'}"`
+        ]);
+        recordCount = presentStudents.length;
+      } else {
+        headers = ['S.No', 'Registration Number', 'Student Name', 'Team Name', 'Attendance Status', 'Check-in Time'];
+        rows = allStudents.map((s, index) => {
+          const queryKey = String(s.regno).trim().toLowerCase();
+          const isPresent = presentMap.has(queryKey);
+          const rec = isPresent ? presentMap.get(queryKey) : null;
+          const timeStr = rec?.timestamp ? new Date(rec.timestamp).toLocaleString() : 'N/A';
+          return [
+            index + 1,
+            `"${String(s.regno || '').replace(/"/g, '""')}"`,
+            `"${String(s.name || '').replace(/"/g, '""')}"`,
+            `"${String(s.teamname || 'N/A').replace(/"/g, '""')}"`,
+            isPresent ? 'PRESENT' : 'ABSENT',
+            `"${timeStr.replace(/"/g, '""')}"`
+          ];
+        });
+        recordCount = allStudents.length;
+      }
+      filename = `presencex_master_attendance_report_${dateStr}.csv`;
+    } else if (type === 'absent') {
+      const absentStudents = allStudents.filter((s) => !presentMap.has(String(s.regno).trim().toLowerCase()));
+      if (absentStudents.length === 0) {
+        alert('All registered students have marked attendance! No absentees.');
+        return;
+      }
+      headers = ['S.No', 'Registration Number', 'Student Name', 'Team Name', 'Attendance Status'];
+      rows = absentStudents.map((s, index) => [
+        index + 1,
+        `"${String(s.regno || '').replace(/"/g, '""')}"`,
+        `"${String(s.name || '').replace(/"/g, '""')}"`,
+        `"${String(s.teamname || 'N/A').replace(/"/g, '""')}"`,
+        'ABSENT'
+      ]);
+      filename = `presencex_absent_students_${dateStr}.csv`;
+      recordCount = absentStudents.length;
     }
 
-    const headers = ['S.No', 'Registration Number', 'Student Name', 'Team Name', 'Timestamp'];
-    const rows = filteredStudents.map((s, index) => [
-      index + 1,
-      `"${String(s.regno || '').replace(/"/g, '""')}"`,
-      `"${String(s.name || '').replace(/"/g, '""')}"`,
-      `"${String(s.teamname || 'N/A').replace(/"/g, '""')}"`,
-      `"${s.timestamp ? new Date(s.timestamp).toLocaleString().replace(/"/g, '""') : 'Recorded'}"`
-    ]);
-
-    const csvContent = [headers.join(','), ...rows.map((r) => r.join(','))].join('\n');
+    // Prepend UTF-8 BOM for Microsoft Excel compatibility
+    const csvContent = '\uFEFF' + [headers.join(','), ...rows.map((r) => r.join(','))].join('\r\n');
     const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
-    const dateStr = new Date().toISOString().split('T')[0];
     link.setAttribute('href', url);
-    link.setAttribute('download', `presencex_attendance_${dateStr}.csv`);
+    link.setAttribute('download', filename);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
     URL.revokeObjectURL(url);
+
+    setDropdownOpen(false);
+    showToast(`✓ Downloaded ${recordCount} record${recordCount === 1 ? '' : 's'} to CSV!`);
   };
 
   const handleExportJSON = () => {
@@ -144,6 +261,9 @@ export default function AdminPage({ onLogout }) {
     link.click();
     document.body.removeChild(link);
     URL.revokeObjectURL(url);
+
+    setDropdownOpen(false);
+    showToast(`✓ Exported ${filteredStudents.length} record(s) to JSON!`);
   };
 
   return (
@@ -151,6 +271,15 @@ export default function AdminPage({ onLogout }) {
       {/* Background Orbs */}
       <div className="glow-orb glow-orb-1" aria-hidden="true"></div>
       <div className="glow-orb glow-orb-2" aria-hidden="true"></div>
+
+      {/* Download Success Toast */}
+      {toastMessage && (
+        <div className="admin-toast-banner" role="status" aria-live="polite">
+          <span className="toast-icon">✨</span>
+          <span className="toast-text">{toastMessage}</span>
+          <button onClick={() => setToastMessage(null)} className="toast-close-btn">✕</button>
+        </div>
+      )}
 
       {/* Navigation Header Bar */}
       <nav className="admin-nav-bar">
@@ -194,26 +323,42 @@ export default function AdminPage({ onLogout }) {
             <p className="dash-subtitle">Real-time check-in metrics and participant tracking</p>
           </div>
 
-          <button 
-            onClick={fetchAdminData} 
-            disabled={loading} 
-            className="refresh-btn-glow"
-          >
-            <svg 
-              className={loading ? 'spin-icon' : ''} 
-              width="16" 
-              height="16" 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              stroke="currentColor" 
-              strokeWidth="2.5"
+          <div className="header-actions-group">
+            <button
+              onClick={() => downloadCSV('all')}
+              className="download-csv-btn-primary"
+              title="Download full master attendance report (CSV)"
             >
-              <polyline points="23 4 23 10 17 10"></polyline>
-              <polyline points="1 20 1 14 7 14"></polyline>
-              <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
-            </svg>
-            {loading ? 'Refreshing...' : 'Refresh Data'}
-          </button>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download CSV</span>
+            </button>
+
+            <button 
+              onClick={fetchAdminData} 
+              disabled={loading} 
+              className="refresh-btn-glow"
+              title="Refresh data from server"
+            >
+              <svg 
+                className={loading ? 'spin-icon' : ''} 
+                width="16" 
+                height="16" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="2.5"
+              >
+                <polyline points="23 4 23 10 17 10"></polyline>
+                <polyline points="1 20 1 14 7 14"></polyline>
+                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+              </svg>
+              {loading ? 'Refreshing...' : 'Refresh'}
+            </button>
+          </div>
         </div>
 
         {/* Analytics Cards Grid */}
@@ -249,6 +394,21 @@ export default function AdminPage({ onLogout }) {
               <span className="dot-green"></span>
               Live Sync Active
             </div>
+          </div>
+
+          <div className="stat-card card-amber">
+            <div className="stat-card-header">
+              <span className="stat-icon-wrapper icon-amber">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="8" x2="12" y2="12"></line>
+                  <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+              </span>
+              <span className="stat-label">Absentees</span>
+            </div>
+            <div className="stat-number text-amber">{totalAbsent}</div>
+            <span className="stat-foot-text">Pending check-in</span>
           </div>
 
           <div className="stat-card card-purple">
@@ -308,27 +468,97 @@ export default function AdminPage({ onLogout }) {
                 </select>
               )}
 
-              <div className="export-buttons-group">
-                <button
-                  onClick={handleExportCSV}
-                  className="export-btn-glow"
-                  title="Export Attendance to CSV spreadsheet"
-                >
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                    <polyline points="7 10 12 15 17 10"></polyline>
-                    <line x1="12" y1="15" x2="12" y2="3"></line>
-                  </svg>
-                  <span>Export CSV</span>
-                </button>
+              {/* Download CSV Split Dropdown Action */}
+              <div className="export-dropdown-wrapper" ref={dropdownRef}>
+                <div className="export-split-btn">
+                  <button
+                    onClick={() => downloadCSV('filtered')}
+                    className="download-csv-action-btn"
+                    title="Download currently filtered attendance list as CSV"
+                  >
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                      <polyline points="7 10 12 15 17 10"></polyline>
+                      <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    <span>Download CSV</span>
+                  </button>
 
-                <button
-                  onClick={handleExportJSON}
-                  className="export-btn-outline"
-                  title="Export Data as JSON"
-                >
-                  <span>JSON</span>
-                </button>
+                  <button
+                    onClick={() => setDropdownOpen(!dropdownOpen)}
+                    className={`dropdown-caret-btn ${dropdownOpen ? 'active' : ''}`}
+                    title="More export options"
+                    aria-expanded={dropdownOpen}
+                    aria-label="Toggle export options menu"
+                  >
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+                </div>
+
+                {dropdownOpen && (
+                  <div className="export-dropdown-menu">
+                    <div className="dropdown-section-title">CSV Download Options</div>
+                    
+                    <button
+                      onClick={() => downloadCSV('filtered')}
+                      className="dropdown-item"
+                    >
+                      <div className="item-icon-circle blue">📥</div>
+                      <div className="item-text-group">
+                        <span className="item-title">Current Table View (CSV)</span>
+                        <span className="item-desc">{filteredStudents.length} filtered records</span>
+                      </div>
+                    </button>
+
+                    <button
+                      onClick={() => downloadCSV('all')}
+                      className="dropdown-item"
+                    >
+                      <div className="item-icon-circle purple">📊</div>
+                      <div className="item-text-group">
+                        <span className="item-title">Full Master Attendance Sheet (CSV)</span>
+                        <span className="item-desc">All {totalRegistered} registered (Present + Absent)</span>
+                      </div>
+                    </button>
+
+                    <button
+                      onClick={() => downloadCSV('present')}
+                      className="dropdown-item"
+                    >
+                      <div className="item-icon-circle emerald">👥</div>
+                      <div className="item-text-group">
+                        <span className="item-title">All Present Students (CSV)</span>
+                        <span className="item-desc">{totalPresent} checked-in participants</span>
+                      </div>
+                    </button>
+
+                    <button
+                      onClick={() => downloadCSV('absent')}
+                      className="dropdown-item"
+                    >
+                      <div className="item-icon-circle amber">⏳</div>
+                      <div className="item-text-group">
+                        <span className="item-title">Absentee List (CSV)</span>
+                        <span className="item-desc">{totalAbsent} not yet verified</span>
+                      </div>
+                    </button>
+
+                    <div className="dropdown-divider"></div>
+
+                    <button
+                      onClick={handleExportJSON}
+                      className="dropdown-item"
+                    >
+                      <div className="item-icon-circle gray">{'{ }'}</div>
+                      <div className="item-text-group">
+                        <span className="item-title">Export as JSON</span>
+                        <span className="item-desc">Raw structured JSON format</span>
+                      </div>
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -397,4 +627,5 @@ export default function AdminPage({ onLogout }) {
     </div>
   );
 }
+
 

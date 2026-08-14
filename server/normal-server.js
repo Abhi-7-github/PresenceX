@@ -280,13 +280,17 @@ app.get('/api/admin/presence', async (req, res) => {
       .sort({ timestamp: -1 })
       .toArray();
 
+    const totalAbsent = Math.max(0, students.length - presentStudents.length);
+
     return res.json({
       success: true,
       stats: {
         totalRegistered: students.length,
         totalPresent: presentStudents.length,
+        totalAbsent,
       },
       presentStudents,
+      allStudents: students,
     });
   } catch (error) {
     console.error('Error retrieving admin presence data from MongoDB:', error.message);
@@ -294,6 +298,86 @@ app.get('/api/admin/presence', async (req, res) => {
       success: false,
       message: 'Presence service is currently unavailable.',
     });
+  }
+});
+
+// Step 8: Direct CSV Download Endpoint - Generates downloadable CSV
+app.get(['/api/admin/export/csv', '/api/export-csv'], async (req, res) => {
+  try {
+    const type = (req.query.type || 'present').toLowerCase(); // 'present', 'all', 'absent'
+    let collection = getPresenceCollection();
+    if (!collection) {
+      collection = await connectDB();
+    }
+
+    const students = getStudentMasterData();
+    let presentStudents = [];
+    if (collection) {
+      presentStudents = await collection
+        .find({}, { projection: { _id: 0 } })
+        .sort({ timestamp: -1 })
+        .toArray();
+    }
+
+    const presentMap = new Map();
+    presentStudents.forEach((p) => {
+      if (p.regno) {
+        presentMap.set(String(p.regno).trim().toLowerCase(), p);
+      }
+    });
+
+    let headers = [];
+    let rows = [];
+
+    if (type === 'all') {
+      headers = ['S.No', 'Registration Number', 'Student Name', 'Team Name', 'Attendance Status', 'Check-in Timestamp'];
+      rows = students.map((s, idx) => {
+        const queryKey = String(s.regno).trim().toLowerCase();
+        const isPresent = presentMap.has(queryKey);
+        const record = isPresent ? presentMap.get(queryKey) : null;
+        const timeStr = record?.timestamp ? new Date(record.timestamp).toLocaleString() : 'N/A';
+        return [
+          idx + 1,
+          `"${String(s.regno || '').replace(/"/g, '""')}"`,
+          `"${String(s.name || '').replace(/"/g, '""')}"`,
+          `"${String(s.teamname || 'N/A').replace(/"/g, '""')}"`,
+          isPresent ? 'PRESENT' : 'ABSENT',
+          `"${timeStr.replace(/"/g, '""')}"`
+        ];
+      });
+    } else if (type === 'absent') {
+      headers = ['S.No', 'Registration Number', 'Student Name', 'Team Name', 'Attendance Status'];
+      const absentStudents = students.filter(s => !presentMap.has(String(s.regno).trim().toLowerCase()));
+      rows = absentStudents.map((s, idx) => [
+        idx + 1,
+        `"${String(s.regno || '').replace(/"/g, '""')}"`,
+        `"${String(s.name || '').replace(/"/g, '""')}"`,
+        `"${String(s.teamname || 'N/A').replace(/"/g, '""')}"`,
+        'ABSENT'
+      ]);
+    } else {
+      // Default: present students
+      headers = ['S.No', 'Registration Number', 'Student Name', 'Team Name', 'Attendance Status', 'Check-in Timestamp'];
+      rows = presentStudents.map((s, idx) => [
+        idx + 1,
+        `"${String(s.regno || '').replace(/"/g, '""')}"`,
+        `"${String(s.name || '').replace(/"/g, '""')}"`,
+        `"${String(s.teamname || 'N/A').replace(/"/g, '""')}"`,
+        'PRESENT',
+        `"${s.timestamp ? new Date(s.timestamp).toLocaleString().replace(/"/g, '""') : 'Recorded'}"`
+      ]);
+    }
+
+    const csvContent = '\uFEFF' + [headers.join(','), ...rows.map(r => r.join(','))].join('\r\n');
+    const dateStr = new Date().toISOString().split('T')[0];
+    const filename = `presencex_${type}_attendance_${dateStr}.csv`;
+
+    res.setHeader('Content-Type', 'text/csv; charset=utf-8');
+    res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
+    return res.status(200).send(csvContent);
+  } catch (error) {
+    console.error('Error generating CSV export:', error.message);
+    return res.status(500).json({ success: false, message: 'Failed to generate CSV' });
   }
 });
 
