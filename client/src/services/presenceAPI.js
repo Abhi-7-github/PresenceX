@@ -72,6 +72,40 @@ export const presenceAPI = {
     return `${API_BASE_URL}/api/admin/export/csv?type=${encodeURIComponent(type)}`;
   },
 
+  // Get attendance active status
+  async getAttendanceStatus() {
+    const res = await fetch(`${API_BASE_URL}/api/attendance/status`);
+    return res.json();
+  },
+
+  // Toggle attendance open / closed
+  async toggleAttendance(isOpen, key = null) {
+    const headers = { 'Content-Type': 'application/json' };
+    if (key) {
+      headers['x-admin-key'] = key;
+    }
+    const res = await fetch(`${API_BASE_URL}/api/admin/attendance/toggle`, {
+      method: 'POST',
+      headers,
+      body: JSON.stringify({ isOpen, key }),
+    });
+    return res.json();
+  },
+
+  // Clear all presence data from DB
+  async clearDatabase(key = null) {
+    const headers = { 'Content-Type': 'application/json' };
+    if (key) {
+      headers['x-admin-key'] = key;
+    }
+    const res = await fetch(`${API_BASE_URL}/api/admin/clear-db`, {
+      method: 'POST',
+      headers,
+      body: JSON.stringify({ key }),
+    });
+    return res.json();
+  },
+
   // Health check
   async healthCheck() {
     try {
@@ -82,3 +116,4 @@ export const presenceAPI = {
     }
   },
 };
+

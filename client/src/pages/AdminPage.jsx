@@ -10,6 +10,11 @@ export default function AdminPage({ onLogout }) {
   const [selectedTeam, setSelectedTeam] = useState('all');
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [toastMessage, setToastMessage] = useState(null);
+  const [isAttendanceOpen, setIsAttendanceOpen] = useState(true);
+  const [togglingAttendance, setTogglingAttendance] = useState(false);
+  const [showClearModal, setShowClearModal] = useState(false);
+  const [showDeleteConfirmToast, setShowDeleteConfirmToast] = useState(false);
+  const [clearingDb, setClearingDb] = useState(false);
   const dropdownRef = useRef(null);
 
   useEffect(() => {
@@ -29,11 +34,15 @@ export default function AdminPage({ onLogout }) {
     };
   }, []);
 
-  const showToast = (message) => {
-    setToastMessage(message);
+  const showToast = (content, type = 'info', icon = '✨') => {
+    if (typeof content === 'string') {
+      setToastMessage({ text: content, type, icon });
+    } else {
+      setToastMessage(content);
+    }
     setTimeout(() => {
-      setToastMessage((prev) => (prev === message ? null : prev));
-    }, 4000);
+      setToastMessage((prev) => (prev?.text === (content.text || content) ? null : prev));
+    }, 4500);
   };
 
   const fetchAdminData = async () => {
@@ -43,6 +52,9 @@ export default function AdminPage({ onLogout }) {
       const result = await presenceAPI.getAdminPresence();
       if (result.success) {
         setData(result);
+        if (typeof result.isAttendanceOpen === 'boolean') {
+          setIsAttendanceOpen(result.isAttendanceOpen);
+        }
       } else {
         setError(result.message || 'Failed to load admin data');
       }
@@ -53,6 +65,55 @@ export default function AdminPage({ onLogout }) {
       setLoading(false);
     }
   };
+
+  const handleToggleAttendance = async () => {
+    const targetStatus = !isAttendanceOpen;
+    try {
+      setTogglingAttendance(true);
+      const res = await presenceAPI.toggleAttendance(targetStatus);
+      if (res && res.success) {
+        setIsAttendanceOpen(res.isOpen);
+        showToast(
+          res.isOpen ? 'Attendance is now OPEN for students' : 'Attendance is now CLOSED for students',
+          res.isOpen ? 'success' : 'warning',
+          res.isOpen ? '🟢' : '🔴'
+        );
+      } else {
+        showToast('Failed to update attendance status', 'warning', '⚠️');
+      }
+    } catch (err) {
+      console.error(err);
+      showToast('Error connecting to server to toggle attendance', 'error', '⚠️');
+    } finally {
+      setTogglingAttendance(false);
+    }
+  };
+
+  const handleClearDatabase = async () => {
+    try {
+      setClearingDb(true);
+      const res = await presenceAPI.clearDatabase();
+      if (res && res.success) {
+        setShowClearModal(false);
+        setShowDeleteConfirmToast(false);
+        await fetchAdminData();
+        showToast(
+          `Successfully cleared all ${res.deletedCount || 0} attendance records from the database!`,
+          'danger-confirmed',
+          '🗑️'
+        );
+      } else {
+        alert(res?.message || 'Failed to clear database records.');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Error connecting to server to clear database.');
+    } finally {
+      setClearingDb(false);
+    }
+  };
+
+
 
   const handleLogout = () => {
     if (confirm('Are you sure you want to logout from Admin Dashboard?')) {
@@ -272,12 +333,62 @@ export default function AdminPage({ onLogout }) {
       <div className="glow-orb glow-orb-1" aria-hidden="true"></div>
       <div className="glow-orb glow-orb-2" aria-hidden="true"></div>
 
-      {/* Download Success Toast */}
+      {/* Interactive Confirm Toast for Deleting Data */}
+      {showDeleteConfirmToast && (
+        <div className="admin-confirm-toast-banner" role="alertdialog" aria-live="assertive">
+          <div className="confirm-toast-header">
+            <div className="confirm-toast-icon-circle">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                <line x1="12" y1="9" x2="12" y2="13"></line>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+            </div>
+            <div className="confirm-toast-body">
+              <span className="confirm-toast-heading">Clear Attendance Data?</span>
+              <span className="confirm-toast-subtitle">
+                Permanently delete all <strong>{totalPresent}</strong> check-in records from MongoDB?
+              </span>
+            </div>
+          </div>
+          <div className="confirm-toast-actions-row">
+            <button
+              onClick={() => setShowDeleteConfirmToast(false)}
+              disabled={clearingDb}
+              className="confirm-toast-cancel-btn"
+            >
+              Cancel
+            </button>
+            <button
+              onClick={handleClearDatabase}
+              disabled={clearingDb}
+              className="confirm-toast-delete-btn"
+            >
+              {clearingDb ? (
+                <span className="btn-flex-center">
+                  <span className="spinner-small"></span>
+                  Clearing...
+                </span>
+              ) : (
+                'Confirm Delete'
+              )}
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Success / Status Notification Toast */}
       {toastMessage && (
-        <div className="admin-toast-banner" role="status" aria-live="polite">
-          <span className="toast-icon">✨</span>
-          <span className="toast-text">{toastMessage}</span>
-          <button onClick={() => setToastMessage(null)} className="toast-close-btn">✕</button>
+        <div 
+          className={`admin-toast-banner ${toastMessage.type ? `toast-${toastMessage.type}` : ''}`} 
+          role="status" 
+          aria-live="polite"
+        >
+          <span className="toast-icon">{toastMessage.icon || '✨'}</span>
+          <div className="toast-content-wrapper">
+            <span className="toast-text">{toastMessage.text || toastMessage}</span>
+          </div>
+          <button onClick={() => setToastMessage(null)} className="toast-close-btn" aria-label="Close notification">✕</button>
         </div>
       )}
 
@@ -324,6 +435,41 @@ export default function AdminPage({ onLogout }) {
           </div>
 
           <div className="header-actions-group">
+            {/* Turn On/Off Attendance Button */}
+            <button
+              onClick={handleToggleAttendance}
+              disabled={togglingAttendance}
+              className={`attendance-toggle-btn ${isAttendanceOpen ? 'status-open' : 'status-closed'}`}
+              title={isAttendanceOpen ? "Click to Close Attendance for students" : "Click to Open Attendance for students"}
+            >
+              <span className={`toggle-indicator-dot ${isAttendanceOpen ? 'dot-open' : 'dot-closed'}`}></span>
+              <span className="toggle-btn-text">
+                {togglingAttendance 
+                  ? 'Updating...' 
+                  : isAttendanceOpen 
+                    ? 'Attendance: OPEN' 
+                    : 'Attendance: CLOSED'}
+              </span>
+              <span className="toggle-switch-track">
+                <span className={`toggle-switch-thumb ${isAttendanceOpen ? 'thumb-open' : 'thumb-closed'}`}></span>
+              </span>
+            </button>
+
+            {/* Clear Database Button - Triggers Confirm Toast */}
+            <button
+              onClick={() => setShowDeleteConfirmToast(true)}
+              className="clear-db-btn"
+              title="Clear all recorded check-ins from database"
+            >
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
+                <polyline points="3 6 5 6 21 6"></polyline>
+                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                <line x1="10" y1="11" x2="10" y2="17"></line>
+                <line x1="14" y1="11" x2="14" y2="17"></line>
+              </svg>
+              <span>Clear Data</span>
+            </button>
+
             <button
               onClick={() => downloadCSV('all')}
               className="download-csv-btn-primary"
@@ -390,9 +536,9 @@ export default function AdminPage({ onLogout }) {
               <span className="stat-label">Students Present</span>
             </div>
             <div className="stat-number text-emerald">{totalPresent}</div>
-            <div className="live-status-chip">
-              <span className="dot-green"></span>
-              Live Sync Active
+            <div className={`live-status-chip ${isAttendanceOpen ? 'chip-open' : 'chip-closed'}`}>
+              <span className={isAttendanceOpen ? 'dot-green' : 'dot-red'}></span>
+              {isAttendanceOpen ? 'Attendance Open' : 'Attendance Closed'}
             </div>
           </div>
 
@@ -624,8 +770,57 @@ export default function AdminPage({ onLogout }) {
           )}
         </div>
       </main>
+
+      {/* Clear Database Confirmation Modal */}
+      {showClearModal && (
+        <div className="admin-modal-overlay" onClick={() => !clearingDb && setShowClearModal(false)}>
+          <div className="admin-modal-card" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-danger-badge">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                <line x1="12" y1="9" x2="12" y2="13"></line>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+            </div>
+            
+            <h2 className="modal-title">Clear Attendance Database?</h2>
+            <p className="modal-desc">
+              Are you sure you want to permanently clear all <strong>{totalPresent}</strong> recorded student check-in records from the database?
+            </p>
+            <div className="modal-warning-box">
+              <span className="warning-icon">⚠️</span>
+              <span>This will delete all live check-ins in MongoDB. Master participant data in data.json will remain untouched.</span>
+            </div>
+
+            <div className="modal-actions-row">
+              <button
+                onClick={() => setShowClearModal(false)}
+                disabled={clearingDb}
+                className="modal-cancel-btn"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleClearDatabase}
+                disabled={clearingDb}
+                className="modal-confirm-danger-btn"
+              >
+                {clearingDb ? (
+                  <span className="btn-flex-center">
+                    <span className="spinner-small"></span>
+                    Clearing Records...
+                  </span>
+                ) : (
+                  'Yes, Clear All Data'
+                )}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
+
 
 

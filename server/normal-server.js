@@ -3,7 +3,14 @@ const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
-const { connectDB, getPresenceCollection } = require('./models/Presence.js');
+const { 
+  connectDB, 
+  getPresenceCollection, 
+  getSettingsCollection, 
+  getAttendanceStatus, 
+  setAttendanceStatus, 
+  clearAllPresenceRecords 
+} = require('./models/Presence.js');
 
 const app = express();
 
@@ -29,7 +36,7 @@ app.use(cors({
   },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'x-admin-key'],
 }));
 
 app.use(express.json());
@@ -58,9 +65,12 @@ app.get(HEALTH_CHECK_PATH, (req, res) => {
   res.status(200).send('OK');
 });
 
-// Presence status endpoint
-app.get('/presence/status', (req, res) => {
+// Presence / Attendance status endpoint
+app.get(['/api/attendance/status', '/presence/status'], async (req, res) => {
+  const isOpen = await getAttendanceStatus();
   res.json({
+    success: true,
+    isOpen,
     timestamp: new Date().toISOString(),
   });
 });
@@ -106,7 +116,16 @@ function getStudentMasterData() {
 }
 
 // Step 3: Student Verification endpoint - Uses server/data.json ONLY
-app.post('/api/verify', (req, res) => {
+app.post('/api/verify', async (req, res) => {
+  const isAttendanceOpen = await getAttendanceStatus();
+  if (!isAttendanceOpen) {
+    return res.status(403).json({
+      success: false,
+      isClosed: true,
+      message: 'Attendance is currently closed.',
+    });
+  }
+
   const { regno } = req.body;
 
   if (!regno || typeof regno !== 'string') {
@@ -148,6 +167,15 @@ app.post('/api/verify', (req, res) => {
 
 // Step 4: Mark Presence endpoint - Confirms in data.json, stores in MongoDB
 app.post('/api/presence', async (req, res) => {
+  const isAttendanceOpen = await getAttendanceStatus();
+  if (!isAttendanceOpen) {
+    return res.status(403).json({
+      success: false,
+      isClosed: true,
+      message: 'Attendance is currently closed.',
+    });
+  }
+
   const { regno } = req.body;
 
   if (!regno || typeof regno !== 'string') {
@@ -259,6 +287,54 @@ app.post('/api/admin/login', (req, res) => {
   }
 });
 
+// Admin Toggle Attendance Status Endpoint
+app.post(['/api/admin/attendance/toggle', '/api/admin/attendance-toggle'], async (req, res) => {
+  try {
+    const { isOpen } = req.body;
+    const targetState = typeof isOpen === 'boolean' ? isOpen : true;
+    const updatedStatus = await setAttendanceStatus(targetState);
+    console.log(`[Server ${PORT}] Attendance status set to: ${updatedStatus ? 'OPEN' : 'CLOSED'}`);
+    return res.json({
+      success: true,
+      isOpen: updatedStatus,
+      message: `Attendance is now ${updatedStatus ? 'OPEN' : 'CLOSED'}.`,
+    });
+  } catch (error) {
+    console.error('Error toggling attendance status:', error.message);
+    return res.status(500).json({
+      success: false,
+      message: 'Failed to update attendance status.',
+    });
+  }
+});
+
+// Admin Clear Database Endpoint
+app.post(['/api/admin/clear-db', '/api/admin/presence/clear'], async (req, res) => {
+  try {
+    const result = await clearAllPresenceRecords();
+    
+    // Reset local JSON if exists
+    const jsonPath = path.join(__dirname, 'presence.json');
+    if (fs.existsSync(jsonPath)) {
+      try {
+        fs.writeFileSync(jsonPath, JSON.stringify({ records: [] }, null, 2));
+      } catch (e) {}
+    }
+
+    return res.json({
+      success: true,
+      message: 'All attendance records have been cleared successfully.',
+      deletedCount: result.deletedCount || 0,
+    });
+  } catch (error) {
+    console.error('Error clearing presence database:', error.message);
+    return res.status(500).json({
+      success: false,
+      message: 'Failed to clear attendance database.',
+    });
+  }
+});
+
 // Step 7: Admin endpoint - Retrieves presence records from MongoDB and stats
 app.get('/api/admin/presence', async (req, res) => {
   try {
@@ -274,6 +350,7 @@ app.get('/api/admin/presence', async (req, res) => {
       });
     }
 
+    const isAttendanceOpen = await getAttendanceStatus();
     const students = getStudentMasterData();
     const presentStudents = await collection
       .find({}, { projection: { _id: 0 } })
@@ -284,6 +361,7 @@ app.get('/api/admin/presence', async (req, res) => {
 
     return res.json({
       success: true,
+      isAttendanceOpen,
       stats: {
         totalRegistered: students.length,
         totalPresent: presentStudents.length,
