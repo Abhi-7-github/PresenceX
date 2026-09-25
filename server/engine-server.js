@@ -125,6 +125,9 @@ app.use(async (req, res) => {
     if (req.headers['authorization']) {
       forwardHeaders['Authorization'] = req.headers['authorization'];
     }
+    if (req.headers['x-admin-key']) {
+      forwardHeaders['x-admin-key'] = req.headers['x-admin-key'];
+    }
 
     const fetchOptions = {
       method: req.method,

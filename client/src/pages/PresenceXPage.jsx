@@ -3,18 +3,20 @@ import { presenceAPI } from '../services/presenceAPI.js';
 import './PresenceXPage.css';
 
 export default function PresenceXPage() {
-  const [step, setStep] = useState('input'); // input, verified, success, error
-  const [registration, setRegistration] = useState('');
-  const [student, setStudent] = useState(null);
+  const [step, setStep] = useState('input'); // 'input', 'verified', 'success', 'error'
+  const [teamNumberInput, setTeamNumberInput] = useState('');
+  const [team, setTeam] = useState(null);
+  const [memberStatuses, setMemberStatuses] = useState({});
+  const [isUpdate, setIsUpdate] = useState(false);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
-  const [recentRegs, setRecentRegs] = useState([]);
+  const [recentTeams, setRecentTeams] = useState([]);
   const [copied, setCopied] = useState(false);
-  const [timestamp, setTimestamp] = useState('');
+  const [submissionTime, setSubmissionTime] = useState('');
   const [isAttendanceOpen, setIsAttendanceOpen] = useState(true);
   const [initialChecked, setInitialChecked] = useState(false);
 
-  // Check attendance open/closed status on mount and poll every 3.5s
+  // Poll attendance open/closed status
   useEffect(() => {
     let isMounted = true;
 
@@ -26,7 +28,6 @@ export default function PresenceXPage() {
           setInitialChecked(true);
         }
       } catch (err) {
-        // Fallback gracefully
         if (isMounted) setInitialChecked(true);
       }
     };
@@ -40,34 +41,35 @@ export default function PresenceXPage() {
     };
   }, []);
 
-  // Load recent registration numbers on mount
+  // Load recent team numbers
   useEffect(() => {
     try {
-      const saved = localStorage.getItem('presenceX_recent_regs');
+      const saved = localStorage.getItem('tara_recent_teams');
       if (saved) {
-        setRecentRegs(JSON.parse(saved).slice(0, 4));
+        setRecentTeams(JSON.parse(saved).slice(0, 5));
       }
     } catch {
       // Ignore localStorage errors
     }
   }, []);
 
-  const saveRecentReg = (regno) => {
+  const saveRecentTeam = (teamNum) => {
     try {
-      const updated = [regno, ...recentRegs.filter((r) => r !== regno)].slice(0, 4);
-      setRecentRegs(updated);
-      localStorage.setItem('presenceX_recent_regs', JSON.stringify(updated));
+      const strVal = String(teamNum).trim();
+      const updated = [strVal, ...recentTeams.filter((r) => String(r).trim() !== strVal)].slice(0, 5);
+      setRecentTeams(updated);
+      localStorage.setItem('tara_recent_teams', JSON.stringify(updated));
     } catch {
       // Ignore localStorage errors
     }
   };
 
-  const handleVerify = async (e) => {
+  const handleVerifyTeam = async (e) => {
     if (e) e.preventDefault();
 
-    const cleanReg = registration.trim();
-    if (!cleanReg) {
-      setError('Please enter your registration number');
+    const cleanInput = String(teamNumberInput).trim();
+    if (!cleanInput) {
+      setError('Please enter a team number.');
       setStep('error');
       return;
     }
@@ -76,17 +78,42 @@ export default function PresenceXPage() {
       setLoading(true);
       setError('');
 
-      const result = await presenceAPI.verifyStudent(cleanReg);
+      const result = await presenceAPI.verifyTeam(cleanInput);
 
-      if (result.success) {
-        setStudent(result.student);
-        saveRecentReg(cleanReg);
+      if (result.success && result.team) {
+        setTeam(result.team);
+        saveRecentTeam(result.team.teamNumber);
+
+        // Initialize member statuses
+        const initialStatusMap = {};
+        const existingRec = result.existingAttendance;
+
+        if (existingRec && Array.isArray(existingRec.members)) {
+          setIsUpdate(true);
+          const existingMap = new Map();
+          existingRec.members.forEach((m) => {
+            if (m.euphoriaId) existingMap.set(m.euphoriaId.toLowerCase(), m.status);
+          });
+
+          result.team.members.forEach((m) => {
+            const key = m.euphoriaId.toLowerCase();
+            initialStatusMap[m.euphoriaId] = existingMap.get(key) === 'absent' ? 'absent' : 'present';
+          });
+        } else {
+          setIsUpdate(false);
+          // Default all to 'present' initially for fast check-in
+          result.team.members.forEach((m) => {
+            initialStatusMap[m.euphoriaId] = 'present';
+          });
+        }
+
+        setMemberStatuses(initialStatusMap);
         setStep('verified');
       } else {
         if (result.isClosed) {
           setIsAttendanceOpen(false);
         }
-        setError(result.message || 'Registration number not found in our database');
+        setError(result.message || 'Team number not found in master records.');
         setStep('error');
       }
     } catch (err) {
@@ -98,25 +125,54 @@ export default function PresenceXPage() {
     }
   };
 
-  const handleQuickSelect = (regno) => {
-    setRegistration(regno);
+  const handleQuickSelect = (teamNum) => {
+    setTeamNumberInput(teamNum);
   };
 
-  const handleMarkPresence = async () => {
+  const toggleMemberStatus = (euphoriaId, newStatus) => {
+    setMemberStatuses((prev) => ({
+      ...prev,
+      [euphoriaId]: newStatus,
+    }));
+  };
+
+  const markAll = (status) => {
+    if (!team || !team.members) return;
+    const updated = {};
+    team.members.forEach((m) => {
+      updated[m.euphoriaId] = status;
+    });
+    setMemberStatuses(updated);
+  };
+
+  const handleSubmitAttendance = async () => {
+    if (!team) return;
+
     try {
       setLoading(true);
       setError('');
 
-      const result = await presenceAPI.markPresence(student.regno);
+      const membersPayload = team.members.map((m) => ({
+        euphoriaId: m.euphoriaId,
+        status: memberStatuses[m.euphoriaId] || 'absent',
+      }));
+
+      const payload = {
+        teamNumber: team.teamNumber,
+        members: membersPayload,
+      };
+
+      const result = await presenceAPI.submitTeamAttendance(payload);
 
       if (result.success) {
-        setTimestamp(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' }));
+        setSubmissionTime(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' }));
+        setIsUpdate(Boolean(result.isUpdate));
         setStep('success');
       } else {
         if (result.isClosed) {
           setIsAttendanceOpen(false);
         }
-        setError(result.message || 'Failed to mark presence');
+        setError(result.message || 'Failed to submit team attendance.');
         setStep('error');
       }
     } catch (err) {
@@ -130,356 +186,364 @@ export default function PresenceXPage() {
 
   const handleReset = () => {
     setStep('input');
-    setRegistration('');
-    setStudent(null);
+    setTeamNumberInput('');
+    setTeam(null);
+    setMemberStatuses({});
     setError('');
     setCopied(false);
+    setIsUpdate(false);
   };
 
   const copyTicketDetails = () => {
-    if (!student) return;
-    const text = `PresenceX Check-in Pass\nName: ${student.name}\nReg No: ${student.regno}\nTeam: ${student.teamname || 'N/A'}\nTime: ${timestamp}`;
+    if (!team) return;
+    const presentMembers = team.members.filter((m) => memberStatuses[m.euphoriaId] === 'present');
+    const absentMembers = team.members.filter((m) => memberStatuses[m.euphoriaId] === 'absent');
+    const text = `TARA Team Attendance Confirmation\nTeam #${team.teamNumber}: ${team.teamName}\nPresent (${presentMembers.length}): ${presentMembers.map((m) => m.name).join(', ')}\nAbsent (${absentMembers.length}): ${absentMembers.map((m) => m.name).join(', ') || 'None'}\nRecorded: ${submissionTime}`;
     navigator.clipboard.writeText(text);
     setCopied(true);
     setTimeout(() => setCopied(false), 2500);
   };
 
-  const getInitials = (name) => {
-    if (!name) return 'PX';
-    const parts = name.trim().split(' ');
-    if (parts.length === 1) return parts[0].substring(0, 2).toUpperCase();
-    return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
-  };
-
-  // Determine current active step number for visual progress tracker
-  const getCurrentStepNum = () => {
-    if (step === 'input') return 1;
-    if (step === 'verified') return 2;
-    if (step === 'success') return 3;
-    return 1;
-  };
-
   return (
-    <div className="presencex-page">
-      <div className="glow-orb glow-orb-1" aria-hidden="true"></div>
-      <div className="glow-orb glow-orb-2" aria-hidden="true"></div>
-      <div className="glow-orb glow-orb-3" aria-hidden="true"></div>
-
-      <div className="presencex-container">
-        <header className="presencex-header">
-          <div className="brand-badge">
-            <span className="brand-title">Presence<span className="brand-highlight">X</span></span>
+    <div className="tara-app-wrapper">
+      {/* Solid Navbar */}
+      <nav className="tara-main-nav">
+        <div className="tara-nav-left">
+          <span className="tara-nav-wordmark">TARA</span>
+          <span className="tara-nav-tag">ATTENDANCE SYSTEM</span>
+        </div>
+        <div className="tara-nav-right">
+          <div className="tara-gate-indicator">
+            <span className={`gate-dot ${isAttendanceOpen ? 'open' : 'closed'}`}></span>
+            <span className="gate-label">{isAttendanceOpen ? 'SYSTEM ACTIVE' : 'GATE LOCKED'}</span>
           </div>
-        </header>
+        </div>
+      </nav>
 
-        {/* When Attendance is Closed, show dedicated Attendance Closed text view ONLY */}
+      <div className="tara-content-container">
+        {/* ATTENDANCE CLOSED STATE */}
         {!isAttendanceOpen ? (
-          <main className="presencex-card closed-card-animated">
-            <div className="closed-icon-wrapper">
-              <div className="closed-icon-circle">
-                <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
-                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                </svg>
-              </div>
-              <div className="closed-status-pill">
-                <span className="dot-closed-pulse"></span>
-                <span>CLOSED</span>
-              </div>
-            </div>
-
-            <h1 className="closed-heading">Attendance Closed</h1>
-            <p className="closed-subtext">
-              The attendance session is currently closed by the administrator. Check-in submissions are not being accepted at this time.
+          <div className="tara-solid-card tara-card-closed">
+            <div className="tara-closed-tag">ATTENDANCE GATE LOCKED</div>
+            <h1 className="tara-closed-title">Attendance Closed</h1>
+            <p className="tara-closed-desc">
+              The attendance session is currently closed by the event administrators. Submissions are not being accepted at this time.
             </p>
-
-            <div className="closed-info-panel">
-              <div className="closed-info-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <line x1="12" y1="16" x2="12" y2="12"></line>
-                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                </svg>
-              </div>
-              <p className="closed-info-text">
-                This page will automatically update once the event administrator turns attendance back on.
-              </p>
+            <div className="tara-closed-subpanel">
+              <span className="subpanel-dot"></span>
+              <span>This screen will automatically update when the gate is reopened.</span>
             </div>
-          </main>
+          </div>
         ) : (
           <>
-            {step !== 'error' && (
-              <div className="step-progress-bar">
-                <div className={`step-item ${getCurrentStepNum() >= 1 ? 'active' : ''} ${getCurrentStepNum() > 1 ? 'completed' : ''}`}>
-                  <div className="step-circle">1</div>
-                  <span className="step-label">Identify</span>
+            {/* STEP 1: Enter Team Number */}
+            {step === 'input' && (
+              <div className="tara-solid-card">
+                <div className="tara-section-badge">VERIFICATION</div>
+                <h1 className="tara-page-heading">TEAM ATTENDANCE</h1>
+                <p className="tara-page-subtext">
+                  Enter your assigned Team Number to verify registration and record individual member attendance.
+                </p>
+
+                <form onSubmit={handleVerifyTeam} className="tara-search-form">
+                  <div className="tara-input-block">
+                    <label htmlFor="team-number-input" className="tara-field-label">
+                      ENTER TEAM NUMBER
+                    </label>
+                    <div className="tara-search-input-wrap">
+                      <input
+                        id="team-number-input"
+                        type="text"
+                        placeholder="e.g. 1, 13, 34, 87..."
+                        value={teamNumberInput}
+                        onChange={(e) => setTeamNumberInput(e.target.value)}
+                        disabled={loading}
+                        className="tara-input-solid"
+                        autoFocus
+                        autoComplete="off"
+                      />
+                      {teamNumberInput && (
+                        <button
+                          type="button"
+                          onClick={() => setTeamNumberInput('')}
+                          className="tara-input-clear"
+                          aria-label="Clear team number"
+                        >
+                          ✕
+                        </button>
+                      )}
+                    </div>
+                  </div>
+
+                  {recentTeams.length > 0 && (
+                    <div className="tara-recent-row">
+                      <span className="recent-heading">RECENT:</span>
+                      <div className="recent-chips">
+                        {recentTeams.map((num) => (
+                          <button
+                            key={num}
+                            type="button"
+                            onClick={() => handleQuickSelect(num)}
+                            className="tara-chip"
+                          >
+                            TEAM #{num}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  <button
+                    type="submit"
+                    disabled={loading || !String(teamNumberInput).trim()}
+                    className="tara-btn-orange"
+                  >
+                    {loading ? 'SEARCHING TEAM...' : 'SEARCH'}
+                  </button>
+                </form>
+              </div>
+            )}
+
+            {/* STEP 2: Team Details & Member Attendance Table */}
+            {step === 'verified' && team && (
+              <div className="tara-solid-card tara-card-wide">
+                <div className="tara-team-header-block">
+                  <div className="tara-team-badge-row">
+                    <span className="tara-team-num-badge">TEAM #{team.teamNumber}</span>
+                    {isUpdate && (
+                      <span className="tara-update-notice">EXISTING RECORD LOADED</span>
+                    )}
+                  </div>
+                  <h1 className="tara-team-name-display">{team.teamName}</h1>
+
+                  {/* Problem Statement Box */}
+                  <div className="tara-ps-solid-box">
+                    <div className="ps-tag">PROBLEM STATEMENT</div>
+                    <div className="ps-content">
+                      {team.problemStatement?.number && (
+                        <span className="ps-code">{team.problemStatement.number}</span>
+                      )}
+                      <span className="ps-title-text">
+                        {team.problemStatement?.title || 'General Track'}
+                      </span>
+                    </div>
+                  </div>
                 </div>
-                <div className={`step-connector ${getCurrentStepNum() >= 2 ? 'active' : ''}`}></div>
-                <div className={`step-item ${getCurrentStepNum() >= 2 ? 'active' : ''} ${getCurrentStepNum() > 2 ? 'completed' : ''}`}>
-                  <div className="step-circle">2</div>
-                  <span className="step-label">Verify</span>
+
+                {/* Table Header Controls */}
+                <div className="tara-table-actions-header">
+                  <div>
+                    <h2 className="tara-subheading">REGISTERED MEMBERS ({team.members.length})</h2>
+                    <span className="tara-subtext-small">Toggle each member's individual status below</span>
+                  </div>
+
+                  <div className="tara-quick-actions">
+                    <button
+                      type="button"
+                      onClick={() => markAll('present')}
+                      className="tara-quick-btn mark-present"
+                    >
+                      ALL PRESENT
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => markAll('absent')}
+                      className="tara-quick-btn mark-absent"
+                    >
+                      ALL ABSENT
+                    </button>
+                  </div>
                 </div>
-                <div className={`step-connector ${getCurrentStepNum() >= 3 ? 'active' : ''}`}></div>
-                <div className={`step-item ${getCurrentStepNum() >= 3 ? 'active' : ''}`}>
-                  <div className="step-circle">3</div>
-                  <span className="step-label">Complete</span>
+
+                {/* Editorial Member Table */}
+                <div className="tara-table-wrapper">
+                  <table className="tara-editorial-table">
+                    <thead>
+                      <tr>
+                        <th style={{ width: '40px' }}>#</th>
+                        <th>MEMBER</th>
+                        <th>COLLEGE</th>
+                        <th>EUPHORIA ID</th>
+                        <th style={{ textAlign: 'center' }}>STATUS</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {team.members.map((member) => {
+                        const isPresent = memberStatuses[member.euphoriaId] === 'present';
+                        return (
+                          <tr
+                            key={member.euphoriaId}
+                            className={`tara-row ${isPresent ? 'row-active-present' : 'row-active-absent'}`}
+                          >
+                            <td className="col-idx">{member.memberNumber}</td>
+                            <td className="col-member">
+                              <div className="member-name-wrap">
+                                <span className="member-fullname">{member.name}</span>
+                                {member.memberNumber === 1 && (
+                                  <span className="tara-leader-tag">TEAM LEADER</span>
+                                )}
+                              </div>
+                            </td>
+                            <td className="col-college">{member.college || '—'}</td>
+                            <td className="col-id">
+                              <span className="tara-code-badge">{member.euphoriaId}</span>
+                            </td>
+                            <td className="col-status" style={{ textAlign: 'center' }}>
+                              <div className="tara-status-toggle">
+                                <button
+                                  type="button"
+                                  onClick={() => toggleMemberStatus(member.euphoriaId, 'present')}
+                                  className={`status-btn-present ${isPresent ? 'selected' : ''}`}
+                                >
+                                  PRESENT
+                                </button>
+                                <button
+                                  type="button"
+                                  onClick={() => toggleMemberStatus(member.euphoriaId, 'absent')}
+                                  className={`status-btn-absent ${!isPresent ? 'selected' : ''}`}
+                                >
+                                  ABSENT
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+
+                {/* Submit Action Row */}
+                <div className="tara-form-submit-row">
+                  <button
+                    onClick={handleSubmitAttendance}
+                    disabled={loading}
+                    className="tara-btn-orange"
+                  >
+                    {loading
+                      ? 'RECORDING ATTENDANCE...'
+                      : isUpdate
+                      ? 'UPDATE TEAM ATTENDANCE'
+                      : 'SUBMIT TEAM ATTENDANCE'}
+                  </button>
+
+                  <button
+                    onClick={handleReset}
+                    disabled={loading}
+                    className="tara-btn-dark"
+                  >
+                    CHANGE TEAM
+                  </button>
                 </div>
               </div>
             )}
 
-            <main className="presencex-card">
-              {step === 'input' && (
-                <div className="step-content step-input-animated">
-                  <div className="step-header">
-                    <h1 className="hero-heading">Mark Your Presence</h1>
-                    <p className="hero-subtext">Enter your registration number to confirm check-in.</p>
+            {/* STEP 3: Success Confirmation Screen */}
+            {step === 'success' && team && (
+              <div className="tara-solid-card">
+                <div className="tara-success-header">
+                  <div className="tara-check-badge">✓</div>
+                  <h1 className="tara-page-heading">
+                    {isUpdate ? 'ATTENDANCE UPDATED' : 'ATTENDANCE RECORDED'}
+                  </h1>
+                  <p className="tara-page-subtext">
+                    Team attendance session has been logged to the database.
+                  </p>
+                </div>
+
+                {/* Editorial Summary Pass */}
+                <div className="tara-summary-slip">
+                  <div className="slip-top-row">
+                    <span className="slip-brand">TARA ATTENDANCE LOG</span>
+                    <span className="slip-team-num">TEAM #{team.teamNumber}</span>
                   </div>
 
-                  <form onSubmit={handleVerify} className="attendance-form">
-                    <div className="input-container">
-                      <label htmlFor="registration-input" className="input-label">
-                        Registration Number
-                      </label>
-                      <div className="input-wrapper">
-                        <span className="input-icon">
-                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="12" cy="7" r="4"></circle>
-                          </svg>
-                        </span>
-                        <input
-                          id="registration-input"
-                          type="text"
-                          placeholder="e.g. 992............."
-                          value={registration}
-                          onChange={(e) => setRegistration(e.target.value)}
-                          disabled={loading}
-                          className="styled-input"
-                          autoFocus
-                          autoComplete="off"
-                        />
-                        {registration && (
-                          <button
-                            type="button"
-                            onClick={() => setRegistration('')}
-                            className="clear-input-btn"
-                            aria-label="Clear input"
-                          >
-                            ✕
-                          </button>
-                        )}
-                      </div>
-                      <div className="input-hint">
-                        <span>Press <kbd>Enter ↵</kbd> to submit</span>
-                      </div>
+                  <div className="slip-details">
+                    <div className="slip-item">
+                      <span className="slip-label">TEAM NAME</span>
+                      <span className="slip-value">{team.teamName}</span>
                     </div>
 
-                    {recentRegs.length > 0 && (
-                      <div className="recent-chips-container">
-                        <span className="recent-label">Recent:</span>
-                        <div className="chips-wrapper">
-                          {recentRegs.map((reg) => (
-                            <button
-                              key={reg}
-                              type="button"
-                              className="chip-btn"
-                              onClick={() => handleQuickSelect(reg)}
-                            >
-                              {reg}
-                            </button>
-                          ))}
-                        </div>
+                    {team.problemStatement?.title && (
+                      <div className="slip-item">
+                        <span className="slip-label">PROBLEM STATEMENT</span>
+                        <span className="slip-value">
+                          {team.problemStatement.number ? `${team.problemStatement.number} — ` : ''}
+                          {team.problemStatement.title}
+                        </span>
                       </div>
                     )}
 
-                    <button
-                      type="submit"
-                      disabled={loading || !registration.trim()}
-                      className="btn-glow-primary"
-                    >
-                      {loading ? (
-                        <span className="btn-loading-flex">
-                          <span className="spinner"></span>
-                          Verifying Identity...
-                        </span>
-                      ) : (
-                        <span className="btn-text-flex">
-                          Verify & Continue
-                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                          </svg>
-                        </span>
-                      )}
-                    </button>
-                  </form>
-                </div>
-              )}
-
-              {step === 'verified' && student && (
-                <div className="step-content step-verified-animated">
-                  <div className="badge-verified-top">
-                    <span className="verified-dot">✓</span>
-                    Identity Verified
-                  </div>
-
-                  <div className="student-profile-header">
-                    <div className="avatar-ring">
-                      <div className="avatar-initials">{getInitials(student.name)}</div>
+                    <div className="slip-item">
+                      <span className="slip-label">ATTENDANCE RATIO</span>
+                      <span className="slip-value bold-orange">
+                        {team.members.filter((m) => memberStatuses[m.euphoriaId] === 'present').length} / {team.members.length} MEMBERS PRESENT
+                      </span>
                     </div>
-                    <h2 className="student-name">{student.name}</h2>
-                    <span className="student-regno-pill">{student.regno}</span>
-                  </div>
 
-                  <div className="student-card-details">
-                    <div className="detail-item">
-                      <div className="detail-icon">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                          <circle cx="9" cy="7" r="4"></circle>
-                          <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
-                      </div>
-                      <div className="detail-meta">
-                        <span className="meta-label">Team Assignment</span>
-                        <span className="meta-value">{student.teamname || 'Individual Participant'}</span>
+                    <div className="slip-members-list">
+                      <span className="slip-label">MEMBER BREAKDOWN</span>
+                      <div className="slip-members-grid">
+                        {team.members.map((m) => {
+                          const isPresent = memberStatuses[m.euphoriaId] === 'present';
+                          return (
+                            <div key={m.euphoriaId} className="slip-member-pill">
+                              <span className="name">{m.name}</span>
+                              <span className={`pill-status ${isPresent ? 'is-pres' : 'is-abs'}`}>
+                                {isPresent ? 'PRESENT' : 'ABSENT'}
+                              </span>
+                            </div>
+                          );
+                        })}
                       </div>
                     </div>
 
-                    <div className="detail-item">
-                      <div className="detail-icon">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                          <line x1="16" y1="2" x2="16" y2="6"></line>
-                          <line x1="8" y1="2" x2="8" y2="6"></line>
-                          <line x1="3" y1="10" x2="21" y2="10"></line>
-                        </svg>
-                      </div>
-                      <div className="detail-meta">
-                        <span className="meta-label">Registration ID</span>
-                        <span className="meta-value font-mono">{student.regno}</span>
-                      </div>
+                    <div className="slip-item">
+                      <span className="slip-label">TIMESTAMP</span>
+                      <span className="slip-value">{submissionTime || 'Confirmed'}</span>
                     </div>
                   </div>
 
-                  <div className="action-buttons-group">
-                    <button
-                      onClick={handleMarkPresence}
-                      disabled={loading}
-                      className="btn-glow-success"
-                    >
-                      {loading ? (
-                        <span className="btn-loading-flex">
-                          <span className="spinner"></span>
-                          Recording Attendance...
-                        </span>
-                      ) : (
-                        <span className="btn-text-flex">
-                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                          </svg>
-                          Confirm & Mark Present
-                        </span>
-                      )}
-                    </button>
-
-                    <button
-                      onClick={handleReset}
-                      disabled={loading}
-                      className="btn-outline-secondary"
-                    >
-                      Change Registration No.
+                  <div className="slip-actions">
+                    <button onClick={copyTicketDetails} className="tara-btn-dark small">
+                      {copied ? '✓ COPIED TO CLIPBOARD' : 'COPY SUMMARY'}
                     </button>
                   </div>
                 </div>
-              )}
 
-              {step === 'success' && (
-                <div className="step-content step-success-animated">
-                  <div className="success-icon-wrapper">
-                    <div className="pulse-ring"></div>
-                    <div className="pulse-ring delay"></div>
-                    <div className="success-checkmark-circle">
-                      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg>
-                    </div>
-                  </div>
-
-                  <h2 className="success-heading">Presence Recorded!</h2>
-                  <p className="success-subtext">Your attendance has been successfully logged to the database.</p>
-
-                  <div className="pass-ticket">
-                    <div className="pass-header">
-                      <span className="pass-title">DIGITAL ATTENDANCE PASS</span>
-                      <span className="pass-badge">CONFIRMED</span>
-                    </div>
-
-                    <div className="pass-body">
-                      <div className="pass-row">
-                        <span className="pass-label">Student Name</span>
-                        <span className="pass-val">{student?.name}</span>
-                      </div>
-                      <div className="pass-row">
-                        <span className="pass-label">Registration</span>
-                        <span className="pass-val font-mono">{student?.regno}</span>
-                      </div>
-                      {student?.teamname && (
-                        <div className="pass-row">
-                          <span className="pass-label">Team</span>
-                          <span className="pass-val">{student.teamname}</span>
-                        </div>
-                      )}
-                      <div className="pass-row">
-                        <span className="pass-label">Time Logged</span>
-                        <span className="pass-val">{timestamp || 'Just now'}</span>
-                      </div>
-                    </div>
-
-                    <div className="pass-footer">
-                      <button onClick={copyTicketDetails} className="copy-ticket-btn">
-                        {copied ? '✓ Copied Pass Info!' : '📋 Copy Pass Details'}
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {step === 'error' && (
-                <div className="step-content step-error-animated">
-                  <div className="error-icon-circle">
-                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <line x1="15" y1="9" x2="9" y2="15"></line>
-                      <line x1="9" y1="9" x2="15" y2="15"></line>
-                    </svg>
-                  </div>
-
-                  <h2 className="error-heading">Verification Failed</h2>
-                  <div className="error-box">
-                    <p className="error-message">{error}</p>
-                  </div>
-
-                  <p className="error-help">
-                    Please verify your registration number format or check with the event coordinator if your details are missing.
-                  </p>
-
-                  <button onClick={handleReset} className="btn-glow-primary margin-top-md">
-                    Try Again
+                <div className="tara-form-submit-row">
+                  <button onClick={handleReset} className="tara-btn-orange">
+                    CHECK IN ANOTHER TEAM
                   </button>
                 </div>
-              )}
-            </main>
+              </div>
+            )}
+
+            {/* STEP 4: Error Screen */}
+            {step === 'error' && (
+              <div className="tara-solid-card">
+                <div className="tara-section-badge error">FAILED</div>
+                <h1 className="tara-page-heading">VERIFICATION ERROR</h1>
+                <div className="tara-error-message-box">
+                  <p>{error}</p>
+                </div>
+                <p className="tara-page-subtext">
+                  Please verify the Team Number or check with the helpdesk coordinator if your team registration is missing.
+                </p>
+                <button onClick={handleReset} className="tara-btn-orange">
+                  TRY AGAIN
+                </button>
+              </div>
+            )}
           </>
         )}
 
-        <footer className="presencex-footer">
-          <p>© {new Date().getFullYear()} PresenceX • Instant Attendance Verification</p>
+        <footer className="tara-footer">
+          <span className="footer-brand">TARA</span>
+          <span className="footer-sep">&bull;</span>
+          <span className="footer-sub">SOLID STATE ATTENDANCE INFRASTRUCTURE</span>
         </footer>
       </div>
     </div>
   );
 }
-

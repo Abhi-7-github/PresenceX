@@ -31,24 +31,41 @@ export const presenceAPI = {
     return res.json();
   },
 
-  // Verify student by registration number
-  async verifyStudent(regno) {
-    const res = await fetch(`${API_BASE_URL}/api/verify`, {
+  // Verify team by Team Number
+  async verifyTeam(teamNumber, date = null, session = null) {
+    const res = await fetch(`${API_BASE_URL}/api/verify-team`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ regno }),
+      body: JSON.stringify({ teamNumber, date, session }),
     });
     return res.json();
   },
 
-  // Mark presence
-  async markPresence(regno) {
+  // Legacy verify wrapper
+  async verifyStudent(query) {
+    return this.verifyTeam(query);
+  },
+
+  // Submit team attendance with individual member statuses
+  async submitTeamAttendance({ teamNumber, members, date = null, session = null }) {
     const res = await fetch(`${API_BASE_URL}/api/presence`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ regno }),
+      body: JSON.stringify({ teamNumber, members, date, session }),
     });
     return res.json();
+  },
+
+  // Backward compatible alias
+  async markPresence(payload) {
+    if (typeof payload === 'object' && payload.teamNumber) {
+      return this.submitTeamAttendance(payload);
+    }
+    // If called with single ID/regno:
+    return this.submitTeamAttendance({
+      teamNumber: payload,
+      members: [],
+    });
   },
 
   // Get admin presence data

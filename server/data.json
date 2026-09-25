@@ -1,1472 +1,3710 @@
 [
   {
-    "teamname": "Sparkle Coders",
-    "regno": "99240040969",
-    "name": "K. Hemanth"
-  },
-  {
-    "teamname": "Sparkle Coders",
-    "regno": "99230040621",
-    "name": "KONDOJU NEERAJ BHARADWAJ"
-  },
-  {
-    "teamname": "Sparkle Coders",
-    "regno": "9924005001",
-    "name": "Y SUMANTH REDDY"
-  },
-  {
-    "teamname": "Sparkle Coders",
-    "regno": "99240040359",
-    "name": "AKSHAY RAJKUMAR J"
-  },
-  {
-    "teamname": "Salaar",
-    "regno": "99230040990",
-    "name": "O. Govardhan Raju"
-  },
-  {
-    "teamname": "Salaar",
-    "regno": "99230040961",
-    "name": "Ch. Vijay Avinash"
-  },
-  {
-    "teamname": "Salaar",
-    "regno": "99230040988",
-    "name": "N. PeddaPeeraiah"
-  },
-  {
-    "teamname": "Salaar",
-    "regno": "99230040953",
-    "name": "P. Gurunath Reddy"
-  },
-  {
-    "teamname": "Bug Busters",
-    "regno": "99240040285",
-    "name": "MARIMESI MANIDEEP"
-  },
-  {
-    "teamname": "Bug Busters",
-    "regno": "99240040284",
-    "name": "Telagamsetti Posi Sai Siddhartha"
-  },
-  {
-    "teamname": "Bug Busters",
-    "regno": "99240040278",
-    "name": "Maddala Surya Chandra Venkata Mohan"
-  },
-  {
-    "teamname": "Bug Busters",
-    "regno": "99240040274",
-    "name": "Kurapati Manohar"
-  },
-  {
-    "teamname": "Supreme Coders",
-    "regno": "99240040925",
-    "name": "GEDDAM PAVAN KUMAR"
-  },
-  {
-    "teamname": "Supreme Coders",
-    "regno": "99240041305",
-    "name": "MUDIYAM JAGADESWARA REDDY"
-  },
-  {
-    "teamname": "Supreme Coders",
-    "regno": "99240040066",
-    "name": "JUJJAVARAPU RISHYENDRA"
-  },
-  {
-    "teamname": "Supreme Coders",
-    "regno": "99240040927",
-    "name": "GAVVALA OMSAI"
-  },
-  {
-    "teamname": "Team Leaders",
-    "regno": "99230040598",
-    "name": "K Yaswanth Kumar Siva Nageswara Rao"
-  },
-  {
-    "teamname": "Team Leaders",
-    "regno": "99230040581",
-    "name": "J Akhil Venkata Satya Karthik"
-  },
-  {
-    "teamname": "Team Leaders",
-    "regno": "9923008006",
-    "name": "M. Naga Venkat"
-  },
-  {
-    "teamname": "Team Leaders",
-    "regno": "99230040385",
-    "name": "NUNNA RAM CHANDRA NAIDU"
-  },
-  {
-    "teamname": "OG TEAM",
-    "regno": "9923005099",
-    "name": "K. BHARGAV SRI ANJANEYA"
-  },
-  {
-    "teamname": "OG TEAM",
-    "regno": "9923005079",
-    "name": "G. BHARAT KUMAR"
-  },
-  {
-    "teamname": "OG TEAM",
-    "regno": "9923004819",
-    "name": "Y. MANIKANTA"
-  },
-  {
-    "teamname": "OG TEAM",
-    "regno": "9923005111",
-    "name": "N. MUNITEJ REDDY"
-  },
-  {
-    "teamname": "Team Nellore",
-    "regno": "99240040011",
-    "name": "Kondapalli Palguna"
-  },
-  {
-    "teamname": "Team Nellore",
-    "regno": "99240041133",
-    "name": "Ravula Venkata Sriram"
-  },
-  {
-    "teamname": "Team Nellore",
-    "regno": "99240041198",
-    "name": "Vemana Pavan Kumar"
-  },
-  {
-    "teamname": "Team Nellore",
-    "regno": "99240040737",
-    "name": "Naramsetty Kiran"
-  },
-  {
-    "teamname": "Dragon",
-    "regno": "9923008024",
-    "name": "KANDULA Lokesh Sai Manikanta"
-  },
-  {
-    "teamname": "Dragon",
-    "regno": "9923008034",
-    "name": "Sandadi Navaneswar Reddy"
-  },
-  {
-    "teamname": "Dragon",
-    "regno": "9923008029",
-    "name": "Raganagari Amareshwar Reddy"
-  },
-  {
-    "teamname": "Dragon",
-    "regno": "9923008012",
-    "name": "Vemireddy Ram Prashantha Reddy"
-  },
-  {
-    "teamname": "THUNDER TITANS",
-    "regno": "9924017043",
-    "name": "P. Hari Suriya"
-  },
-  {
-    "teamname": "THUNDER TITANS",
-    "regno": "9924017071",
-    "name": "V. Madesh Kumar"
-  },
-  {
-    "teamname": "THUNDER TITANS",
-    "regno": "9924017103",
-    "name": "Praveen Jesu S"
-  },
-  {
-    "teamname": "THUNDER TITANS",
-    "regno": "9924017099",
-    "name": "V. Pathma Kumar"
-  },
-  {
-    "teamname": "Elite",
-    "regno": "9924018125",
-    "name": "V. Bathmaavathi"
-  },
-  {
-    "teamname": "Elite",
-    "regno": "9924018022",
-    "name": "K. Deepak Manikandan"
-  },
-  {
-    "teamname": "Elite",
-    "regno": "9924018024",
-    "name": "Dinesh K"
-  },
-  {
-    "teamname": "Elite",
-    "regno": "9924018025",
-    "name": "K. Divya"
-  },
-  {
-    "teamname": "TEAM SPARTAN",
-    "regno": "9924017059",
-    "name": "S. KESHORE KUMAR"
-  },
-  {
-    "teamname": "TEAM SPARTAN",
-    "regno": "9924017010",
-    "name": "S. AJAY HARI KRISHNAN"
-  },
-  {
-    "teamname": "TEAM SPARTAN",
-    "regno": "9924017012",
-    "name": "R. ANANTHAPADMANATHAN"
-  },
-  {
-    "teamname": "TEAM SPARTAN",
-    "regno": "9924017127",
-    "name": "T. SHARAN"
-  },
-  {
-    "teamname": "AgriTech Titans",
-    "regno": "9924019019",
-    "name": "T. Gunalini"
-  },
-  {
-    "teamname": "AgriTech Titans",
-    "regno": "9924019073",
-    "name": "M. Jeyasurya"
-  },
-  {
-    "teamname": "AgriTech Titans",
-    "regno": "9924019076",
-    "name": "R. Vikash"
-  },
-  {
-    "teamname": "AgriTech Titans",
-    "regno": "9924019026",
-    "name": "G. Jegan"
-  },
-  {
-    "teamname": "JK warriors",
-    "regno": "9924001086",
-    "name": "Azhar Mohi ud din War"
-  },
-  {
-    "teamname": "JK warriors",
-    "regno": "9924001085",
-    "name": "M.B Muna Raisal"
-  },
-  {
-    "teamname": "JK warriors",
-    "regno": "9924011053",
-    "name": "Nicepreet Kour"
-  },
-  {
-    "teamname": "JK warriors",
-    "regno": "9924011049",
-    "name": "Zaina Shanaz"
-  },
-  {
-    "teamname": "Electronix",
-    "regno": "9924005271",
-    "name": "K. NAGA KARTHIK"
-  },
-  {
-    "teamname": "Electronix",
-    "regno": "9924005408",
-    "name": "M. JASWANTH"
-  },
-  {
-    "teamname": "Electronix",
-    "regno": "9924005428",
-    "name": "K.M.S.S. GANDHI"
-  },
-  {
-    "teamname": "Electronix",
-    "regno": "9924005199",
-    "name": "S. SANDEEP"
-  },
-  {
-    "teamname": "WARRIORS",
-    "regno": "9924005288",
-    "name": "K BHASKAR BHANU VAMSI"
-  },
-  {
-    "teamname": "WARRIORS",
-    "regno": "9924005134",
-    "name": "P SRIRAM SAI PRASAD"
-  },
-  {
-    "teamname": "WARRIORS",
-    "regno": "9924005434",
-    "name": "K SUSANTH"
-  },
-  {
-    "teamname": "WARRIORS",
-    "regno": "99240041244",
-    "name": "P NAVADEEP"
-  },
-  {
-    "teamname": "Farmers",
-    "regno": "9924018039",
-    "name": "Jayakrishnan S"
-  },
-  {
-    "teamname": "Farmers",
-    "regno": "9924018099",
-    "name": "A.vyshali"
-  },
-  {
-    "teamname": "Farmers",
-    "regno": "9924001029",
-    "name": "Gayathri J"
-  },
-  {
-    "teamname": "Farmers",
-    "regno": "9924018031",
-    "name": "P hariharan"
-  },
-  {
-    "teamname": "Team Error",
-    "regno": "99240040232",
-    "name": "Gannamani Lavya Sri"
-  },
-  {
-    "teamname": "Team Error",
-    "regno": "99240040654",
-    "name": "Yash kailas mane"
-  },
-  {
-    "teamname": "Team Error",
-    "regno": "99240041256",
-    "name": "Gillela Reddy Yeshaswini"
-  },
-  {
-    "teamname": "Team Error",
-    "regno": "99240041238",
-    "name": "Rakesh Davuluri"
-  },
-  {
-    "teamname": "PlinkX",
-    "regno": "99240040874",
-    "name": "CHALLA VARUN KUMAR"
-  },
-  {
-    "teamname": "PlinkX",
-    "regno": "99240040211",
-    "name": "CHENNURU NIKHIL KUMAR"
-  },
-  {
-    "teamname": "PlinkX",
-    "regno": "99240040899",
-    "name": "DUDUKELA DHARMA TEJA"
-  },
-  {
-    "teamname": "PlinkX",
-    "regno": "99240040966",
-    "name": "KAMALA RISHIK"
-  },
-  {
-    "teamname": "Itachi",
-    "regno": "99240041032",
-    "name": "MANKINA GOPICHAND"
-  },
-  {
-    "teamname": "Itachi",
-    "regno": "99240041030",
-    "name": "M.Adhithya Ram"
-  },
-  {
-    "teamname": "Itachi",
-    "regno": "99240041036",
-    "name": "S.D.B.Sanjeev"
-  },
-  {
-    "teamname": "Itachi",
-    "regno": "99240041024",
-    "name": "MATTAPARTHI VEERA VENKATA SRINIVAS"
-  },
-  {
-    "teamname": "THE GREEKS",
-    "regno": "99230040776",
-    "name": "ABHIRAM SURAPU"
-  },
-  {
-    "teamname": "THE GREEKS",
-    "regno": "99230040372",
-    "name": "VENKATA HEMADRI MAVILLA"
-  },
-  {
-    "teamname": "THE GREEKS",
-    "regno": "99230040787",
-    "name": "SRIRAM TIMMISETTY"
-  },
-  {
-    "teamname": "THE GREEKS",
-    "regno": "99230040848",
-    "name": "KRISHNA BHARGAV PINNAMANENI"
-  },
-  {
-    "teamname": "JAI BABU",
-    "regno": "99230040635",
-    "name": "L. BHARGAV SAI"
-  },
-  {
-    "teamname": "JAI BABU",
-    "regno": "9923008038",
-    "name": "K. SHYAM SUNDER"
-  },
-  {
-    "teamname": "JAI BABU",
-    "regno": "99230040462",
-    "name": "Y.HARSHIT"
-  },
-  {
-    "teamname": "JAI BABU",
-    "regno": "9924005111",
-    "name": "K.RAM CHARAN"
-  },
-  {
-    "teamname": "Hackers",
-    "regno": "9923008013",
-    "name": "VUDDANDAIAHGARI LOHITH"
-  },
-  {
-    "teamname": "Hackers",
-    "regno": "9923008025",
-    "name": "K.Deva datta sai"
-  },
-  {
-    "teamname": "Hackers",
-    "regno": "99230040126",
-    "name": "Lingala Seshanth Reddy"
-  },
-  {
-    "teamname": "Hackers",
-    "regno": "99230040698",
-    "name": "NUSHI purna Chandra reddy"
-  },
-  {
-    "teamname": "Team OG",
-    "regno": "9923005096",
-    "name": "Kokkera Srinivas"
-  },
-  {
-    "teamname": "Team OG",
-    "regno": "9824005003",
-    "name": "Dronadhula Venkata Siva Manikanta"
-  },
-  {
-    "teamname": "Team OG",
-    "regno": "9923005065",
-    "name": "Bommu Gowtham Sai Reddy"
-  },
-  {
-    "teamname": "Team OG",
-    "regno": "9923005122",
-    "name": "Pulla Siddardha"
-  },
-  {
-    "teamname": "Team Dragon",
-    "regno": "99240041052",
-    "name": "P.Rama Krishna Prasad"
-  },
-  {
-    "teamname": "Team Dragon",
-    "regno": "99240041051",
-    "name": "Marneni Naveen"
-  },
-  {
-    "teamname": "Team Dragon",
-    "regno": "99240040930",
-    "name": "V Venkat Rao"
-  },
-  {
-    "teamname": "Team Dragon",
-    "regno": "99240040620",
-    "name": "V Ajay Kumar"
-  },
-  {
-    "teamname": "Aks harsha",
-    "regno": "99240041023",
-    "name": "MANNEPALLI HARSHA PRIYA"
-  },
-  {
-    "teamname": "Aks harsha",
-    "regno": "99240041008",
-    "name": "KURAM HEMALATHA"
-  },
-  {
-    "teamname": "Aks harsha",
-    "regno": "99240041015",
-    "name": "LAKKIREDDY HARSHITHA"
-  },
-  {
-    "teamname": "Aks harsha",
-    "regno": "99230040176",
-    "name": "THATI SKANDHA MALLIKARJUNA"
-  },
-  {
-    "teamname": "JANTAR MANTAR",
-    "regno": "99240040807",
-    "name": "C Sindhu"
-  },
-  {
-    "teamname": "JANTAR MANTAR",
-    "regno": "99240040897",
-    "name": "Rajesh Devaravula"
-  },
-  {
-    "teamname": "JANTAR MANTAR",
-    "regno": "99240041229",
-    "name": "Manigala Mahitha"
-  },
-  {
-    "teamname": "JANTAR MANTAR",
-    "regno": "99240040390",
-    "name": "Bandameeda Vijaya Sankar"
-  },
-  {
-    "teamname": "Unreal",
-    "regno": "9924018040",
-    "name": "M.JeevithaSakthi"
-  },
-  {
-    "teamname": "Unreal",
-    "regno": "9924018018",
-    "name": "K.Blessing"
-  },
-  {
-    "teamname": "Unreal",
-    "regno": "9924018002",
-    "name": "P.Abishek"
-  },
-  {
-    "teamname": "Unreal",
-    "regno": "9924018030",
-    "name": "M.Hariharan"
-  },
-  {
-    "teamname": "Team Darling",
-    "regno": "9924005359",
-    "name": "Seelaboina Satyanarayana"
-  },
-  {
-    "teamname": "Team Darling",
-    "regno": "9924005358",
-    "name": "T ravi teja"
-  },
-  {
-    "teamname": "Team Darling",
-    "regno": "9924005410",
-    "name": "pd.usman"
-  },
-  {
-    "teamname": "Team Darling",
-    "regno": "99250040036",
-    "name": "Alam Akash"
-  },
-  {
-    "teamname": "Root logic",
-    "regno": "9923005187",
-    "name": "Anusuya.A"
-  },
-  {
-    "teamname": "Root logic",
-    "regno": "9923005238",
-    "name": "Divyadharshini.D"
-  },
-  {
-    "teamname": "Root logic",
-    "regno": "9923005233",
-    "name": "Abarna.S"
-  },
-  {
-    "teamname": "CODE-X",
-    "regno": "99240040813",
-    "name": "Allabakash Mohammed sadiq"
-  },
-  {
-    "teamname": "CODE-X",
-    "regno": "99240040814",
-    "name": "ANJINEYULU GARI SREENIVASULU"
-  },
-  {
-    "teamname": "CODE-X",
-    "regno": "99240040724",
-    "name": "Pujari punith kumar"
-  },
-  {
-    "teamname": "CODE-X",
-    "regno": "99240040723",
-    "name": "PUVVADA GURU BRAHMAM"
-  },
-  {
-    "teamname": "The Rowdy",
-    "regno": "9825037005",
-    "name": "BATHALA AMARENDRA KUMAR"
-  },
-  {
-    "teamname": "The Rowdy",
-    "regno": "9825037001",
-    "name": "SAGAR KANTHIBASAPPA YATNATTI"
-  },
-  {
-    "teamname": "The Rowdy",
-    "regno": "9825037008",
-    "name": "Gunja Mahesh"
-  },
-  {
-    "teamname": "The Rowdy",
-    "regno": "9825037003",
-    "name": "Ramapuram Sailkshmi"
-  },
-  {
-    "teamname": "Spartans",
-    "regno": "9924017022",
-    "name": "Sam Dennis"
-  },
-  {
-    "teamname": "Spartans",
-    "regno": "9924017141",
-    "name": "Surya prakash"
-  },
-  {
-    "teamname": "Spartans",
-    "regno": "9924017109",
-    "name": "Raja surya"
-  },
-  {
-    "teamname": "Spartans",
-    "regno": "9924017121",
-    "name": "Santhosh"
-  },
-  {
-    "teamname": "Agri Warriors",
-    "regno": "99240041139",
-    "name": "V RAJIV MOUNITH"
-  },
-  {
-    "teamname": "Agri Warriors",
-    "regno": "99240041146",
-    "name": "Sai Balaji B"
-  },
-  {
-    "teamname": "Agri Warriors",
-    "regno": "99240041155",
-    "name": "RANGAMREDDY MAHENDRA REDDY"
-  },
-  {
-    "teamname": "Agri Warriors",
-    "regno": "99240040598",
-    "name": "Kota Pusphak Chowdary"
-  },
-  {
-    "teamname": "Goodfellas",
-    "regno": "9923008143",
-    "name": "Vikas Kannan"
-  },
-  {
-    "teamname": "Goodfellas",
-    "regno": "9923008125",
-    "name": "Gaushik"
-  },
-  {
-    "teamname": "Goodfellas",
-    "regno": "9923008121",
-    "name": "Yogeshwaran"
-  },
-  {
-    "teamname": "Goodfellas",
-    "regno": "9923008125",
-    "name": "Santhosh Kumar"
-  },
-  {
-    "teamname": "GREEN GAURDIANS",
-    "regno": "99240040908",
-    "name": "GEVINI NAVADEEP"
-  },
-  {
-    "teamname": "GREEN GAURDIANS",
-    "regno": "9240041001",
-    "name": "MADDELA BHARATH"
-  },
-  {
-    "teamname": "GREEN GAURDIANS",
-    "regno": "9924005157",
-    "name": "SOBANALA PRASANTH"
-  },
-  {
-    "teamname": "GREEN GAURDIANS",
-    "regno": "99240041314",
-    "name": "P Roopa"
-  },
-  {
-    "teamname": "Devixers",
-    "regno": "9923011011",
-    "name": "Pooja R K"
-  },
-  {
-    "teamname": "Devixers",
-    "regno": "99230041185",
-    "name": "Jayakumaran P R"
-  },
-  {
-    "teamname": "Devixers",
-    "regno": "99230041107",
-    "name": "Vishvanth S"
-  },
-  {
-    "teamname": "Devixers",
-    "regno": "99230041115",
-    "name": "Jeyashankar"
-  },
-  {
-    "teamname": "Team Samy",
-    "regno": "9924018004",
-    "name": "V.ajayaraja"
-  },
-  {
-    "teamname": "Team Samy",
-    "regno": "9924018026",
-    "name": "P.Esakkimuthu"
-  },
-  {
-    "teamname": "Team Samy",
-    "regno": "9924018043",
-    "name": "K.Kavirajan"
-  },
-  {
-    "teamname": "Team Samy",
-    "regno": "9924018048",
-    "name": "D.Mahalingam"
-  },
-  {
-    "teamname": "Codeblast",
-    "regno": "9924017030",
-    "name": "S.devi"
-  },
-  {
-    "teamname": "Codeblast",
-    "regno": "9924017136",
-    "name": "M.srirama suvetha"
-  },
-  {
-    "teamname": "Codeblast",
-    "regno": "9924017033",
-    "name": "E.divya"
-  },
-  {
-    "teamname": "Codeblast",
-    "regno": "9924017128",
-    "name": "J.P Shenbaga devi"
-  },
-  {
-    "teamname": "Team gillbet",
-    "regno": "9924017145",
-    "name": "Umayaraja M"
-  },
-  {
-    "teamname": "Team gillbet",
-    "regno": "9924017081",
-    "name": "Mohanapriyan v"
-  },
-  {
-    "teamname": "Team gillbet",
-    "regno": "9924017120",
-    "name": "Santhosh A"
-  },
-  {
-    "teamname": "Team gillbet",
-    "regno": "9924017158",
-    "name": "Vinoth r"
-  },
-  {
-    "teamname": "HarvestIQ",
-    "regno": "99240040748",
-    "name": "Nikhil Sai Kenguri"
-  },
-  {
-    "teamname": "HarvestIQ",
-    "regno": "99240040505",
-    "name": "Gudipati Balaji"
-  },
-  {
-    "teamname": "HarvestIQ",
-    "regno": "99240040758",
-    "name": "Yeemireddy Kowshik Kumar Reddy"
-  },
-  {
-    "teamname": "HarvestIQ",
-    "regno": "99240040510",
-    "name": "Gulla Navadeep"
-  },
-  {
-    "teamname": "Quantum wave",
-    "regno": "9924008125",
-    "name": "R.Vijaya Lakshmi"
-  },
-  {
-    "teamname": "Quantum wave",
-    "regno": "9925008008",
-    "name": "S.Aruna Devi"
-  },
-  {
-    "teamname": "Quantum wave",
-    "regno": "99240041189",
-    "name": "V.Raghu Nath reddy"
-  },
-  {
-    "teamname": "Quantum wave",
-    "regno": "99240041183",
-    "name": "Guru Srinivas"
-  },
-  {
-    "teamname": "Byte Builders",
-    "regno": "9924017095",
-    "name": "Nethaji A"
-  },
-  {
-    "teamname": "Byte Builders",
-    "regno": "9924017020",
-    "name": "N.Aswin Reg.no.9924017020 9924017020klu@ac.in"
-  },
-  {
-    "teamname": "Byte Builders",
-    "regno": "9924017080",
-    "name": "M.Mohamed ibrahim"
-  },
-  {
-    "teamname": "Byte Builders",
-    "regno": "9924017124",
-    "name": "Shalavudeen M"
-  },
-  {
-    "teamname": "Rushers",
-    "regno": "99220041209",
-    "name": "Kancharla Vinay"
-  },
-  {
-    "teamname": "Rushers",
-    "regno": "99220040766",
-    "name": "V Mukesh"
-  },
-  {
-    "teamname": "Rushers",
-    "regno": "9922008065",
-    "name": "P. Santhiya"
-  },
-  {
-    "teamname": "One piece",
-    "regno": "99240040868",
-    "name": "Challa sai bharath"
-  },
-  {
-    "teamname": "One piece",
-    "regno": "99240040082",
-    "name": "Kota Venkateswarlu reddy"
-  },
-  {
-    "teamname": "One piece",
-    "regno": "99240040102",
-    "name": "Shailsh"
-  },
-  {
-    "teamname": "One piece",
-    "regno": "99240040928",
-    "name": "Koduri chandu"
-  },
-  {
-    "teamname": "Team apex",
-    "regno": "9924005141",
-    "name": "PUVVADA UMA MAHESWARA RAO"
-  },
-  {
-    "teamname": "Team apex",
-    "regno": "99240040711",
-    "name": "Putsala kumar kiran"
-  },
-  {
-    "teamname": "Team apex",
-    "regno": "99240040149",
-    "name": "M thiyo philas"
-  },
-  {
-    "teamname": "Team apex",
-    "regno": "9924005142",
-    "name": "Galemmagri vijay ramanatha reddy"
-  },
-  {
-    "teamname": "Dragon warriors",
-    "regno": "99240041235",
-    "name": "Patibandla srinivas"
-  },
-  {
-    "teamname": "Dragon warriors",
-    "regno": "99240041053",
-    "name": "Nagireddy venkata krishna teja"
-  },
-  {
-    "teamname": "Dragon warriors",
-    "regno": "99240040329",
-    "name": "BODEMMAGARI ARUN KUMAR REDDY"
-  },
-  {
-    "teamname": "Dragon warriors",
-    "regno": "99240041038",
-    "name": "P. Yaswanth kumar"
-  },
-  {
-    "teamname": "Street coders",
-    "regno": "9924051056",
-    "name": "Yogesh P"
-  },
-  {
-    "teamname": "Street coders",
-    "regno": "9924008130",
-    "name": "Pradeep S N"
-  },
-  {
-    "teamname": "Street coders",
-    "regno": "9924008128",
-    "name": "Vishnu G"
-  },
-  {
-    "teamname": "Street coders",
-    "regno": "9924008135",
-    "name": "Prakash K"
-  },
-  {
-    "teamname": "TECHCODERS",
-    "regno": "99240040998",
-    "name": "katta harshvardhan"
-  },
-  {
-    "teamname": "TECHCODERS",
-    "regno": "99240041331",
-    "name": "kollapudi poorna chandra"
-  },
-  {
-    "teamname": "TECHCODERS",
-    "regno": "9924005291",
-    "name": "kollapudi pavan kalyan"
-  },
-  {
-    "teamname": "TECHCODERS",
-    "regno": "99240040416",
-    "name": "TADIBOINA AKHIL"
-  },
-  {
-    "teamname": "Kings",
-    "regno": "9924019065",
-    "name": "M.vasantha kumar"
-  },
-  {
-    "teamname": "Kings",
-    "regno": "9924019046",
-    "name": "S. Ramanathan"
-  },
-  {
-    "teamname": "Kings",
-    "regno": "9924019074",
-    "name": "P.mareeswaran"
-  },
-  {
-    "teamname": "Kings",
-    "regno": "9924019028",
-    "name": "M.kajini varman"
-  },
-  {
-    "teamname": "Nantha kuma.T",
-    "regno": "9925037010",
-    "name": "Nantha kumar.T"
-  },
-  {
-    "teamname": "Nantha kuma.T",
-    "regno": "9826037009",
-    "name": "RITIK ANAND"
-  },
-  {
-    "teamname": "Nantha kuma.T",
-    "regno": "9826037010",
-    "name": "Abhishek Kumar"
-  },
-  {
-    "teamname": "Nantha kuma.T",
-    "regno": "9925037006",
-    "name": "MADHUMEDHAN S D"
-  },
-  {
-    "teamname": "GAME OF THRONES",
-    "regno": "99240041242",
-    "name": "Ampolu Lakshmi Amarnadh"
-  },
-  {
-    "teamname": "GAME OF THRONES",
-    "regno": "99240041262",
-    "name": "Thummala Kumar Reddy"
-  },
-  {
-    "teamname": "GAME OF THRONES",
-    "regno": "99240041411",
-    "name": "Dokala Lokesh Venkata Jayanthi Naidu"
-  },
-  {
-    "teamname": "GAME OF THRONES",
-    "regno": "9924005455",
-    "name": "Kota Sai Prasad"
-  },
-  {
-    "teamname": "Blaze Force",
-    "regno": "9924005317",
-    "name": "MUTYALA VENKATA PRANAY"
-  },
-  {
-    "teamname": "Blaze Force",
-    "regno": "99240040288",
-    "name": "MUNAGAPATI SHANMUKHA SAI GANESH"
-  },
-  {
-    "teamname": "Blaze Force",
-    "regno": "9924005130",
-    "name": "A V PAVAN KALYAN"
-  },
-  {
-    "teamname": "Blaze Force",
-    "regno": "99240040176",
-    "name": "E HARSHA VARDHAN GOWD"
-  },
-  {
-    "teamname": "Avengers",
-    "regno": "9924017149",
-    "name": "VIGNESH WARAN R"
-  },
-  {
-    "teamname": "Avengers",
-    "regno": "9924017162",
-    "name": "MAHARAJA M"
-  },
-  {
-    "teamname": "Avengers",
-    "regno": "9924017087",
-    "name": "MUTHUPANDI. M"
-  },
-  {
-    "teamname": "Avengers",
-    "regno": "9924017157",
-    "name": "JANAKIRAMAN R"
-  },
-  {
-    "teamname": "Blind program",
-    "regno": "9924037004",
-    "name": "K. Namasiavayam"
-  },
-  {
-    "teamname": "Blind program",
-    "regno": "9924037001",
-    "name": "Aiden vinod"
-  },
-  {
-    "teamname": "Blind program",
-    "regno": "9924037006",
-    "name": "Solaman Shaji"
-  },
-  {
-    "teamname": "Blind program",
-    "regno": "9825037007",
-    "name": "Nithinkumar"
-  },
-  {
-    "teamname": "Sabhijeetcoding",
-    "regno": "9825037011",
-    "name": "ABHIJEET KUMAR"
-  },
-  {
-    "teamname": "Sabhijeetcoding",
-    "regno": "9825037004",
-    "name": "Akash Naik M"
-  },
-  {
-    "teamname": "Sabhijeetcoding",
-    "regno": "9825037010",
-    "name": "Sushmitha.L"
-  },
-  {
-    "teamname": "Sabhijeetcoding",
-    "regno": "9825037009",
-    "name": "Nandish Basayya Pujer"
-  },
-  {
-    "teamname": "Gold Diggers",
-    "regno": "99240040859",
-    "name": "C .MADHUSUDHAN REDDY"
-  },
-  {
-    "teamname": "Gold Diggers",
-    "regno": "9924005330",
-    "name": "O. KALYAN RAJU"
-  },
-  {
-    "teamname": "Gold Diggers",
-    "regno": "9924005251",
-    "name": "G. AJAY KUMAR"
-  },
-  {
-    "teamname": "Gold Diggers",
-    "regno": "9924005388",
-    "name": "B .BALA VIGNESH NAYAK"
-  },
-  {
-    "teamname": "Code Crushers",
-    "regno": "99240041274",
-    "name": "PEDDINENIKALVA GIRIDHAR REDDY"
-  },
-  {
-    "teamname": "Code Crushers",
-    "regno": "99240041273",
-    "name": "POLURI KRUSHITHA REDDY"
-  },
-  {
-    "teamname": "Code Crushers",
-    "regno": "99240041280",
-    "name": "DHANIYA CHRISTY J"
-  },
-  {
-    "teamname": "Code Crushers",
-    "regno": "9924008120",
-    "name": "SANJEEVI KUMAR S"
-  },
-  {
-    "teamname": "Team Alpha",
-    "regno": "99240040339",
-    "name": "P.Venkata karthik"
-  },
-  {
-    "teamname": "Team Alpha",
-    "regno": "99240041188",
-    "name": "Vennapusa rama venkata madhava reddy"
-  },
-  {
-    "teamname": "Team Alpha",
-    "regno": "99240040293",
-    "name": "Thangalla palli sai krishna reddy"
-  },
-  {
-    "teamname": "Team Alpha",
-    "regno": "99240040336",
-    "name": "Yerla nikhil kumar"
-  },
-  {
-    "teamname": "team titans",
-    "regno": "99240040383",
-    "name": "k siva charan"
-  },
-  {
-    "teamname": "team titans",
-    "regno": "99240040590",
-    "name": "vasa Akshaya harshini"
-  },
-  {
-    "teamname": "team titans",
-    "regno": "99240040384",
-    "name": "a haswitha"
-  },
-  {
-    "teamname": "team titans",
-    "regno": "99240040098",
-    "name": "y lakshmi durga"
-  },
-  {
-    "teamname": "Agri Optimals",
-    "regno": "99240040240",
-    "name": "Yammanuru Harish Reddy"
-  },
-  {
-    "teamname": "Agri Optimals",
-    "regno": "99240040161",
-    "name": "Sandeep Sanapala"
-  },
-  {
-    "teamname": "Agri Optimals",
-    "regno": "99240040160",
-    "name": "S Ramanadha Reddy"
-  },
-  {
-    "teamname": "Agri Optimals",
-    "regno": "99240040241",
-    "name": "H.K.MAHESH"
-  },
-  {
-    "teamname": "POWERPUFF GIRLS",
-    "regno": "9923005312",
-    "name": "M Jyoshitha"
-  },
-  {
-    "teamname": "POWERPUFF GIRLS",
-    "regno": "9923005251",
-    "name": "A Saniya reddy"
-  },
-  {
-    "teamname": "POWERPUFF GIRLS",
-    "regno": "9923005240",
-    "name": "P Jenika"
-  },
-  {
-    "teamname": "POWERPUFF GIRLS",
-    "regno": "9923005291",
-    "name": "S Vyshnavi"
-  },
-  {
-    "teamname": "Team Goat",
-    "regno": "99240041064",
-    "name": "Pathi Venkata Mahith Kumar"
-  },
-  {
-    "teamname": "Team Goat",
-    "regno": "99240041067",
-    "name": "Murakandi Kumarasree Chowdary"
-  },
-  {
-    "teamname": "Team Goat",
-    "regno": "99240041286",
-    "name": "Avula Akshith"
-  },
-  {
-    "teamname": "Team Goat",
-    "regno": "99240041054",
-    "name": "Mutyala Sivakrishna"
-  },
-  {
-    "teamname": "Infinity Loop",
-    "regno": "9923005064",
-    "name": "Bommidi Ganesh"
-  },
-  {
-    "teamname": "Infinity Loop",
-    "regno": "9923005055",
-    "name": "KATAMGARI PAVAN"
-  },
-  {
-    "teamname": "Infinity Loop",
-    "regno": "9923005176",
-    "name": "Munagala Prasanna Kumar"
-  },
-  {
-    "teamname": "Infinity Loop",
-    "regno": "9923009003",
-    "name": "Bandreddy Gangadhar"
-  },
-  {
-    "teamname": "SPIDERMAN",
-    "regno": "99240040213",
-    "name": "CHILIVERU HARSHITH"
-  },
-  {
-    "teamname": "SPIDERMAN",
-    "regno": "99240040885",
-    "name": "Velmala Mourya Raj"
-  },
-  {
-    "teamname": "SPIDERMAN",
-    "regno": "99240040187",
-    "name": "AMBU GOWTHAM REDDY"
-  },
-  {
-    "teamname": "SPIDERMAN",
-    "regno": "99240040003",
-    "name": "Abinaya Thendral M"
-  },
-  {
-    "teamname": "Paradise",
-    "regno": "99240041007",
-    "name": "P LIKITH RAJ"
-  },
-  {
-    "teamname": "Paradise",
-    "regno": "99240041127",
-    "name": "Posa Hemanth reddy"
-  },
-  {
-    "teamname": "Paradise",
-    "regno": "99240041116",
-    "name": "E Pradeep"
-  },
-  {
-    "teamname": "Paradise",
-    "regno": "99240041110",
-    "name": "Polepalli Mani Sree Chandu"
-  },
-  {
-    "teamname": "Code Rockers",
-    "regno": "9924017125",
-    "name": "Shankaranarayanan G"
-  },
-  {
-    "teamname": "Code Rockers",
-    "regno": "9924017028",
-    "name": "Boopathy Krishna P"
-  },
-  {
-    "teamname": "Code Rockers",
-    "regno": "9924017123",
-    "name": "Selva Athithan B J"
-  },
-  {
-    "teamname": "Code Rockers",
-    "regno": "9924017101",
-    "name": "Prabhakaran K"
-  },
-  {
-    "teamname": "Threatx",
-    "regno": "99240041275",
-    "name": "Padamati Sai Ganesh Yadav"
-  },
-  {
-    "teamname": "Threatx",
-    "regno": "99240041271",
-    "name": "Poluru vivek"
-  },
-  {
-    "teamname": "Threatx",
-    "regno": "99240041277",
-    "name": "Rayapudi naga sai Lakshmi Koushik"
-  },
-  {
-    "teamname": "Threatx",
-    "regno": "99240041261",
-    "name": "Tubbati Venkata Mohan Sairam"
-  },
-  {
-    "teamname": "Call of Titans",
-    "regno": "9923005006",
-    "name": "Besta Abhinav Krishna"
-  },
-  {
-    "teamname": "Call of Titans",
-    "regno": "9923005144",
-    "name": "V. Rajesh"
-  },
-  {
-    "teamname": "Call of Titans",
-    "regno": "9923005139",
-    "name": "V. Pavan"
-  },
-  {
-    "teamname": "Call of Titans",
-    "regno": "9923005314",
-    "name": "G. Ravi"
-  },
-  {
-    "teamname": "Team Warriors",
-    "regno": "9924018058",
-    "name": "Meganathan S"
-  },
-  {
-    "teamname": "Team Warriors",
-    "regno": "9924018083",
-    "name": "Sridhar T"
-  },
-  {
-    "teamname": "Team Warriors",
-    "regno": "9924018074",
-    "name": "Saran G"
-  },
-  {
-    "teamname": "Team Warriors",
-    "regno": "9924018064",
-    "name": "Pradeepan M"
-  },
-  {
-    "teamname": "PEDDI SIRRUU",
-    "regno": "9923005113",
-    "name": "P ABHISHEK"
-  },
-  {
-    "teamname": "PEDDI SIRRUU",
-    "regno": "9923005098",
-    "name": "K PAVAN KUMAR"
-  },
-  {
-    "teamname": "PEDDI SIRRUU",
-    "regno": "9923005021",
-    "name": "K NETHRA NANDU"
-  },
-  {
-    "teamname": "PEDDI SIRRUU",
-    "regno": "9824005005",
-    "name": "L SREE HARI"
-  },
-  {
-    "teamname": "OG",
-    "regno": "9923005244",
-    "name": "Kumar sashank"
-  },
-  {
-    "teamname": "OG",
-    "regno": "9923005093",
-    "name": "K.Hareesh"
-  },
-  {
-    "teamname": "OG",
-    "regno": "9923005118",
-    "name": "P .N.B.KARTHEEK"
-  },
-  {
-    "teamname": "OG",
-    "regno": "99230040546",
-    "name": "G SAINATH REDDY"
-  },
-  {
-    "teamname": "CYBER SQUIGGLES",
-    "regno": "99240041250",
-    "name": "SHAIK SALMAAN FARIS"
-  },
-  {
-    "teamname": "CYBER SQUIGGLES",
-    "regno": "99240041355",
-    "name": "LINGAREDDY GARI MAHESHWARA REDDY"
-  },
-  {
-    "teamname": "CYBER SQUIGGLES",
-    "regno": "99240041249",
-    "name": "MANDALA THANUJ KUMAR"
-  },
-  {
-    "teamname": "CYBER SQUIGGLES",
-    "regno": "99240040762",
-    "name": "SHAIK SALEEM"
-  },
-  {
-    "teamname": "team AAA",
-    "regno": "9924018011",
-    "name": "R Ariraman"
-  },
-  {
-    "teamname": "team AAA",
-    "regno": "9924018001",
-    "name": "Abishek a"
-  },
-  {
-    "teamname": "team AAA",
-    "regno": "9924018120",
-    "name": "m aathi vigenesh"
-  },
-  {
-    "teamname": "team AAA",
-    "regno": "9924018068",
-    "name": "ruba pradeep"
-  },
-  {
-    "teamname": "Water bottle",
-    "regno": "9925009070",
-    "name": "Jeyavarshini J"
-  },
-  {
-    "teamname": "Water bottle",
-    "regno": "9925151054",
-    "name": "HARSHINI S"
-  },
-  {
-    "teamname": "Water bottle",
-    "regno": "9925009023",
-    "name": "Lanzo Silva"
-  },
-  {
-    "teamname": "Water bottle",
-    "regno": "9925008074",
-    "name": "Bharath R"
+    "teamNumber": 34,
+    "teamName": "KRAG",
+    "problemStatement": {
+      "number": "WO-037",
+      "title": "Security Log Anomaly Filtering Engine"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "KRISH R",
+        "college": "KALASALINGAM ACADEMY OF RESEARCH AND EDUCATION",
+        "euphoriaId": "EUPH-26-331275",
+        "email": "9925051027@klu.ac.in",
+        "contactNumber": "9626686003"
+      },
+      {
+        "memberNumber": 2,
+        "name": "GANESH KUMAR B",
+        "college": "KALASALINGAM ACADEMY OF RESEARCH AND EDUCATION",
+        "euphoriaId": "EUPH-26-933B46"
+      },
+      {
+        "memberNumber": 3,
+        "name": "RATHINAGIRI N",
+        "college": "KALASALINGAM ACADEMY OF RESEARCH AND EDUCATION",
+        "euphoriaId": "EUPH-26-17D9AA"
+      },
+      {
+        "memberNumber": 4,
+        "name": "NISWAN S",
+        "college": "KALASALINGAM ACADEMY OF RESEARCH AND EDUCATION",
+        "euphoriaId": "EUPH-26-B0C71E"
+      },
+      {
+        "memberNumber": 5,
+        "name": "AJAY CHIDAMBARAM S",
+        "college": "KALASALINGAM ACADEMY OF RESEARCH AND EDUCATION",
+        "euphoriaId": "EUPH-26-9DB278"
+      }
+    ]
+  },
+  {
+    "teamNumber": 13,
+    "teamName": "CodeNova",
+    "problemStatement": {
+      "number": "WO-053",
+      "title": "CSRF & CORS Misconfiguration Detector"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Abinaya M",
+        "college": "Ramco Institute of Technology",
+        "euphoriaId": "EUPH-26-E9B78C",
+        "email": "abinaya3489@gmail.com",
+        "contactNumber": "7358437708"
+      },
+      {
+        "memberNumber": 2,
+        "name": "P Dharshini",
+        "college": "Ramco Institute of Technology",
+        "euphoriaId": "EUPH-26-149ABC"
+      }
+    ]
+  },
+  {
+    "teamNumber": 47,
+    "teamName": "ASTRYX",
+    "problemStatement": {
+      "number": "WO-070",
+      "title": "Collaborative Educational Escape Room"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "JANARTHANAN R",
+        "college": "NANDHA ENGINEERING COLLEGE",
+        "euphoriaId": "EUPH-26-469806",
+        "email": "jana16112024@gmail.com",
+        "contactNumber": "9384163713"
+      },
+      {
+        "memberNumber": 2,
+        "name": "FARVAESH MUSHRAF M",
+        "college": "NANDHA ENGINEERING COLLEGE",
+        "euphoriaId": "EUPH-26-0CBF71"
+      },
+      {
+        "memberNumber": 3,
+        "name": "JEEVITHA S",
+        "college": "NANDHA ENGINEERING COLLEGE",
+        "euphoriaId": "EUPH-26-9E34CB"
+      },
+      {
+        "memberNumber": 4,
+        "name": "PRANITHA C",
+        "college": "NANDHA ENGINEERING COLLEGE",
+        "euphoriaId": "EUPH-26-A1A5A3"
+      },
+      {
+        "memberNumber": 5,
+        "name": "PRADEEPA M",
+        "college": "NANDHA ENGINEERING COLLEGE",
+        "euphoriaId": "EUPH-26-C684A8"
+      }
+    ]
+  },
+  {
+    "teamNumber": 87,
+    "teamName": "Team Thunder",
+    "problemStatement": {
+      "number": "WO-002",
+      "title": "Semantic Code Search and Dependency Mapper"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Shridar V",
+        "college": "M.KUMARASAMY COLLEGE OF ENGINEERING",
+        "euphoriaId": "EUPH-26-7AF3AD",
+        "email": "shridar325@gmail.com",
+        "contactNumber": "6369134496"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Santhosh Kumar S",
+        "college": "M.KUMARASAMY COLLEGE OF ENGINEERING",
+        "euphoriaId": "EUPH-26-1762B2"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Poovendhiran V",
+        "college": "M.KUMARASAMY COLLEGE OF ENGINEERING",
+        "euphoriaId": "EUPH-26-EAED5A"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Navaneethan T",
+        "college": "M.KUMARASAMY COLLEGE OF ENGINEERING",
+        "euphoriaId": "EUPH-26-441C32"
+      },
+      {
+        "memberNumber": 5,
+        "name": "Naveen Raj R",
+        "college": "M.KUMARASAMY COLLEGE OF ENGINEERING",
+        "euphoriaId": "EUPH-26-18BAA6"
+      }
+    ]
+  },
+  {
+    "teamNumber": 15,
+    "teamName": "Tech sparks",
+    "problemStatement": {
+      "number": "WO- 102",
+      "title": "Generative ui layout builder"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "P.akshay",
+        "college": "Kalasalingam university",
+        "euphoriaId": "EUPH-26-B1C870",
+        "email": "99250040532@klu.ac.in",
+        "contactNumber": "6309047076"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Katta Nitish Kumar",
+        "college": "Kalasalingam university",
+        "euphoriaId": "EUPH-26-590E69"
+      },
+      {
+        "memberNumber": 3,
+        "name": "P.yaswanth",
+        "college": "Kalasalingam university",
+        "euphoriaId": "EUPH-26-390C0F"
+      },
+      {
+        "memberNumber": 4,
+        "name": "AMADASANI HARI",
+        "college": "Kalasalingam university",
+        "euphoriaId": "EUPH - 26 - 5CF792"
+      }
+    ]
+  },
+  {
+    "teamNumber": 54,
+    "teamName": "Ethasphere",
+    "problemStatement": {
+      "number": "WO-104",
+      "title": "EV Charging Grid Load Balancer"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Yuvan Mathesh M",
+        "college": "Erode Sengunthar Engineering College",
+        "euphoriaId": "EUPH-26-787DEE",
+        "email": "yuvanmathesh12@gmail.com",
+        "contactNumber": "7904555314"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Dhanush S",
+        "college": "Erode Sengunthar Engineering College",
+        "euphoriaId": "EUPH-26-2337AB"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Mohammed Ansar A",
+        "college": "Erode Sengunthar Engineering College",
+        "euphoriaId": "EUPH-26-B00E85"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Sharvani K",
+        "college": "Erode Sengunthar Engineering College",
+        "euphoriaId": "EUPH-26-25368D"
+      },
+      {
+        "memberNumber": 5,
+        "name": "Pavatharini S",
+        "college": "Erode Sengunthar Engineering College",
+        "euphoriaId": "EUPH-26-CCC7EA"
+      }
+    ]
+  },
+  {
+    "teamNumber": 78,
+    "teamName": "Tech Nova",
+    "problemStatement": {
+      "number": "W-075",
+      "title": "QUANTUM-ENHANCED FEATURE SELECTION FOR THREAT DETECTION"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "KANNIMATHA V",
+        "college": "VELAMMAL COLLEGE OF ENGINEERING AND TECHNOLOGY",
+        "euphoriaId": "EUPH-26-C4062F",
+        "email": "kannimatha2@gmail.com",
+        "contactNumber": "9150127424"
+      },
+      {
+        "memberNumber": 2,
+        "name": "P.POOJA",
+        "college": "VELAMMAL COLLEGE OF ENGINEERING AND TECHNOLOGY MADURAI",
+        "euphoriaId": "EUPH-26-62EC52"
+      },
+      {
+        "memberNumber": 3,
+        "name": "TAMILSELVAN G",
+        "college": "SETHU INSTITUTE OF TECHNOLOGY",
+        "euphoriaId": "EUPH-26-135857"
+      }
+    ]
+  },
+  {
+    "teamNumber": 96,
+    "teamName": "Cognivex",
+    "problemStatement": {
+      "number": "WO-085",
+      "title": "AI Resume & Skill Development Coach"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "THILAK K",
+        "college": "Bannari Amman Institute of Technology",
+        "euphoriaId": "EUPH-26-1D08E1",
+        "email": "thilak.ad23@bitsathy.ac.in",
+        "contactNumber": "9787534585"
+      },
+      {
+        "memberNumber": 2,
+        "name": "VISHAL M",
+        "college": "Bannari Amman Institute of Technology",
+        "euphoriaId": "EUPH-26-73C4CF"
+      },
+      {
+        "memberNumber": 3,
+        "name": "KANISH S",
+        "college": "Bannari Amman Institute of Technology",
+        "euphoriaId": "EUPH-26-0252E8"
+      }
+    ]
+  },
+  {
+    "teamNumber": 77,
+    "teamName": "Hexriot",
+    "problemStatement": {
+      "number": "WO-001",
+      "title": "Automated Public Health Sanitation Alerting"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "SANTHOSH C",
+        "college": "ERODE SENGUNTHAR ENGINEERING COLLEGE",
+        "euphoriaId": "EUPH-26-3F436E",
+        "email": "c.santhoshsanthosh2730@gmail.com",
+        "contactNumber": "9345680980"
+      },
+      {
+        "memberNumber": 2,
+        "name": "GURUPRASATH A",
+        "college": "ERODE SENGUNTHAR ENGINEERING COLLEGE",
+        "euphoriaId": "EUPH-26-BC56FA"
+      },
+      {
+        "memberNumber": 3,
+        "name": "RAMYA P",
+        "college": "ERODE SENGUNTHAR ENGINEERING COLLEGE",
+        "euphoriaId": "EUPH-26-45323B"
+      },
+      {
+        "memberNumber": 4,
+        "name": "SUDHARSHAN S",
+        "college": "ERODE SENGUNTHAR ENGINEERING COLLEGE",
+        "euphoriaId": "EUPH-26-0B8904"
+      }
+    ]
+  },
+  {
+    "teamNumber": 55,
+    "teamName": "Gladiator",
+    "problemStatement": {
+      "number": "W0-012",
+      "title": "Quantum Random Number Generator Entropy"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Ashin R",
+        "college": "St.xavier's catholic college of engineering Nagercoil",
+        "euphoriaId": "EUPH-26-607CAO",
+        "email": "ashin.902431@sxcce.edu.in",
+        "contactNumber": "6374161566"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Anushek R.K",
+        "college": "St.xavier's catholic college of engineering",
+        "euphoriaId": "EUPH-26-0C9207"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Akhash A",
+        "college": "St.xavier's catholic college of engineering",
+        "euphoriaId": "EUPH-26-8565BF"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Aravind R",
+        "college": "St.xavier's catholic college of engineering",
+        "euphoriaId": "EUPH-26-876760"
+      },
+      {
+        "memberNumber": 5,
+        "name": "Astlin Dijo D",
+        "college": "St.xavier's catholic college of engineering",
+        "euphoriaId": "EUPH-26-76327B"
+      }
+    ]
+  },
+  {
+    "teamNumber": 5,
+    "teamName": "5Star",
+    "problemStatement": {
+      "number": "WO-087",
+      "title": "The same topic,five different students"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Sam sundar j",
+        "college": "M.kumarasamy college of engineering",
+        "euphoriaId": "EUPH-26-D1704C",
+        "email": "j.samsundhar2007@gmail.com",
+        "contactNumber": "6380217243"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Sathish v",
+        "college": "M.kumarasamy College of engineering",
+        "euphoriaId": "EUPH-26-98C825"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Sasitharan s",
+        "college": "m.kumarasamy college of engineering",
+        "euphoriaId": "EUPH-26-E08E54"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Saran k",
+        "college": "M.kumarasamy college of engineering",
+        "euphoriaId": "EUPH-26-8AFD80"
+      },
+      {
+        "memberNumber": 5,
+        "name": "Pranav p",
+        "college": "M kumarswamy college of engineering",
+        "euphoriaId": "EUPH-26-70EFA1"
+      }
+    ]
+  },
+  {
+    "teamNumber": 29,
+    "teamName": "Catalyst",
+    "problemStatement": {
+      "number": "WO-076",
+      "title": "Quantum-Assisted Portfolio Optimization"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Kamalesh",
+        "college": "Thiagarajar college of engineering, madurai",
+        "euphoriaId": "EUPH-26-F6DE6C",
+        "email": "skamalesh1@student.tce.edu",
+        "contactNumber": "9344945378"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Aashik H",
+        "college": "Thiagarajar college of engineering,  madurai",
+        "euphoriaId": "EUPH-26-D9642D"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Shahana Chidambarakumar C",
+        "college": "Thiagarajar college of engineering,  madurai",
+        "euphoriaId": "EUPH-26-F53295"
+      }
+    ]
+  },
+  {
+    "teamNumber": 14,
+    "teamName": "Kryptos 97",
+    "problemStatement": {
+      "number": "WO-050",
+      "title": "AI Lesson Planner with Student Performance Integration"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Jamal Khan I",
+        "college": "Kalasalingam Academy of Research and Education",
+        "euphoriaId": "EUPH-26-F62E9E",
+        "email": "99250040297@klu.ac.in",
+        "contactNumber": "8124547437"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Ajmal Khan I",
+        "college": "Kalasalingam Academy of Research and Education",
+        "euphoriaId": "EUPH-26-560370"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Harish Aravinth B S S",
+        "college": "Kalasalingam Academy of Research and Education",
+        "euphoriaId": "EUPH-26-EF140E"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Jassir J A",
+        "college": "Kalasalingam Academy of Research and Education",
+        "euphoriaId": "EUPH-26-C2BD06"
+      },
+      {
+        "memberNumber": 5,
+        "name": "Leonard Joegan A",
+        "college": "Kalasalingam Academy of Research and Education",
+        "euphoriaId": "EUPH-26-3F5BAD"
+      }
+    ]
+  },
+  {
+    "teamNumber": 59,
+    "teamName": "NovaNerds",
+    "problemStatement": {
+      "number": "WO-019",
+      "title": "Automated Heat-Island Mitigation Control ."
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "K.Muthunivethitha",
+        "college": "AAA College of Engineering and Technology",
+        "euphoriaId": "EUPH-26-29D7EB",
+        "email": "muthunivethitha61@gmail.com",
+        "contactNumber": "6374506386"
+      },
+      {
+        "memberNumber": 2,
+        "name": "S.Muthu Nandhini",
+        "college": "AAA College of Engineering and Technology",
+        "euphoriaId": "EUPH-26-2F4442"
+      },
+      {
+        "memberNumber": 3,
+        "name": "V.Muneeswari",
+        "college": "AAA College of Engineering and Technology",
+        "euphoriaId": "EUPH-26-D67EF0"
+      },
+      {
+        "memberNumber": 4,
+        "name": "M.Mano Prabha",
+        "college": "AAA College of Engineering and Technology",
+        "euphoriaId": "EUPH-26-1AAD6F"
+      },
+      {
+        "memberNumber": 5,
+        "name": "M.Jayasree",
+        "college": "AAA College of Engineering and Technology",
+        "euphoriaId": "EUPH-26-EC1816"
+      }
+    ]
+  },
+  {
+    "teamNumber": 3,
+    "teamName": "Quantum Forge",
+    "problemStatement": {
+      "number": "WO-083",
+      "title": "Software Supply Chain Dependency Risk Analyzer"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "S.PON SWETHA",
+        "college": "AAA COLLEGE OF ENGINEERING AND TECHNOLOGY",
+        "euphoriaId": "EUPH-26-8F1C8F",
+        "email": "ponswethas9@gmail.com",
+        "contactNumber": "8248528117"
+      },
+      {
+        "memberNumber": 2,
+        "name": "P.MUTHU SHARMITHA",
+        "college": "AAA COLLEGE OF ENGINEERING AND TECHNOLOGY",
+        "euphoriaId": "EUPH-26-AB7AB4"
+      },
+      {
+        "memberNumber": 3,
+        "name": "M.ILAKKIYA",
+        "college": "AAA COLLEGE OF ENGINEERING AND TECHNOLOGY",
+        "euphoriaId": "EUPH-26-B0D416"
+      },
+      {
+        "memberNumber": 4,
+        "name": "M.KASI GURULAKSHMI",
+        "college": "AAA COLLEGE OF ENGINEERING AND TECHNOLOGY",
+        "euphoriaId": "EUPH-26-E41EE7"
+      },
+      {
+        "memberNumber": 5,
+        "name": "M.KAVIYA DHARSHINI",
+        "college": "AAA COLLEGE OF ENGINEERING AND TECHNOLOGY",
+        "euphoriaId": "EUPH-26-FB12E8"
+      }
+    ]
+  },
+  {
+    "teamNumber": 10,
+    "teamName": "Tech Hunters",
+    "problemStatement": {
+      "number": "WO-041",
+      "title": "Smart Assignment & Automated Feedback Platform"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "KAVINBOOBESH G",
+        "college": "Ramco Institute Of Technology",
+        "euphoriaId": "EUPH-26-CD8BC4",
+        "email": "kavinbooo@gmail.com",
+        "contactNumber": "6374703854"
+      },
+      {
+        "memberNumber": 2,
+        "name": "N.Reguram",
+        "college": "Ramco Institute of technology",
+        "euphoriaId": "EUPH-26-A25033"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Jeyaprakash M",
+        "college": "Ramco Institute of Technology",
+        "euphoriaId": "EUPH-26-D4717F"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Siva G",
+        "college": "Ramco Institute of Technology",
+        "euphoriaId": "EUPH-26-62B817"
+      },
+      {
+        "memberNumber": 5,
+        "name": "Santhaana Vignesh G.S.G",
+        "college": "Ramco Institute of Technology",
+        "euphoriaId": "EUPH-26-1554D5"
+      }
+    ]
+  },
+  {
+    "teamNumber": 36,
+    "teamName": "Team Kandoz",
+    "problemStatement": {
+      "number": "90",
+      "title": "Quantum Kernel Estimation for image classification"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Thiru Balaji S",
+        "college": "SNS College Of Technology",
+        "euphoriaId": "EUPH - 26 - 74F21B",
+        "email": "thirubalaji2005abc@gmail.com",
+        "contactNumber": "8015524894"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Infant T",
+        "college": "Vel Tech High Tech dr rangarajan dr sakunthala engineering college",
+        "euphoriaId": "EUPH - 26 - 4F12FF"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Dalwin R",
+        "college": "Government Engineering College srirangam",
+        "euphoriaId": "EUPH - 26 - 1A74E0"
+      }
+    ]
+  },
+  {
+    "teamNumber": 102,
+    "teamName": "Veridyn",
+    "problemStatement": {
+      "number": "WO-099",
+      "title": "Synthetic Bug Repro Tool"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Arun Sandosh Subramaniam S S",
+        "college": "VSB College of Engineering Technical Campus",
+        "euphoriaId": "EUPH-26-CB08C2",
+        "email": "arunsandosh03@gmail.com",
+        "contactNumber": "8884884587"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Dinesh Kumar D",
+        "college": "VSB College of Engineering Technical Campus",
+        "euphoriaId": "EUPH-26-0EE73A"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Aswak Hussain A",
+        "college": "VSB College of Engineering Technical Campus",
+        "euphoriaId": "EUPH-26-8D60FF"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Abdul Basith Rahman K",
+        "college": "VSB College of Engineering Technical Campus",
+        "euphoriaId": "EUPH-26-52C639"
+      },
+      {
+        "memberNumber": 5,
+        "name": "Ashwin S",
+        "college": "VSB College of Engineering Technical Campus",
+        "euphoriaId": "EUPH-26-0F152C"
+      }
+    ]
+  },
+  {
+    "teamNumber": 100,
+    "teamName": "SUPERNOVA",
+    "problemStatement": {
+      "number": "WO-016",
+      "title": "Parameter  Encroachment Detection for Public Utilities"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "G.Karthikeyan",
+        "college": "S veerasamy Chettiar college of engineering and technology , puliyangudi",
+        "euphoriaId": "EUPH-26-31B106",
+        "email": "karthikeyan08042006@gmail.com",
+        "contactNumber": "7010772505"
+      },
+      {
+        "memberNumber": 2,
+        "name": "K Vana marish",
+        "college": "S.Veerasamy Chettiar college of engineering and technology",
+        "euphoriaId": "EUPH-26-31B106"
+      },
+      {
+        "memberNumber": 3,
+        "name": "C.Sugan",
+        "college": "S.Veerasamy Chettiar college of engineering and Technology",
+        "euphoriaId": "EUPH-26-31B106"
+      },
+      {
+        "memberNumber": 4,
+        "name": "A.Prakash",
+        "college": "S.Veerasamy Chettiar college of engineering and Technology",
+        "euphoriaId": "EUPH-26-31B106"
+      },
+      {
+        "memberNumber": 5,
+        "name": "G.Abishek",
+        "college": "S.Veerasamy Chettiar college of engineering and Technology",
+        "euphoriaId": "EUPH-26-31B106"
+      }
+    ]
+  },
+  {
+    "teamNumber": 44,
+    "teamName": "Team Caishen",
+    "problemStatement": {
+      "number": "WQ-032",
+      "title": "Virtual laboratory simulation platform"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Dattatreya M K",
+        "college": "Mepco schlenk engineering college",
+        "euphoriaId": "EUPH-26-5BC7FA",
+        "email": "mkannankannanmkannan@gmail.com",
+        "contactNumber": "6369116359"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Kaushik N R",
+        "college": "Mepco schlenk engineering college",
+        "euphoriaId": "EUPH-26-DE6E51"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Karikolraj G",
+        "college": "Mepco schlenk engineering college",
+        "euphoriaId": "EUPH-26-8735EC"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Soorya Sankar R",
+        "college": "Mepco schlenk engineering college",
+        "euphoriaId": "EUPH-26-E481F7"
+      }
+    ]
+  },
+  {
+    "teamNumber": 81,
+    "teamName": "MIND MATRIX",
+    "problemStatement": {
+      "number": "WO-077",
+      "title": "University talent intelligent platform"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "PONVANNAN M",
+        "college": "SRM MADURAI COLLEGE FOR ENGENEERING AND TECHNOLOGY",
+        "euphoriaId": "EUPH-26-896A0F",
+        "email": "ponvannan.m2325@gmail.com",
+        "contactNumber": "8608612325"
+      },
+      {
+        "memberNumber": 2,
+        "name": "MOUNESH M",
+        "college": "SRM MADURAI COLLEGE FOR ENGENEERING AND TECHNOLOGY",
+        "euphoriaId": "EUPH-26-4A00F0"
+      },
+      {
+        "memberNumber": 3,
+        "name": "POOJA SHREE M",
+        "college": "SRM MADURAI COLLEGE FOR ENGENEERING AND TECHNOLOGY",
+        "euphoriaId": "EUPH-26-84ABE5"
+      },
+      {
+        "memberNumber": 4,
+        "name": "YUTHICA S",
+        "college": "SRM  MADURAI COLLEGE FOR ENGENEERING AND TECHNOLOGY",
+        "euphoriaId": "EUPH-26-B4C43C"
+      },
+      {
+        "memberNumber": 5,
+        "name": "OLIVIA GRACE S",
+        "college": "SRM MADURAI COLLEGE FOR ENGENEERING AND TECHNOLOGY",
+        "euphoriaId": "EUPH-26-9C06C7"
+      }
+    ]
+  },
+  {
+    "teamNumber": 39,
+    "teamName": "TechNova",
+    "problemStatement": {
+      "number": "WO-093",
+      "title": "LLM-Based intelligent document anonymizer"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "A.Evanjali",
+        "college": "P.S.R. Engineering College",
+        "euphoriaId": "EUPH-26-E81659",
+        "email": "evan.edu107@gmail.com",
+        "contactNumber": "8056342997"
+      },
+      {
+        "memberNumber": 2,
+        "name": "A.Dharshinika",
+        "college": "P.S.R.Engineering College",
+        "euphoriaId": "EUPH-26-ODCCFF"
+      },
+      {
+        "memberNumber": 3,
+        "name": "P.Kalaiarasi",
+        "college": "P.S.R. Engineering College",
+        "euphoriaId": "EUPH-26-B06FFC"
+      },
+      {
+        "memberNumber": 4,
+        "name": "S.Gayathri",
+        "college": "P.S.R.Engineering College",
+        "euphoriaId": "EUPH-26-6AC046"
+      },
+      {
+        "memberNumber": 5,
+        "name": "R.Dharshini",
+        "college": "P.S.R.Engineering College",
+        "euphoriaId": "EUPH26-FLAG-MUCYLTOO-85ZI"
+      }
+    ]
+  },
+  {
+    "teamNumber": 105,
+    "teamName": "TechNova",
+    "problemStatement": {
+      "number": "WO-142",
+      "title": "Quantum circuit Noise Mitigation Tool"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "P.Nagalakshmi",
+        "college": "PSR Engineering College",
+        "euphoriaId": "D64134",
+        "email": "nagalakshmimari07@gmail.com",
+        "contactNumber": "9790742055"
+      },
+      {
+        "memberNumber": 2,
+        "name": "K.Beula Paranjothi",
+        "college": "PSR Engineering College",
+        "euphoriaId": "91B808"
+      },
+      {
+        "memberNumber": 3,
+        "name": "M.Karthika",
+        "college": "PSR Engineering College",
+        "euphoriaId": "6E9DD4"
+      },
+      {
+        "memberNumber": 4,
+        "name": "R.Breeze Sharan Rose",
+        "college": "PSR Engineering College",
+        "euphoriaId": "DF5C75"
+      },
+      {
+        "memberNumber": 5,
+        "name": "K.Divya",
+        "college": "PSR Engineering College",
+        "euphoriaId": "E2DAB8"
+      }
+    ]
+  },
+  {
+    "teamNumber": 79,
+    "teamName": "USELESS ENGINEERS",
+    "problemStatement": {
+      "number": "WO-059",
+      "title": "QUANTUM SENSORS DATA DENOISING ENGINE"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "DARSHAN K",
+        "college": "M.Kumarasamy college of engineering",
+        "euphoriaId": "EUPH-26-DCEA07",
+        "email": "darshankannan@gmail.com",
+        "contactNumber": "8754379559"
+      },
+      {
+        "memberNumber": 2,
+        "name": "JOSHUA L",
+        "college": "M.Kumarasamy college of engineering",
+        "euphoriaId": "EUPH-26-C75B2D"
+      },
+      {
+        "memberNumber": 3,
+        "name": "BATHIRINATH S S",
+        "college": "M.Kumarasamy college of engineering",
+        "euphoriaId": "EUPH-26-C7C608"
+      },
+      {
+        "memberNumber": 4,
+        "name": "ELANGO M",
+        "college": "M.Kumarasamy college of engineering",
+        "euphoriaId": "EUPH-26-F51DBF"
+      }
+    ]
+  },
+  {
+    "teamNumber": 70,
+    "teamName": "Runtime Terrors",
+    "problemStatement": {
+      "number": "WO-026",
+      "title": "Commercial Fleet Idle-Time Monitoring"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "NITHISH R",
+        "college": "M.Kumarasamy College of Engineering",
+        "euphoriaId": "EUPH-26-02BBDA",
+        "email": "grnithish07@gmail.com",
+        "contactNumber": "9487776225"
+      },
+      {
+        "memberNumber": 2,
+        "name": "KIRUBATH S",
+        "college": "M.Kumarasamy College of Engineering",
+        "euphoriaId": "EUPH-26-7D28A0"
+      },
+      {
+        "memberNumber": 3,
+        "name": "MOHIT S",
+        "college": "M.Kumarasamy College Of Engineering",
+        "euphoriaId": "EUPH-26-E791F7"
+      }
+    ]
+  },
+  {
+    "teamNumber": 46,
+    "teamName": "Ignite",
+    "problemStatement": {
+      "number": "W0-036",
+      "title": "AI Powered Excel Data Analyst"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "SUBIKSHA LAKSHMI",
+        "college": "P.S.R.R College of Engineering",
+        "euphoriaId": "EUPH-26-A587D5",
+        "email": "iamsubikshalakshmi@gmail.com",
+        "contactNumber": "7550397115"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Seenivasan",
+        "college": "Hindustan Arts and Science",
+        "euphoriaId": "EUPH-26-5CBF95"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Mahalakshmi",
+        "college": "Government College of Engineering Srirangam",
+        "euphoriaId": "EUPH-26-D6D897"
+      }
+    ]
+  },
+  {
+    "teamNumber": 98,
+    "teamName": "IdeaX",
+    "problemStatement": {
+      "number": "WO-073",
+      "title": "Quantum key Distribution Network Simulator"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "D.PAVITHRA",
+        "college": "P. S. R ENGINEERING COLLEGE",
+        "euphoriaId": "EUPH -26-390D5E",
+        "email": "dpavithra134@gmail.com",
+        "contactNumber": "9629989811"
+      },
+      {
+        "memberNumber": 2,
+        "name": "K. SARANYA",
+        "college": "P. S. R ENGINEERING COLLEGE",
+        "euphoriaId": "EUPH -26 - 852995"
+      },
+      {
+        "memberNumber": 3,
+        "name": "S. S. BALA ASUMATHI",
+        "college": "P. S. R ENGINEERING COLLEGE",
+        "euphoriaId": "EUPH -26-75CC4F"
+      },
+      {
+        "memberNumber": 4,
+        "name": "P. ARI SUDHA",
+        "college": "P. S. R ENGINEERING COLLEGE",
+        "euphoriaId": "EUPH -26-E2444F"
+      }
+    ]
+  },
+  {
+    "teamNumber": 66,
+    "teamName": "INNOVATE X",
+    "problemStatement": {
+      "number": "WO-064",
+      "title": "DNS TUNNELING & DATA EXFILTRATION DETECTOR"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "MOHAN RAJ N",
+        "college": "Mepco Schlenk Engineering College",
+        "euphoriaId": "EUPH-26-7FB710",
+        "email": "aathielak2020@gmail.com",
+        "contactNumber": "9360267598"
+      },
+      {
+        "memberNumber": 2,
+        "name": "ELAKKIYAN T",
+        "college": "Mepco Schlenk Engineering College",
+        "euphoriaId": "EUPH-26-4A487C"
+      },
+      {
+        "memberNumber": 3,
+        "name": "DINESH KUMAR K",
+        "college": "Mepco Schlenk Engineering College",
+        "euphoriaId": "EUPH-26-536086"
+      },
+      {
+        "memberNumber": 4,
+        "name": "KESAVAN G",
+        "college": "Mepco Schlenk Engineering College",
+        "euphoriaId": "EUPH-26-9FB08E"
+      }
+    ]
+  },
+  {
+    "teamNumber": 35,
+    "teamName": "Team Hackbreakers",
+    "problemStatement": {
+      "number": "WO-040",
+      "title": "What if ? - AI Counterfactual Learning"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "PRIYASHALINI J",
+        "college": "AAA college of engineering and technology",
+        "euphoriaId": "EUPH-26-2D686D",
+        "email": "shalini06chandran@gmail.com",
+        "contactNumber": "9384720656"
+      },
+      {
+        "memberNumber": 2,
+        "name": "ABARNA V",
+        "college": "AAA college of engineering and technology",
+        "euphoriaId": "EUPH-26-0167D3"
+      },
+      {
+        "memberNumber": 3,
+        "name": "SAABIHA BANU R",
+        "college": "AAA college of engineering and technology",
+        "euphoriaId": "EUPH-26-CA8E1F"
+      },
+      {
+        "memberNumber": 4,
+        "name": "SOUNDARYA V",
+        "college": "AAA college of Engineering and Technology",
+        "euphoriaId": "EUPH-26-551349"
+      },
+      {
+        "memberNumber": 5,
+        "name": "MANOJ KUMAR S",
+        "college": "AAA college of Engineering and Technology",
+        "euphoriaId": "EUPH-26-9B18DF"
+      }
+    ]
+  },
+  {
+    "teamNumber": 43,
+    "teamName": "Runtime Error",
+    "problemStatement": {
+      "number": "WO-035",
+      "title": "Automated CI/CD Secret Leakage Prevention Engine"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Ayush Kumar Satyam",
+        "college": "Kalasalingam Academy of Research and Education",
+        "euphoriaId": "EUPH-26-12C04A",
+        "email": "99250040076@klu.ac.in",
+        "contactNumber": "7004312624"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Lakshay Bhomia",
+        "college": "Kalasalingam Academy of Research and Education",
+        "euphoriaId": "EUPH-26-9D7116"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Bandi Chakradhar Reddy",
+        "college": "Kalasalingam Academy of Research and Education",
+        "euphoriaId": "EUPH-26-450C16"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Lalit Kumar Pandit",
+        "college": "Kalasalingam Academy of Research and Education",
+        "euphoriaId": "EUPH-26-5D5EC5"
+      },
+      {
+        "memberNumber": 5,
+        "name": "Zamanullah Shaikh",
+        "college": "Kalasalingam Academy of Research and Education",
+        "euphoriaId": "EUPH-26-363D4B"
+      }
+    ]
+  },
+  {
+    "teamNumber": 19,
+    "teamName": "Straw hats",
+    "problemStatement": {
+      "number": "WO-021",
+      "title": "Quantum Entanglement Based Intrusion Detection visualizer"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Vijaya Dharshini K",
+        "college": "Ramco institute of technology",
+        "euphoriaId": "EUPH-26-FCCA3D",
+        "email": "953624244060@ritrjpm.ac.in",
+        "contactNumber": "9500726202"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Cheguvera VS",
+        "college": "Ramco institute of technology",
+        "euphoriaId": "EUPH-26-421390"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Rohini P",
+        "college": "Ramco institute of technology",
+        "euphoriaId": "EUPH-26-BBACB6"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Muthumari M",
+        "college": "Ramco institute of technology",
+        "euphoriaId": "EUPH-26-CA2176"
+      }
+    ]
+  },
+  {
+    "teamNumber": 76,
+    "teamName": "Team Legends",
+    "problemStatement": {
+      "number": "WO-015",
+      "title": "Quantum SVM for Credit Risk Assessment"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "SIMSON A",
+        "college": "Kamaraj college of engineering and technology",
+        "euphoriaId": "EUPH-26-3AB7FD",
+        "email": "simsonebi0803@gmail.com",
+        "contactNumber": "9360087284"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Ajay Rathinam R.M",
+        "college": "Kalasalingam academy of research and education",
+        "euphoriaId": "EUPH-26-4B4A1B"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Dharun Pandi J",
+        "college": "Kamaraj college of engineering and technology",
+        "euphoriaId": "EUPH-26-908856"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Kanishk raja durai J",
+        "college": "Kamaraj college of engineering and technology",
+        "euphoriaId": "EUPH-26-4E901D"
+      },
+      {
+        "memberNumber": 5,
+        "name": "Bala guru baran S",
+        "college": "Kalasalingam academy of research and education",
+        "euphoriaId": "EUPH-26-7D5D04"
+      }
+    ]
+  },
+  {
+    "teamNumber": 101,
+    "teamName": "INNOVATE CRUSADERS",
+    "problemStatement": {
+      "number": "WO-066",
+      "title": "Precision Urban Air Quality Mapping"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "SARANYA K",
+        "college": "BANNARI AMMAN INSTITUTE OF TECHNOLOGY",
+        "euphoriaId": "EUPH-26-4E6C7A",
+        "email": "saranya.ad23@bitsathy.ac.in",
+        "contactNumber": "9344988625"
+      },
+      {
+        "memberNumber": 2,
+        "name": "SHRI SHETHRA R",
+        "college": "BANNARI AMMAN INSTITUTE OF TECHNOLOGY",
+        "euphoriaId": "EUPH-26-DB4CB0"
+      },
+      {
+        "memberNumber": 3,
+        "name": "KARUNAKARAN N",
+        "college": "BANNARI AMMAN INSTITUTE OF TECHNOLOGY",
+        "euphoriaId": "EUPH-26-CB4F58"
+      },
+      {
+        "memberNumber": 4,
+        "name": "KAMATCHI A",
+        "college": "BANNARI AMMAN INSTITUTE OF TECHNOLOGY",
+        "euphoriaId": "EUPH-26-342C9E"
+      },
+      {
+        "memberNumber": 5,
+        "name": "SHIVANI E",
+        "college": "BANNARI AMMAN INSTITUTE OF TECHNOLOGY",
+        "euphoriaId": "EUPH-26-CF284A"
+      }
+    ]
+  },
+  {
+    "teamNumber": 16,
+    "teamName": "THE TITANS",
+    "problemStatement": {
+      "number": "WO-046",
+      "title": "AI DRIVEN DYNAMIC API DOCUMENTATION"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "NARAKKAGARI NIRANJAN REDDY",
+        "college": "KALASALINGAM ACADEMY OF RESEARCH AND EDUCATION",
+        "euphoriaId": "EUPH-26-D02E36",
+        "email": "99240040233@klu.ac.in",
+        "contactNumber": "8688057693"
+      },
+      {
+        "memberNumber": 2,
+        "name": "GONTHI VINAY VENKATA MANI HARI",
+        "college": "KALASALINGAM ACADEMY OF RESEARCH AND EDUCATION",
+        "euphoriaId": "EUPH-26-817128"
+      },
+      {
+        "memberNumber": 3,
+        "name": "DONDETI VIJAYA BHASKARA REDDY",
+        "college": "KALASALINGAM ACADEMY OF RESEARCH AND EDUCATION",
+        "euphoriaId": "EUPH-26-CD40B7"
+      },
+      {
+        "memberNumber": 4,
+        "name": "YERRA RANGAPPA NAIDU",
+        "college": "KALASALINGAM ACADEMY OF RESEARCH AND EDUCATION",
+        "euphoriaId": "EUPH-26-73D6FE"
+      },
+      {
+        "memberNumber": 5,
+        "name": "GANJI ESWAR",
+        "college": "KALASALINGAM ACADEMY OF RESEARCH AND EDUCATION",
+        "euphoriaId": "EUPH-26-D567AD"
+      }
+    ]
+  },
+  {
+    "teamNumber": 28,
+    "teamName": "AI AESTHETICS",
+    "problemStatement": {
+      "number": "WO-022",
+      "title": "AI Personalized Learning & Revision Coach"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Asvika R",
+        "college": "Kalasalingam academy of research and education",
+        "euphoriaId": "EUPH-26-47C417",
+        "email": "9925051012@klu.ac.in",
+        "contactNumber": "6369318197"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Ajay M",
+        "college": "Kalasalingam academy of research and education",
+        "euphoriaId": "EUPH-26-EDE6B9"
+      },
+      {
+        "memberNumber": 3,
+        "name": "ADITHYAN G",
+        "college": "Kalasalingam academy of research and education",
+        "euphoriaId": "EUPH-26-387B42"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Aadithya P",
+        "college": "Kalasalingam academy of research and education",
+        "euphoriaId": "EUPH-26-157586"
+      }
+    ]
+  },
+  {
+    "teamNumber": 97,
+    "teamName": "Nexora",
+    "problemStatement": {
+      "number": "WO-095",
+      "title": "Qunatam-Enhanced Logistics Fleet Routing"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Selva Sharan P",
+        "college": "Bannari Amman Institute of technology",
+        "euphoriaId": "EUPH-26-F234F1",
+        "email": "selvasharanp@gmail.com",
+        "contactNumber": "9345334119"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Suresh S U",
+        "college": "Bannari Amman Institute of technology",
+        "euphoriaId": "EUPH-26-E1CF40"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Thamarai Kabilan T",
+        "college": "Bannari Amman Institute of technology",
+        "euphoriaId": "EUPH-26-0A0174"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Ananth P",
+        "college": "Bannari Amman Institute of technology",
+        "euphoriaId": "EUPH-26-A36932"
+      }
+    ]
+  },
+  {
+    "teamNumber": 21,
+    "teamName": "TEAM NASO",
+    "problemStatement": {
+      "number": "WO-086",
+      "title": "Reverse Classroom — Let AI Become the Student"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "NAVUDU OMKAR",
+        "college": "Kalasalingam University",
+        "euphoriaId": "EUPH-26-7BCE6D",
+        "email": "99240040931@klu.ac.in",
+        "contactNumber": "7013694303"
+      },
+      {
+        "memberNumber": 2,
+        "name": "INDUKURI NAVEEN VARMA",
+        "college": "Kalasalingam University",
+        "euphoriaId": "EUPH-26-9727E9"
+      },
+      {
+        "memberNumber": 3,
+        "name": "VEERAMREDDY AJAY KUMAR REDDY",
+        "college": "Kalasalingam University",
+        "euphoriaId": "EUPH-26-DAF3FA"
+      },
+      {
+        "memberNumber": 4,
+        "name": "THANNEERU SANTHOSH",
+        "college": "Kalasalingam University",
+        "euphoriaId": "EUPH-26-BD7C1B"
+      }
+    ]
+  },
+  {
+    "teamNumber": 5,
+    "teamName": "Nexora",
+    "problemStatement": {
+      "number": "WO-048",
+      "title": "AI Viva and Interview Preparation Coach"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Rubika M",
+        "college": "Velammal College of Engineering and Technology",
+        "euphoriaId": "EUPH-26-B5F53E",
+        "email": "mkrubi442007@gmail.com",
+        "contactNumber": "7339328104"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Janushya T",
+        "college": "Velammal College of Engineering and Technology",
+        "euphoriaId": "EUPH-26-70E80D"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Kanisha Sri S",
+        "college": "Velammal College of Engineering and Technology",
+        "euphoriaId": "EUPH-26-6F26A8"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Harini M",
+        "college": "Velammal College of Engineering and Technology",
+        "euphoriaId": "EUPH-26-87F3AF"
+      },
+      {
+        "memberNumber": 5,
+        "name": "Vishnu Dheshetha C",
+        "college": "Velammal College of Engineering and Technology",
+        "euphoriaId": "EUPH-26-3A96F0"
+      }
+    ]
+  },
+  {
+    "teamNumber": 69,
+    "teamName": "TechTitans",
+    "problemStatement": {
+      "number": "WO-030",
+      "title": "Malware Sandbox Report Aggregator & Classifier"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Regana Sharmi M",
+        "college": "Velammal College of engineering and technology",
+        "euphoriaId": "EUPH-26-4D0976",
+        "email": "reganasharme@gmail.com",
+        "contactNumber": "6380993688"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Mukila Devi M",
+        "college": "Velammal College of engineering and technology",
+        "euphoriaId": "EUPH-26-D69730"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Dhanya S S",
+        "college": "Velammal College of engineering and technology",
+        "euphoriaId": "EUPH-26-9861D2"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Nithikha S",
+        "college": "Velammal College of engineering and technology",
+        "euphoriaId": "EUPH-26-120CBE"
+      },
+      {
+        "memberNumber": 5,
+        "name": "Resool Rifana A",
+        "college": "Velammal College of engineering and technology",
+        "euphoriaId": "EUPH-26-EA594E"
+      }
+    ]
+  },
+  {
+    "teamNumber": 8,
+    "teamName": "CodeKraft",
+    "problemStatement": {
+      "number": "WO- 061",
+      "title": "Dynamic Lane Assignment for Emergency Vehicles"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Earnest Abraham E A",
+        "college": "St. Xavier's Catholic College of Engineering, Nagercoil, Kanyakumari",
+        "euphoriaId": "EUPH-26-53B8E8",
+        "email": "earnestabrah@gmail.com",
+        "contactNumber": "9043945850"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Bensingh J",
+        "college": "St. Xavier's Catholic College of Engineering, Nagercoil, Kanyakumari",
+        "euphoriaId": "EUPH-26-A29A7B"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Bevan W Rishi",
+        "college": "St. Xavier's Catholic College of Engineering, Nagercoil, Kanyakumari",
+        "euphoriaId": "EUPH-26-8112A8"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Beswin Joe B",
+        "college": "St. Xavier's Catholic College of Engineering, Nagercoil, Kanyakumari",
+        "euphoriaId": "EUPH-26-CA2DCF"
+      },
+      {
+        "memberNumber": 5,
+        "name": "Jacshan J P",
+        "college": "St. Xavier's Catholic College of Engineering, Nagercoil, Kanyakumari",
+        "euphoriaId": "EUPH-26-108EA3"
+      }
+    ]
+  },
+  {
+    "teamNumber": 51,
+    "teamName": "404 Founders",
+    "problemStatement": {
+      "number": "WO-024",
+      "title": "Build an AI University that adapts to you"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Kodidela Haindavi",
+        "college": "Kalasalingam Academy of Research and Education",
+        "euphoriaId": "EUPH-26-302E28",
+        "email": "kodidelahaindavi@gmail.com",
+        "contactNumber": "9642335948"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Chittamuru Mounika",
+        "college": "Kalasalingam Academy of Research and Education",
+        "euphoriaId": "EUPH-26-E51AC6"
+      },
+      {
+        "memberNumber": 3,
+        "name": "K.Bhavya Sri Lakshmi",
+        "college": "Kalasalingam Academy of Research and Education",
+        "euphoriaId": "EUPH-26-CO2079"
+      },
+      {
+        "memberNumber": 4,
+        "name": "M.Tanmaya sree",
+        "college": "Kalasalingam Academy of Research and Education",
+        "euphoriaId": "EUPH-26-DA12F7"
+      },
+      {
+        "memberNumber": 5,
+        "name": "CHINTHAM JHANSI",
+        "college": "Kalasalingam Academy of Research and Education",
+        "euphoriaId": "EUPH-26-1E264D"
+      }
+    ]
+  },
+  {
+    "teamNumber": 31,
+    "teamName": "Team TVA",
+    "problemStatement": {
+      "number": "WO-007",
+      "title": "Multilingual AI Learning Assistant"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "GONUGUNTLA JEEVAN SAI",
+        "college": "Kalasalingam academy of research and education",
+        "euphoriaId": "EUPH-26-6BD6B0",
+        "email": "99240040923@klu.ac.in",
+        "contactNumber": "9063550635"
+      },
+      {
+        "memberNumber": 2,
+        "name": "K GNAN JASHWANTH",
+        "college": "Kalasalingam academy of research and education",
+        "euphoriaId": "EUPH-26-3103BD"
+      },
+      {
+        "memberNumber": 3,
+        "name": "TODETI CHAITANYA",
+        "college": "Kalasalingam academy of research and education",
+        "euphoriaId": "EUPH-26-5FEBB9"
+      },
+      {
+        "memberNumber": 4,
+        "name": "BORRU PALLAVI",
+        "college": "Kalasalingam academy of research and education",
+        "euphoriaId": "EUPH-26-16D547"
+      },
+      {
+        "memberNumber": 5,
+        "name": "GATTU BHAVANA",
+        "college": "Kalasalingam academy of research and education",
+        "euphoriaId": "EUPH-26-3256DE"
+      }
+    ]
+  },
+  {
+    "teamNumber": 12,
+    "teamName": "Twinkling watermelon",
+    "problemStatement": {
+      "number": "WO-018",
+      "title": "Quantum Machine Learning for Intrusion Detection"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Ragavi R",
+        "college": "Kamaraj college of engineering and technology",
+        "euphoriaId": "EUPH-26-629302",
+        "email": "ragavir871@gmail.com",
+        "contactNumber": "9751139953"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Sri Aishwarya D",
+        "college": "Kamaraj college of engineering and technology",
+        "euphoriaId": "EUPH-26-FBC379"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Benitta Yazhini M",
+        "college": "Kamaraj college of engineering and technology",
+        "euphoriaId": "EUPH-26-8D78B9"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Akshaya G",
+        "college": "Kamaraj college of engineering and technology",
+        "euphoriaId": "EUPH-26-EDD1A0"
+      }
+    ]
+  },
+  {
+    "teamNumber": 72,
+    "teamName": "Breaking bad",
+    "problemStatement": {
+      "number": "WO-054",
+      "title": "AI Career Roadmap &Skill Gap Analyzer"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Agastin Raju A",
+        "college": "Mepco Shelnk Engineering College",
+        "euphoriaId": "EUPH-26-F8B190",
+        "email": "agastinraju08_mca28@mepcoeng.ac.in",
+        "contactNumber": "7904463725"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Anandh K",
+        "college": "Mepco Shelnk Engineering College",
+        "euphoriaId": "EUPH-26-B22144"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Deeparajan A",
+        "college": "Mepco Shelnk Engineering College",
+        "euphoriaId": "EUPH-26-E8A048"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Joe claris pio T",
+        "college": "Mepco Shelnk Engineering College",
+        "euphoriaId": "EUPH-26-951288"
+      }
+    ]
+  },
+  {
+    "teamNumber": 23,
+    "teamName": "Ctrl alt elite",
+    "problemStatement": {
+      "number": "WO-078",
+      "title": "Quantum Feature Map Optimizer for Malware Detection”"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "PERUGU CHINMAI",
+        "college": "KALASASALINGAM ACADEMY OF RESEARCH AND ORGANISATION",
+        "euphoriaId": "EUPH-26-41E29C",
+        "email": "99240041068@klu.ac.in",
+        "contactNumber": "63039 73665"
+      },
+      {
+        "memberNumber": 2,
+        "name": "ASAM HARINI",
+        "college": "KALASALINGAM ACADEMY OF RESEARCH AND education",
+        "euphoriaId": "EUPH-26-655094"
+      },
+      {
+        "memberNumber": 3,
+        "name": "KALLUDEVAKUNTA SAI PRAVEEN",
+        "college": "KALASALINGAM ACADEMY OF RESEARCH AND ORGANISATION",
+        "euphoriaId": "EUPH-26-EBCEA"
+      },
+      {
+        "memberNumber": 4,
+        "name": "SUDALAGUNTA PRAVEEN KUMAR",
+        "college": "KALASALINGAM ACADEMY OF RESEARCH AND ORGANISATION",
+        "euphoriaId": "EUPH-26-E30CDB"
+      }
+    ]
+  },
+  {
+    "teamNumber": 86,
+    "teamName": "STORMBREAKERS",
+    "problemStatement": {
+      "number": "WO-038",
+      "title": "Automated Container Image Vulnerability"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "LOKIT.S.S",
+        "college": "M.KUMARASAMY COLLEGE OF ENGINEERING,KARUR",
+        "euphoriaId": "EUPH-26-8DB9C8",
+        "email": "s.s.lokit46@gmail.Com",
+        "contactNumber": "9095352232"
+      },
+      {
+        "memberNumber": 2,
+        "name": "KAMALESH.K",
+        "college": "M.KUMARASAMY COLLEGE OF ENGINEERING,KARUR",
+        "euphoriaId": "EUPH-26-9AA199"
+      },
+      {
+        "memberNumber": 3,
+        "name": "MATHIYAZHAGAN.R",
+        "college": "M.KUMARASAMY COLLEGE OF ENGINEERING,KARUR",
+        "euphoriaId": "EUPH-26-FE9DEB"
+      },
+      {
+        "memberNumber": 4,
+        "name": "BALAKRISHNA.S",
+        "college": "M.KUMARASAMY COLLEGE OF ENGINEERING,KARUR",
+        "euphoriaId": "EUPH-26-666294"
+      },
+      {
+        "memberNumber": 5,
+        "name": "HEMANTH.S",
+        "college": "M.KUMARASAMY COLLEGE OF ENGINEERING,KARUR",
+        "euphoriaId": "EUPH-26-E73490"
+      }
+    ]
+  },
+  {
+    "teamNumber": 15,
+    "teamName": "TECH SPARKS",
+    "problemStatement": {
+      "number": "WO-102",
+      "title": "Generative ui layout bulider"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "P Akshay",
+        "college": "Kalasalingam university",
+        "euphoriaId": "EUPH-26-B1C870",
+        "email": "99250040532@klu.ac.in",
+        "contactNumber": "6309047076"
+      },
+      {
+        "memberNumber": 2,
+        "name": "P Yaswanth",
+        "college": "Kalasalingam university",
+        "euphoriaId": "EUPH-26-390COF"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Katta Nitish kumar",
+        "college": "Kalasalingam university",
+        "euphoriaId": "EUPH-26-590E69"
+      },
+      {
+        "memberNumber": 4,
+        "name": "AMADASANI HARI",
+        "college": "Kalasalingam university",
+        "euphoriaId": "EUPH-26-5CF792"
+      }
+    ]
+  },
+  {
+    "teamNumber": 9,
+    "teamName": "CODE DOMINATERS",
+    "problemStatement": {
+      "number": "WO-092",
+      "title": "FACULTY RESOURCE SHARING & INTELLIGENT RECOMMENDATION PLATFORM"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "MUTHUBALAMURUGAN M",
+        "college": "RAMCO INSTITUTE OF TECHNOLOGY",
+        "euphoriaId": "EUPH-26-CE2DB2",
+        "email": "muthubala73k@gmail.com",
+        "contactNumber": "6369098806"
+      },
+      {
+        "memberNumber": 2,
+        "name": "MUSHI DHARUN A",
+        "college": "RAMCO INSTITUTE OF TECHNOLOGY",
+        "euphoriaId": "EUPH-26-69923F"
+      },
+      {
+        "memberNumber": 3,
+        "name": "NANTHAKUMAR N",
+        "college": "RAMCO INSTITUTE OF TECHNOLOGY",
+        "euphoriaId": "EUPH-26-EC38AE"
+      },
+      {
+        "memberNumber": 4,
+        "name": "MUKESH KUMARAN M",
+        "college": "RAMCO INSTITUTE OF TECHNOLOGY",
+        "euphoriaId": "EUPH-26-68AF01"
+      },
+      {
+        "memberNumber": 5,
+        "name": "BALA SUBBRAMANIAN I",
+        "college": "RAMCO INSTITUTE OF TECHNOLOGY",
+        "euphoriaId": "EUPH-26-967F68"
+      }
+    ]
+  },
+  {
+    "teamNumber": 88,
+    "teamName": "NeuraNova",
+    "problemStatement": {
+      "number": "WO-034",
+      "title": "Personalized adaptive learning engine"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "M.Murugajothi",
+        "college": "P.S.R Engineering college",
+        "euphoriaId": "EUPH-26-702C63",
+        "email": "sethujothi2009@gmail.com",
+        "contactNumber": "6382667472"
+      },
+      {
+        "memberNumber": 2,
+        "name": "M Swetha",
+        "college": "P.S.R Engineering college",
+        "euphoriaId": "EUPH-26-3FCECE"
+      },
+      {
+        "memberNumber": 3,
+        "name": "A.Sri Balatharshini",
+        "college": "P.S.R Engineering college",
+        "euphoriaId": "EUPH-26-702C63"
+      },
+      {
+        "memberNumber": 4,
+        "name": "S.Mukila shree",
+        "college": "P.S.R Engineering college",
+        "euphoriaId": "EUPH-26-6AB907"
+      },
+      {
+        "memberNumber": 5,
+        "name": "S.Muthu lakshmi",
+        "college": "P.S.R Engineering college",
+        "euphoriaId": "EUPH-26-129D65"
+      }
+    ]
+  },
+  {
+    "teamNumber": 83,
+    "teamName": "Team Rex",
+    "problemStatement": {
+      "number": "WO-094",
+      "title": "Dynamic Schema Migration Copilot"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "HAREEZZ VIJEY R J",
+        "college": "SRM MADURAI COLLEGE FOR ENGINEERING AND TECHNOLOGY",
+        "euphoriaId": "EUPH-26-3E4050",
+        "email": "hareezzv@gmail.com",
+        "contactNumber": "8220983187"
+      },
+      {
+        "memberNumber": 2,
+        "name": "DHARSAN S S",
+        "college": "SRM MADURAI COLLEGE FOR ENGINEERING AND TECHNOLOGY",
+        "euphoriaId": "EUPH-26-68D822"
+      },
+      {
+        "memberNumber": 3,
+        "name": "RAM MEYYAPPAN A",
+        "college": "SRM MADURAI COLLEGE FOR ENGINEERING AND TECHNOLOGY",
+        "euphoriaId": "EUPH-26-826DD1"
+      },
+      {
+        "memberNumber": 4,
+        "name": "SHEREEN SHIFA J",
+        "college": "SRM MADURAI COLLEGE FOR ENGINEERING AND TECHNOLOGY",
+        "euphoriaId": "EUPH-26-D9C685"
+      },
+      {
+        "memberNumber": 5,
+        "name": "DEVADHARSHINI M",
+        "college": "SRM MADURAI COLLEGE FOR ENGINEERING AND TECHNOLOGY",
+        "euphoriaId": "EUPH-26-AEE7B6"
+      }
+    ]
+  },
+  {
+    "teamNumber": 89,
+    "teamName": "Famous 5",
+    "problemStatement": {
+      "number": "WO-067",
+      "title": "Automated Feature Flag Manager"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Iniya N",
+        "college": "Velammal college of engineering and technology",
+        "euphoriaId": "EUPH-26-0D55F8",
+        "email": "iniyaop5@gmail.com",
+        "contactNumber": "6383413981"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Nandika Senit B G",
+        "college": "Velammal college of engineering and technology",
+        "euphoriaId": "EUPH-26-FA981B"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Divya Lakshmi R M",
+        "college": "Velammal college of engineering and technology",
+        "euphoriaId": "EUPH-26-D9BA0D"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Rehana Sitthika",
+        "college": "Velammal college of engineering and technology",
+        "euphoriaId": "EUPH-26-9A92FD"
+      },
+      {
+        "memberNumber": 5,
+        "name": "R.S.Eesha",
+        "college": "Velammal college of engineering and technology",
+        "euphoriaId": "EUPH-26-2BDB40"
+      }
+    ]
+  },
+  {
+    "teamNumber": 82,
+    "teamName": "Zentrix_vector",
+    "problemStatement": {
+      "number": "WO-097",
+      "title": "AI DESCRIPTIVE ANSWER EVALUATION AND FEEDBACK SYSTEM"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "KavinKumar R",
+        "college": "SRM Madurai College for Engineering and Technology",
+        "euphoriaId": "EUPH-26-2416CC",
+        "email": "kavinvishnu2005@gmail.com",
+        "contactNumber": "86080 60331"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Harish P",
+        "college": "SRM Madurai College for Engineering and Technology",
+        "euphoriaId": "EUPH-26-31AACD"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Vibushini J R",
+        "college": "SRM Madurai College For Engineering and Technology",
+        "euphoriaId": "EUPH-26-D9C276"
+      },
+      {
+        "memberNumber": 4,
+        "name": "RIZWAN AHMED M",
+        "college": "SRM Madurai College For Engineering and Technology",
+        "euphoriaId": "EUPH-26-527E94"
+      }
+    ]
+  },
+  {
+    "teamNumber": 17,
+    "teamName": "Chronic Solvers",
+    "problemStatement": {
+      "number": "WO-013",
+      "title": "AI- Powered 30-Second Business Pitch Coach"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Sindhuja N",
+        "college": "Kamaraj College Of Engineering And Technology",
+        "euphoriaId": "EUPH-26-399836",
+        "email": "sindhuja180907@gmail.com",
+        "contactNumber": "7538840821"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Miruthula A",
+        "college": "Kamaraj College Of Engineering And Technology",
+        "euphoriaId": "EUPH-26-E897F3"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Kaleeswari P",
+        "college": "Kamaraj College Of Engineering And Technology",
+        "euphoriaId": "EUPH-26-E3DF2B"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Thanga Santhiya S R",
+        "college": "Kamaraj College Of Engineering And Technology",
+        "euphoriaId": "EUPH-26-F0FCB4"
+      }
+    ]
+  },
+  {
+    "teamNumber": 7,
+    "teamName": "Team",
+    "problemStatement": {
+      "number": "WO-081",
+      "title": "Smart Classroom Engagement & Early Warning System"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Veeresh Aarya V",
+        "college": "SRM Madurai College for Engineering and Technology",
+        "euphoriaId": "EUPH-26-F0B62E",
+        "email": "veereshaaryav75@gmail.com",
+        "contactNumber": "9363771927"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Thatshana B",
+        "college": "SRM Madurai College for Engineering and Technology",
+        "euphoriaId": "EUPH-26-AAD7BC"
+      },
+      {
+        "memberNumber": 3,
+        "name": "SHRI GANAPATHI V R",
+        "college": "SRM Madurai College for Engineering and Technology",
+        "euphoriaId": "EUPH-26-C4ADE4"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Uvan M",
+        "college": "SRM Madurai College for Engineering and Technology",
+        "euphoriaId": "EUPH-26-4FB8F6"
+      },
+      {
+        "memberNumber": 5,
+        "name": "Vikash A R",
+        "college": "SRM Madurai College for Engineering and Technology",
+        "euphoriaId": "EUPH-26-C77E25"
+      }
+    ]
+  },
+  {
+    "teamNumber": 25,
+    "teamName": "Genesis",
+    "problemStatement": {
+      "number": "WO-071",
+      "title": "Generative threat modeling assistant"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Majeetha Begum H",
+        "college": "AAA College of Engineering and Technology",
+        "euphoriaId": "EUPH-26-D3C514",
+        "email": "majeetharejiya@gmail.com",
+        "contactNumber": "8015161690"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Joyce P",
+        "college": "AAA College of Engineering and Technology",
+        "euphoriaId": "EUPH-26-99B457"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Mahalakshmi S",
+        "college": "AAA College of Engineering and Technology",
+        "euphoriaId": "EUPH-26-DC5D0B"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Mohamed Farhaan Ali M",
+        "college": "AAA College of Engineering and Technology",
+        "euphoriaId": "EUPH-26-96236B"
+      }
+    ]
+  },
+  {
+    "teamNumber": 49,
+    "teamName": "Code Storm",
+    "problemStatement": {
+      "number": "WO-052",
+      "title": "AI TEACHER VS AI STUDENT"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Santhosh J",
+        "college": "Velammal college of engineering and technology",
+        "euphoriaId": "EUPH-26-0F7372",
+        "email": "25cseb53santhosh@gmail.com",
+        "contactNumber": "7548883759"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Santhosh S",
+        "college": "Velammal college of engineering and technology",
+        "euphoriaId": "EUPH-26-B270B6"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Santhosh raam M",
+        "college": "Velammal college of engineering and technology",
+        "euphoriaId": "EUPH-26-EFFA0D"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Siva Sankar A V",
+        "college": "Velammal college of engineering and technology",
+        "euphoriaId": "EUPH-26-E034C7"
+      },
+      {
+        "memberNumber": 5,
+        "name": "Nithish Kumar V",
+        "college": "Velammal college of engineering and technology",
+        "euphoriaId": "EUPH-26-D87BC7"
+      }
+    ]
+  },
+  {
+    "teamNumber": 104,
+    "teamName": "Code crafters",
+    "problemStatement": {
+      "number": "WO-043",
+      "title": "Port and intermodal cargo tracking hub"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "P.Samrutha",
+        "college": "Nadar Saraswathi college of engineering and technology",
+        "euphoriaId": "EUPH-26-E2B616",
+        "email": "samruthaprabu@gmail.com",
+        "contactNumber": "9363329501"
+      },
+      {
+        "memberNumber": 2,
+        "name": "M.Bharathi",
+        "college": "Nadar Saraswathi college of engineering and technology",
+        "euphoriaId": "EUPH-26-B46117"
+      },
+      {
+        "memberNumber": 3,
+        "name": "V.Nethra",
+        "college": "Nadar Saraswathi college of engineering and technology",
+        "euphoriaId": "EUPH-26-0AE3A6"
+      },
+      {
+        "memberNumber": 4,
+        "name": "S.Kanipriya",
+        "college": "Nadar Saraswathi college of engineering and technology",
+        "euphoriaId": "EUPH-26-943F65"
+      }
+    ]
+  },
+  {
+    "teamNumber": 108,
+    "teamName": "NEXA TECH",
+    "problemStatement": {
+      "number": "135",
+      "title": "Ai powered personalized educational adventure"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "RasithaSri.M",
+        "college": "P.S.R Engineering College Sivakasi",
+        "euphoriaId": "EUPH-26-B83E96",
+        "email": "rasithasrim@gmail.com",
+        "contactNumber": "8870297797"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Lalithambigai.T",
+        "college": "Psr engineering college",
+        "euphoriaId": "EUPH-26-FB994F"
+      },
+      {
+        "memberNumber": 3,
+        "name": "C. Santhiya",
+        "college": "Psr engineering college",
+        "euphoriaId": "EUPH-26-FB994F"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Ananya sree.N",
+        "college": "Psr engineering college",
+        "euphoriaId": "EUPH-26 -FE081F"
+      }
+    ]
+  },
+  {
+    "teamNumber": 4,
+    "teamName": "CodeWaves",
+    "problemStatement": {
+      "number": "WO-045",
+      "title": "Project -Based Learning Management Platform"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Belgin Lino S P",
+        "college": "St.Xavier's Catholic College of Engineering, Nagercoil, Kanya",
+        "euphoriaId": "EUPH-26-BCAD87",
+        "email": "belginlino485@gmail com",
+        "contactNumber": "7598479920"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Athira S",
+        "college": "St Xavier's Catholic College of Engineering, Nagercoil, Kanyakumari",
+        "euphoriaId": "EUPH-26-306FCS"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Adshaya A",
+        "college": "St.Xavier's Catholic College of Engineering, Nagercoil, Kanyakumari",
+        "euphoriaId": "EUPH-26-56091F"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Anne Steffy J",
+        "college": "St.Xavier's Catholic College of Engineering, Nagercoil, Kanyakumari",
+        "euphoriaId": "EUPH-26-DF23C0"
+      }
+    ]
+  },
+  {
+    "teamNumber": 30,
+    "teamName": "COGNEXA",
+    "problemStatement": {
+      "number": "WO-039",
+      "title": "Intelligent Structural Health Monitor for Bridges"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "HARINI K",
+        "college": "RAMCO INSTITUTE OF TECHNOLOGY",
+        "euphoriaId": "EUPH-26-89DF3A",
+        "email": "harinidarshini2@gmail.com",
+        "contactNumber": "8056453271"
+      },
+      {
+        "memberNumber": 2,
+        "name": "LAJASHRI NAIDU MK",
+        "college": "RAMCO INSTITUTE OF TECHNOLOGY",
+        "euphoriaId": "EUPH-26-361C33"
+      },
+      {
+        "memberNumber": 3,
+        "name": "THARSINI K",
+        "college": "RAMCO INSTITUTE OF TECHNOLOGY",
+        "euphoriaId": "EUPH-26-D234DC"
+      },
+      {
+        "memberNumber": 4,
+        "name": "NIHAL AMREEN G",
+        "college": "RAMCO INSTITUTE OF TECHNOLOGY",
+        "euphoriaId": "EUPH-26-BE103F"
+      }
+    ]
+  },
+  {
+    "teamNumber": 94,
+    "teamName": "Med Squad",
+    "problemStatement": {
+      "number": "WO-031",
+      "title": "AI Visual Learning Generator"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "A S SADANA",
+        "college": "St.joseph's institute of technology",
+        "euphoriaId": "EUPH-26-52900F",
+        "email": "assadana2006@gmail.com",
+        "contactNumber": "6381107229"
+      },
+      {
+        "memberNumber": 2,
+        "name": "R SANDHIYA",
+        "college": "St Joseph's institute of technology",
+        "euphoriaId": "EUPH-26-A8DBE8"
+      }
+    ]
+  },
+  {
+    "teamNumber": 64,
+    "teamName": "Ellite Innovators",
+    "problemStatement": {
+      "number": "4",
+      "title": "Smart Monitoring of Public Park Assets"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "S.P.Meenakshi",
+        "college": "Mangayarkarasi College Of Engineering",
+        "euphoriaId": "EUPH-26-DC2AA2",
+        "email": "meenakshisubramanian82@gmail.com",
+        "contactNumber": "8940722111"
+      },
+      {
+        "memberNumber": 2,
+        "name": "A.S.AKSHAYA",
+        "college": "Mangayarkarasi college of engineering",
+        "euphoriaId": "euphoria id not available due to technical issues"
+      },
+      {
+        "memberNumber": 3,
+        "name": "M.Dhanalakshmi",
+        "college": "Mangayarkarasi college of engineering",
+        "euphoriaId": "EUPH-26-80A5B4"
+      },
+      {
+        "memberNumber": 4,
+        "name": "M.Aishwarya",
+        "college": "Mangayarkarasi College Of engineering",
+        "euphoriaId": "EUPH-26-9140B9"
+      }
+    ]
+  },
+  {
+    "teamNumber": 57,
+    "teamName": "Code for India 🇮🇳",
+    "problemStatement": {
+      "number": "39 (Hardware)",
+      "title": "Intelligent Structural Health Monitor for Bridges Smart-city operations need connected sensing and automated decision support for intelligent structural health monitor for bridges."
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "T. Jaganathan",
+        "college": "Saveetha University",
+        "euphoriaId": "EUPH-26-056AEF",
+        "email": "j54609802@gmail.com",
+        "contactNumber": "8925226718"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Tamil selvan R",
+        "college": "SIMATS Engineering",
+        "euphoriaId": "EUPH-26-3E1E70"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Sharvesh G",
+        "college": "SIMATS ENGINEERING",
+        "euphoriaId": "EUPH-26-E3D476"
+      },
+      {
+        "memberNumber": 4,
+        "name": "R. Visshaal",
+        "college": "Saveetha University",
+        "euphoriaId": "EUPH-26-912244"
+      },
+      {
+        "memberNumber": 5,
+        "name": "ADHARSH S",
+        "college": "NANDHA ENGINEERING COLLEGE",
+        "euphoriaId": "EUPH-26-04E99F"
+      }
+    ]
+  },
+  {
+    "teamNumber": 24,
+    "teamName": "Sigma force",
+    "problemStatement": {
+      "number": "27",
+      "title": "AI Plagiarism & Learning Integrity Assistant"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "JAIGANESH R",
+        "college": "SIMATS ENGINEERING",
+        "euphoriaId": "EUPH-26-AB3815",
+        "email": "jaiganesh3304@gmail.com",
+        "contactNumber": "8248813326"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Ariharan V S",
+        "college": "SIMATS ENGINEERING",
+        "euphoriaId": "EUPH-26-E5ADEE"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Kailash sharma M",
+        "college": "SIMATS ENGINEERING",
+        "euphoriaId": "EUPH-26-ED6F1A"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Sabari S",
+        "college": "SIMATS ENGINEERING",
+        "euphoriaId": "EUPH-26-723751"
+      },
+      {
+        "memberNumber": 5,
+        "name": "Suriya B S",
+        "college": "SIMATS ENGINEERING",
+        "euphoriaId": "EUPH-26-47AA6E"
+      }
+    ]
+  },
+  {
+    "teamNumber": 95,
+    "teamName": "The meth-odologist.",
+    "problemStatement": {
+      "number": "WO-079",
+      "title": "Serverless Function Security Auditor"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Ajay P",
+        "college": "Mepco Schlenk Engineering College, Sivakasi",
+        "euphoriaId": "EUPH-26-E360C4",
+        "email": "ajaypandiyarajann@gmail.com",
+        "contactNumber": "9342819646"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Sam Thesigan M",
+        "college": "Mepco Schlenk Engineering College, Sivakasi",
+        "euphoriaId": "EUPH-26-4AE4E4"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Srikarthikeyan M",
+        "college": "Mepco Schlenk Engineering College, Sivakasi",
+        "euphoriaId": "EUPH-26-3B697C"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Sudhir A",
+        "college": "Mepco Schlenk Engineering College, Sivakasi",
+        "euphoriaId": "EUPH-26-BF64D9"
+      },
+      {
+        "memberNumber": 5,
+        "name": "Sakthi Raj Pandian A",
+        "college": "Mepco Schlenk Engineering College, Sivakasi",
+        "euphoriaId": "EUPH-26-81FA92"
+      }
+    ]
+  },
+  {
+    "teamNumber": 8610954697,
+    "teamName": "Innovexa",
+    "problemStatement": {
+      "number": "WO-125",
+      "title": "AI powered behaviour - based lead scoring"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Viswaksena M",
+        "college": "Velammal college of engineering and technology",
+        "euphoriaId": "EUPH-26-24B113",
+        "email": "viswaksenam@gmail.com",
+        "contactNumber": "8610954697"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Dinesh Prabhu R",
+        "college": "Velammal college of engineering and technology",
+        "euphoriaId": "EUPH-26-2F37D1"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Devaeshar C B",
+        "college": "Velammal college of engineering and technology",
+        "euphoriaId": "EUPH-26-367E7A"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Navin Balaji M",
+        "college": "Velammal college of engineering and technology",
+        "euphoriaId": "EUPH-26-4BC9AB"
+      },
+      {
+        "memberNumber": 5,
+        "name": "GOKUL M",
+        "college": "Velammal college of engineering and technology",
+        "euphoriaId": "EUPH-26-97D037"
+      }
+    ]
+  },
+  {
+    "teamNumber": 107,
+    "teamName": "Tech builders",
+    "problemStatement": {
+      "number": "WO-127",
+      "title": "Smart parking space reservation & Enforcement"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Abisheck.S",
+        "college": "Erode sengunthar engineering college",
+        "euphoriaId": "Euph-26-f244e7",
+        "email": "abisheck062008@gmail.com",
+        "contactNumber": "9751225845"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Ahil.A",
+        "college": "Erode sengunthar engineering college",
+        "euphoriaId": "Euph-26-5bec1a"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Akitha . G",
+        "college": "Erode sengunthar engineering college",
+        "euphoriaId": "Euph-26-3a2a99"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Abinithi .DS",
+        "college": "Erode sengunthar engineering college",
+        "euphoriaId": "Euph-26-bb45cb"
+      },
+      {
+        "memberNumber": 5,
+        "name": "Nilafhra Nisha.M",
+        "college": "Erode sengunthar engineering college",
+        "euphoriaId": "Euph-26-11c300"
+      }
+    ]
+  },
+  {
+    "teamNumber": 1,
+    "teamName": "Byte squad",
+    "problemStatement": {
+      "number": "WO-137",
+      "title": "Adaptive Learning & Personalized Practice Engine"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "ARIGELA VENKATA SUSHANTH",
+        "college": "Kalasalingam university",
+        "euphoriaId": "EUPH-26-DF5CF8",
+        "email": "99240041322@klu.ac.in",
+        "contactNumber": "9014989128"
+      },
+      {
+        "memberNumber": 2,
+        "name": "C TEJASWINI",
+        "college": "Kalasalingam university",
+        "euphoriaId": "EUPH-26-B1CD4C"
+      },
+      {
+        "memberNumber": 3,
+        "name": "NIRAGANTI GOWTHAM",
+        "college": "Kalasalingam university",
+        "euphoriaId": "EUPH-26-9DF2DC"
+      },
+      {
+        "memberNumber": 4,
+        "name": "N ANKITHA",
+        "college": "Kalasalingam university",
+        "euphoriaId": "EUPH-26-DA4444"
+      },
+      {
+        "memberNumber": 5,
+        "name": "NIMMALA SRIMANNARAYANA",
+        "college": "Kalasalingam university",
+        "euphoriaId": "EUPH-26-68A7B3"
+      }
+    ]
+  },
+  {
+    "teamNumber": 65,
+    "teamName": "InnovateX",
+    "problemStatement": {
+      "number": "58",
+      "title": "Multi-cloud Drift Security Guard"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Roopan Balaji B M",
+        "college": "Mepco Schlenk Engineering College",
+        "euphoriaId": "EUPH-26-9C269F",
+        "email": "a1b2c3roopan_mca28@mepcoeng.ac.in",
+        "contactNumber": "9344845680"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Muthuvel S",
+        "college": "Mepco Schlenk Engineering College",
+        "euphoriaId": "EUPH-26-9A2D7C"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Karthikeyan M",
+        "college": "Mepco Schlenk Engineering College",
+        "euphoriaId": "EUPH-26-A9B9B2"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Surya Prakash P",
+        "college": "Mepco Schlenk Engineering College",
+        "euphoriaId": "EUPH-26-E29815"
+      }
+    ]
+  },
+  {
+    "teamNumber": 41,
+    "teamName": "Hacksphere",
+    "problemStatement": {
+      "number": "WO-101",
+      "title": "Kubernetes RBAC Misconfiguration scanner"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Karthik Hari Vasan .I",
+        "college": "Manikam Ramasami College of arts and science",
+        "euphoriaId": "EUPH-26-48F756",
+        "email": "karthikharivasan16@gmail.com",
+        "contactNumber": "8270624856"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Swetha Sri .J",
+        "college": "Manikam Ramasami College of arts and science",
+        "euphoriaId": "EUPH-26-C55CA0"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Vishnu Kumar B.B",
+        "college": "Manikam Ramasami College of arts and science",
+        "euphoriaId": "EUPH-26-C56892"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Jaya Vishnu .G.D",
+        "college": "Manikam Ramasami College of arts and science",
+        "euphoriaId": "EUPH-26-6D0DD8"
+      },
+      {
+        "memberNumber": 5,
+        "name": "Sanjay Kumar.M",
+        "college": "Manikam Ramasami College of arts and science",
+        "euphoriaId": "EUPH-26-177C24"
+      }
+    ]
+  },
+  {
+    "teamNumber": 99,
+    "teamName": "CodeX",
+    "problemStatement": {
+      "number": "WO-056",
+      "title": "Student Knowledge Graph & Learning Gap Analyzer"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "S.Monisha",
+        "college": "Nadar Saraswati College of engineering and technology, Theni",
+        "euphoriaId": "7ABBE1",
+        "email": "monishamalar207@gmail.com",
+        "contactNumber": "9385626104"
+      },
+      {
+        "memberNumber": 2,
+        "name": "S.Nitharshana",
+        "college": "Nadar Saraswati College of engineering and technology, Theni",
+        "euphoriaId": "F8F62B"
+      },
+      {
+        "memberNumber": 3,
+        "name": "S.Santhosi",
+        "college": "Nadar Saraswati College of engineering and technology",
+        "euphoriaId": "167F00"
+      },
+      {
+        "memberNumber": 4,
+        "name": "M.Bhavadharani",
+        "college": "Nadar Saraswati College of engineering and technology",
+        "euphoriaId": "B37494"
+      },
+      {
+        "memberNumber": 5,
+        "name": "K.Lathika",
+        "college": "Nadar Saraswati College of engineering and technology",
+        "euphoriaId": "E63D0C"
+      }
+    ]
+  },
+  {
+    "teamNumber": 72,
+    "teamName": "TETROX",
+    "problemStatement": {
+      "number": "Wo-008",
+      "title": "SMART URBAN TREE HEALTH MONITORING"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Naresh kumar G",
+        "college": "AAA college of engineering and technology",
+        "euphoriaId": "EUPH - 26 - 7D29DF",
+        "email": "nnaresh2972@gmail.com",
+        "contactNumber": "9080492144"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Mohamad risal S",
+        "college": "AAA college of engineering and technology",
+        "euphoriaId": "EUPH - 26 - 09CA51"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Kamatchi R",
+        "college": "AAA college of engineering and technology",
+        "euphoriaId": "EUPH - 36 - D6B088"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Nikitha M",
+        "college": "AAA college of engineering and technology",
+        "euphoriaId": "EUPH - 26 - BB4083"
+      }
+    ]
+  },
+  {
+    "teamNumber": 91,
+    "teamName": "Paradox",
+    "problemStatement": {
+      "number": "WO-051",
+      "title": "Post-Quantum TLS Handshake Demonstrator"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Mohammed Ashfar M",
+        "college": "Bannari Amman Institute of technology",
+        "euphoriaId": "EUPH-26-6BEEF0",
+        "email": "mohammedashfarm.ag23@bitsathy.ac.in",
+        "contactNumber": "6381413557"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Sasikumar E",
+        "college": "Bannari Amman Institute of Technology",
+        "euphoriaId": "EUPH-26-F58E72"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Dinesh J",
+        "college": "Bannari Amman Institute of Technology",
+        "euphoriaId": "EUPH-26-FA73D9"
+      },
+      {
+        "memberNumber": 4,
+        "name": "VISHNU SELVAN",
+        "college": "Bannari Amman Institute of Technology",
+        "euphoriaId": "EUPH-26-4DC1A0"
+      }
+    ]
+  },
+  {
+    "teamNumber": 93,
+    "teamName": "Shakthi guru R",
+    "problemStatement": {
+      "number": "98",
+      "title": "Real time ai video highlights synthesizer"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Shakthiguru R",
+        "college": "Kamaraj College of Engineering and Technology",
+        "euphoriaId": "EUPH-26-701C2B",
+        "email": "sivalathashakthi@gmail.com",
+        "contactNumber": "6381532937"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Mohamed Rafiq R H",
+        "college": "Kamaraj College of Engineering and Technology",
+        "euphoriaId": "EUPH-26-C43699"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Afsar Hussain G",
+        "college": "Kamaraj College of Engineering and Technology",
+        "euphoriaId": "EUPH-26-MUA250CQ"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Gauri Sankaran M",
+        "college": "Kamaraj College of Engineering and Technology",
+        "euphoriaId": "EUPH-26-728AB4"
+      }
+    ]
+  },
+  {
+    "teamNumber": 32,
+    "teamName": "Boolean Pundits",
+    "problemStatement": {
+      "number": "WO-020",
+      "title": "Smart Labaratory Assistant"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "R. Guna Nagaraj",
+        "college": "Manikam Ramaswami college of arts and science",
+        "euphoriaId": "EUPH-26-465DCA",
+        "email": "gunargn3ngr@gmail.com",
+        "contactNumber": "9443831805"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Nivasri P",
+        "college": "Manikam ramasami college of arts and science",
+        "euphoriaId": "EUPH-26-FB7268"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Sandhiya M",
+        "college": "Manikam Ramaswami College of Arts and Science",
+        "euphoriaId": "EUPH-26-03E43C"
+      },
+      {
+        "memberNumber": 4,
+        "name": "EUPH-26-4044D9",
+        "college": "Manikam Ramaswami college of arts and science",
+        "euphoriaId": "Nil"
+      }
+    ]
+  },
+  {
+    "teamNumber": 92,
+    "teamName": "Quantum Minds",
+    "problemStatement": {
+      "number": "WO-063",
+      "title": "PQC code signer & Verifier CLI"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Karthikeyan KV",
+        "college": "Manikam Ramaswami College of Arts and Science",
+        "euphoriaId": "EUPH-26-6CE56A",
+        "email": "karthikeyanvenkateshkv@gmail.com",
+        "contactNumber": "9942495665"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Dharshan Riju",
+        "college": "Manikam Ramaswami College of Arts and Science",
+        "euphoriaId": "EUPH-26-04237A"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Hari prasanth A",
+        "college": "Manikam Ramaswami College of Arts and Science",
+        "euphoriaId": "EUPH-26-A226B5"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Shiek Ahamed yasin U",
+        "college": "Manikam Ramaswami College of Arts and Science",
+        "euphoriaId": "EUPH-26-929COF"
+      },
+      {
+        "memberNumber": 5,
+        "name": "Ibrahim A",
+        "college": "Manikam Ramaswami College of Arts and Science",
+        "euphoriaId": "EUPH-26-6CE56A"
+      }
+    ]
+  },
+  {
+    "teamNumber": 80,
+    "teamName": "Team Aspiron",
+    "problemStatement": {
+      "number": "29",
+      "title": "Generative Ai shell command copilot with safety"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "NIRANJANA M",
+        "college": "Dhanalakshmi Srinivasan University",
+        "euphoriaId": "On spot registration",
+        "email": "mniranjana963@gmail.com",
+        "contactNumber": "7339187161"
+      },
+      {
+        "memberNumber": 2,
+        "name": "NIVETHA A",
+        "college": "Dhanalakshmi Srinivasan University",
+        "euphoriaId": "EUPH-26-1972F1"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Padmageetha S",
+        "college": "Dhanalakshmi Srinivasan University",
+        "euphoriaId": "On spot registration"
+      },
+      {
+        "memberNumber": 4,
+        "name": "RAGUL SUBBURAJ S",
+        "college": "Dhanalakshmi Srinivasan University",
+        "euphoriaId": "On spot registration"
+      },
+      {
+        "memberNumber": 5,
+        "name": "NAGULAN RAJ A",
+        "college": "Dhanalakshmi Srinivasan University",
+        "euphoriaId": "On spot registration"
+      }
+    ]
+  },
+  {
+    "teamNumber": 45,
+    "teamName": "Innovexa",
+    "problemStatement": {
+      "number": "WO-060",
+      "title": "Hybrid Quantum Convolution Neural Network"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "MITHRAJA K",
+        "college": "Thiagarajar college of engineering",
+        "euphoriaId": "EUPH-26-6F6756",
+        "email": "mithu.bahikrishna@gmail.com",
+        "contactNumber": "7305661881"
+      },
+      {
+        "memberNumber": 2,
+        "name": "SONA S",
+        "college": "Thiagarajar college of engineering",
+        "euphoriaId": "EUPH-26-BF8A07"
+      },
+      {
+        "memberNumber": 3,
+        "name": "SIVANISRI S",
+        "college": "Thiagarajar college of engineering",
+        "euphoriaId": "EUPH-26-4532FD"
+      },
+      {
+        "memberNumber": 4,
+        "name": "KISHANTHINI P",
+        "college": "Thiagarajar college of engineering",
+        "euphoriaId": "EUPH-26-75646E"
+      },
+      {
+        "memberNumber": 5,
+        "name": "STEPHEN ABRAHAM A",
+        "college": "Kalasalingam Academy of Research and Education",
+        "euphoriaId": "EUPH-26-B18E6B"
+      }
+    ]
+  },
+  {
+    "teamNumber": 18,
+    "teamName": "V5",
+    "problemStatement": {
+      "number": "WO-084",
+      "title": "Ai Powered Real Estate Plot Layout Management"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Seeman G",
+        "college": "Ramco Institute of Technology",
+        "euphoriaId": "EUPH-26-D0792E",
+        "email": "953624104142@ritrjpm.ac.in",
+        "contactNumber": "7810098412"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Thabsira Fathima M",
+        "college": "Ramco Institute of Technology",
+        "euphoriaId": "EUPH-26-F77885"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Shriman Vettri Velavaa K",
+        "college": "Ramco Institute of Technology",
+        "euphoriaId": "EUPH-26-DBB2F1"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Sajina J",
+        "college": "Ramco Institute of Technology",
+        "euphoriaId": "EUPH-26-BB721A"
+      },
+      {
+        "memberNumber": 5,
+        "name": "Irfana Barveen M",
+        "college": "Ramco Institute of Technology",
+        "euphoriaId": "EUPH-26-A91116"
+      }
+    ]
+  },
+  {
+    "teamNumber": 26,
+    "teamName": "Power Rangers",
+    "problemStatement": {
+      "number": "WO-103",
+      "title": "Client - Side Formjacking (Magecart) detector"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Yogitha J",
+        "college": "Manikam Ramaswami College of Arts and Science",
+        "euphoriaId": "EUPH-26-468F2",
+        "email": "yogitha653@gmail.com",
+        "contactNumber": "9514148789"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Nageswari J",
+        "college": "Manikam Ramaswami College of Arts and Science",
+        "euphoriaId": "EUPH-26-152E81"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Maheedhara B T S",
+        "college": "Manikam Ramaswami College of Arts and Science",
+        "euphoriaId": "EUPH-26-8C4ABD"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Deekshitha P K",
+        "college": "Manikam Ramaswami College of Arts and Science",
+        "euphoriaId": "EUPH-26-577183"
+      },
+      {
+        "memberNumber": 5,
+        "name": "Nandhana K",
+        "college": "Manikam Ramaswami College of Arts and Science",
+        "euphoriaId": "EUPH-26-948F01"
+      }
+    ]
+  },
+  {
+    "teamNumber": 90,
+    "teamName": "Breaking Bugs",
+    "problemStatement": {
+      "number": "WO-011",
+      "title": "Build Your Own AI Learning Twin"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "SOUNDHAR RAJ V",
+        "college": "Bannari Amman Institute of Technology",
+        "euphoriaId": "EUPH-26-5CBE56",
+        "email": "soundharraj122005@gmail.com",
+        "contactNumber": "6380831039"
+      },
+      {
+        "memberNumber": 2,
+        "name": "ARULSANKARAN N",
+        "college": "Bannari Amman Institute of Technology",
+        "euphoriaId": "EUPH-26-EFBB15"
+      },
+      {
+        "memberNumber": 3,
+        "name": "GOWTHAM M",
+        "college": "Bannari Amman Institute of Technology",
+        "euphoriaId": "EUPH-26-B30AD8"
+      },
+      {
+        "memberNumber": 4,
+        "name": "BHARATHEES K",
+        "college": "Bannari Amman Institute of Technology",
+        "euphoriaId": "EUPH-26-D98989"
+      },
+      {
+        "memberNumber": 5,
+        "name": "GOKUL V",
+        "college": "Bannari Amman Institute of Technology",
+        "euphoriaId": "EUPH-26-1EE5D0"
+      }
+    ]
+  },
+  {
+    "teamNumber": 67,
+    "teamName": "Innovex",
+    "problemStatement": {
+      "number": "WO-055",
+      "title": "PEER LEARNING AND STUDENT MENTORSHIP PLATFORM"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Sujith m",
+        "college": "Mgr University",
+        "euphoriaId": "EUPH-26-9BE104",
+        "email": "sujithmada477@gmail.com",
+        "contactNumber": "9177118032"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Y Nagar Sreeja",
+        "college": "Kalasalingam university",
+        "euphoriaId": "EUPH-26-F5C0C7"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Rajapuram poojitha",
+        "college": "Kalasalingam university",
+        "euphoriaId": "EUPH-26-5BEA3E"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Vinay Mamedesetti",
+        "college": "Mgr University",
+        "euphoriaId": "EUPH-26-CD3A1C"
+      },
+      {
+        "memberNumber": 5,
+        "name": "Polanki vyshnavi",
+        "college": "Kalasalingam university",
+        "euphoriaId": "EUPH-26-4AB91D"
+      }
+    ]
+  },
+  {
+    "teamNumber": 20,
+    "teamName": "Team Alpha",
+    "problemStatement": {
+      "number": "100",
+      "title": "Regulatory compliance diff engine"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "RALLACHENI VENU RAVI CHANDRA",
+        "college": "Kalasalingam academy of research and education",
+        "euphoriaId": "EUPH-26-E47431",
+        "email": "9920040363@gmail.com",
+        "contactNumber": "9030527428"
+      },
+      {
+        "memberNumber": 2,
+        "name": "BATTINI SAI KUMAR",
+        "college": "Kalasalingam academy of research and education",
+        "euphoriaId": "EUPH-26-C50FCF"
+      },
+      {
+        "memberNumber": 3,
+        "name": "BATTINA GOVARDHAN",
+        "college": "kalasalingam academy of research and education",
+        "euphoriaId": "EUPH-26-A6010E"
+      },
+      {
+        "memberNumber": 4,
+        "name": "DONGALA VENKATA HARISH REDDY",
+        "college": "Kalasalingam academy of research and education",
+        "euphoriaId": "EUPH-26-3755B5"
+      },
+      {
+        "memberNumber": 5,
+        "name": "GOTTIPATI TEJA CHANDRA SUBHASH",
+        "college": "Kalasalingam academy of research and education",
+        "euphoriaId": "EUPH-26-5392CB"
+      }
+    ]
+  },
+  {
+    "teamNumber": 27,
+    "teamName": "Zero To One",
+    "problemStatement": {
+      "number": "WO-057",
+      "title": "One Lecture,Many Learning Paths"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Gokul.G",
+        "college": "Manikam Ramaswami College of arts and science",
+        "euphoriaId": "EUPH-26-1CC183",
+        "email": "gokulganeshan228@gmail.com",
+        "contactNumber": "7604845242"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Joshitha S.M",
+        "college": "Manikam Ramaswami College of arts and science",
+        "euphoriaId": "EUPH-26-76ABDB"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Priyadharshini.J",
+        "college": "Manikam Ramaswami College of arts and science",
+        "euphoriaId": "EUPH-26-65BBBE"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Vanithaa Vijeyadharshini.K",
+        "college": "Manikam Ramaswami College of arts and science",
+        "euphoriaId": "EUPH-26-415CAF"
+      },
+      {
+        "memberNumber": 5,
+        "name": "Prabanzan.A",
+        "college": "Manikam Ramaswami College of arts and science",
+        "euphoriaId": "EUPH-26-0B789A"
+      }
+    ]
+  },
+  {
+    "teamNumber": 61,
+    "teamName": "The Cipher crew",
+    "problemStatement": {
+      "number": "WO-006",
+      "title": "Zero-Trust API Gateway with Behavioral Anomaly"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Navein Kumar  B R",
+        "college": "Mepco Schlenk Engineering College Sivakasi",
+        "euphoriaId": "EUPH-26-9F6140",
+        "email": "naveinkumar2006@gmail.com",
+        "contactNumber": "8610277363"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Moulin Daris D",
+        "college": "Mepco Schlenk Engineering College Sivakasi",
+        "euphoriaId": "EUPH-26-E17DB7"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Pragadeeswar R",
+        "college": "Mepco Schlenk Engineering College Sivakasi",
+        "euphoriaId": "EUPH-26-7BEEAC"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Naresh Kanha S",
+        "college": "Mepco Schlenk Engineering College Sivakasi",
+        "euphoriaId": "EUPH-26-275880"
+      },
+      {
+        "memberNumber": 5,
+        "name": "Sree Pachin Siyam S",
+        "college": "Mepco Schlenk Engineering College Sivakasi",
+        "euphoriaId": "EUPH-26-93820D"
+      }
+    ]
+  },
+  {
+    "teamNumber": 11,
+    "teamName": "INNOVISION CREW",
+    "problemStatement": {
+      "number": "WO-014",
+      "title": "Ai reading & comprehension assistant"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "KISHORE C",
+        "college": "DR.MAHALINGAM COLLEGE OF ENGINEERING AND TECHNOLOGY",
+        "euphoriaId": "EUPH-26-A9ACA0",
+        "email": "kumar1721yugesh@gmail.com",
+        "contactNumber": "9361777169"
+      },
+      {
+        "memberNumber": 2,
+        "name": "YUGESH KUMAR M",
+        "college": "DR.MAHALINGAM COLLEGE OF ENGINEERING AND TECHNOLOGY",
+        "euphoriaId": "EUPH-26-EA9931"
+      },
+      {
+        "memberNumber": 3,
+        "name": "SHAHUL HAMEED K",
+        "college": "DR.MAHALINGAM COLLEGE OF ENGINEERING AND TECHNOLOGY",
+        "euphoriaId": "EUPH-26-41DE4C"
+      },
+      {
+        "memberNumber": 4,
+        "name": "KAVYA S",
+        "college": "DR.MAHALINGAM COLLEGE OF ENGINEERING AND TECHNOLOGY",
+        "euphoriaId": "EUPH-26-A1EE6A"
+      },
+      {
+        "memberNumber": 5,
+        "name": "TRIMAAN V",
+        "college": "DR.MAHALINGAM COLLEGE OF ENGINEERING AND TECHNOLOGY",
+        "euphoriaId": "EUPH-26-27821F"
+      }
+    ]
+  },
+  {
+    "teamNumber": 48,
+    "teamName": "Cicada 3301",
+    "problemStatement": {
+      "number": "WO-47",
+      "title": "Student skill to oppertunity matching platform"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Jeeva Darwin M",
+        "college": "Kalasalingam Academy of research and education",
+        "euphoriaId": "EUPH-26-1D80A9",
+        "email": "99250040307@klu.ac.in",
+        "contactNumber": "9842072422"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Arun Karthikeyan S",
+        "college": "Kalasalingam Academy of research and education",
+        "euphoriaId": "EUPH-26-174CB7"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Tridev R",
+        "college": "Kalasalingam Academy of research and education",
+        "euphoriaId": "EUPH-26-F5A7FF"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Sri Kiran Monish M S",
+        "college": "Kalasalingam Academy of research and education",
+        "euphoriaId": "EUPH-26-249B88"
+      },
+      {
+        "memberNumber": 5,
+        "name": "Jeeva Jeffrin T",
+        "college": "Kalasalingam Academy of research and education",
+        "euphoriaId": "EUPH-26-59F969"
+      }
+    ]
+  },
+  {
+    "teamNumber": 60,
+    "teamName": "Hallucination Station",
+    "problemStatement": {
+      "number": "WO-091",
+      "title": "Voice-Assisted Code Auditor for Accessibility"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Prasanth Narayanan V S",
+        "college": "SRM Madurai College For Engineering and Technology Sivagangai",
+        "euphoriaId": "EUPH-26-48929E",
+        "email": "prasanthjoueur@gmail.com",
+        "contactNumber": "8015928461"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Mahesh M S K",
+        "college": "SRM Madurai College For Engineering and Technology Sivagangai",
+        "euphoriaId": "EUPH-26-D647A4"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Jagadish J",
+        "college": "SRM Madurai College For Engineering and Technology Sivagangai",
+        "euphoriaId": "EUPH-26-0E1CE1"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Jeeva Varshini G",
+        "college": "SRM Madurai College For Engineering and Technology Sivagangai",
+        "euphoriaId": "EUPH-26-A2171D"
+      },
+      {
+        "memberNumber": 5,
+        "name": "Logitha S",
+        "college": "SRM Madurai College For Engineering and Technology Sivagangai",
+        "euphoriaId": "EUPH-26-3A599A"
+      }
+    ]
+  },
+  {
+    "teamNumber": 53,
+    "teamName": "Innoventures",
+    "problemStatement": {
+      "number": "WO-074",
+      "title": "IoT-Enabled Pedestrian Crosswalk Safety"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Kaushik.R.S",
+        "college": "Velammal college of engineering and technology",
+        "euphoriaId": "EUPH-26-C91467",
+        "email": "rrrithanya@gmail.com",
+        "contactNumber": "9360157154"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Rithanya.R.R",
+        "college": "Velammal college of engineering and technology",
+        "euphoriaId": "EUPH-26-ODB478-S1"
+      },
+      {
+        "memberNumber": 3,
+        "name": "P.Harini",
+        "college": "Velammal college of engineering and technology",
+        "euphoriaId": "EUPH-26-FAE177"
+      },
+      {
+        "memberNumber": 4,
+        "name": "P.Vikas",
+        "college": "Velammal college of engineering and technology",
+        "euphoriaId": "EUPH-26-15BFB8"
+      }
+    ]
+  },
+  {
+    "teamNumber": 75,
+    "teamName": "TechTittans",
+    "problemStatement": {
+      "number": "25",
+      "title": "Adaptive educational escape room"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Prajapathi.CM",
+        "college": "Kamaraj college of engineering and technology",
+        "euphoriaId": "EUPH-26-BB7618",
+        "email": "Prajapathi017@gmail.com",
+        "contactNumber": "7305603418"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Balaganesh .D",
+        "college": "Kamaraj college of engineering and technology",
+        "euphoriaId": "EUPH-26-96D8F4"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Hashini.s",
+        "college": "Kamaraj college of engineering and technology",
+        "euphoriaId": "EUPH-26-76862A"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Varshini.S",
+        "college": "Kamaraj college of engineering and technology",
+        "euphoriaId": "EUPH-26-36A6E8"
+      },
+      {
+        "memberNumber": 5,
+        "name": "Sree lekha.S",
+        "college": "Kamaraj college of engineering and technology",
+        "euphoriaId": "EUPH-26-1DCBB1"
+      }
+    ]
+  },
+  {
+    "teamNumber": 22,
+    "teamName": "Vortex",
+    "problemStatement": {
+      "number": "WO-080",
+      "title": "AI Teacher that learns from its student"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Hari Prasanth K",
+        "college": "Ramco Institute of Technology",
+        "euphoriaId": "EUPH-26-05F33B",
+        "email": "953624104051@ritrjpm.ac.in",
+        "contactNumber": "9360346414"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Sharvesh S",
+        "college": "Ramco Institute of Technology",
+        "euphoriaId": "EUPH-26-FB480E"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Sabarinathan G",
+        "college": "Ramco Institute of Technology",
+        "euphoriaId": "EUPH-26-405602"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Kathir murugan P",
+        "college": "Ramco Institute of Technology",
+        "euphoriaId": "EUPH-26-53F94C"
+      },
+      {
+        "memberNumber": 5,
+        "name": "Vetri Ajay R",
+        "college": "Ramco Institute of Technology",
+        "euphoriaId": "EUPH-26-073002"
+      }
+    ]
+  },
+  {
+    "teamNumber": 52,
+    "teamName": "Curious coders",
+    "problemStatement": {
+      "number": "WO-028",
+      "title": "Quantum reinforced learning for dynamic smart grid control"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Dhivya Dharshini.R",
+        "college": "PSR Engineering College",
+        "euphoriaId": "EUPH-26-6E7461",
+        "email": "dhivya.05dharshini@gmail.com",
+        "contactNumber": "8610453876"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Mahalakshmi.R",
+        "college": "PSR Engineering College",
+        "euphoriaId": "EUPH-26-96B5F7"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Swathi.R",
+        "college": "PSR Engineering College",
+        "euphoriaId": "EUPH-26-6E7461"
+      },
+      {
+        "memberNumber": 4,
+        "name": "Priya dharshini.K",
+        "college": "PSR Engineering College",
+        "euphoriaId": "EUPH-26-3ECE57"
+      },
+      {
+        "memberNumber": 5,
+        "name": "Sri Nandhini.M",
+        "college": "PSR Engineering College",
+        "euphoriaId": "EUPH-26-C89774"
+      }
+    ]
+  },
+  {
+    "teamNumber": 73,
+    "teamName": "Code Nova",
+    "problemStatement": {
+      "number": "W0033",
+      "title": "Turn Students Mistake Into Personal Teacher"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "P.R.Lakshhika",
+        "college": "Kamaraj college of engineering and technology",
+        "euphoriaId": "EUPH-26-7782E4",
+        "email": "prlakshhika@gmail.com",
+        "contactNumber": "9578649692"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Gayathri",
+        "college": "Kamaraj college of engineering and technology",
+        "euphoriaId": "EUPH-26-DC9EBC"
+      },
+      {
+        "memberNumber": 3,
+        "name": "sri meenatchi",
+        "college": "Kamaraj college of engineering and technology",
+        "euphoriaId": "EUPH-26-E24A94"
+      },
+      {
+        "memberNumber": 4,
+        "name": "lakshmi priya",
+        "college": "Kamaraj college of engineering and technology",
+        "euphoriaId": "EUPH-26-F213B0"
+      },
+      {
+        "memberNumber": 5,
+        "name": "sharmila.s",
+        "college": "Kamaraj college of engineering and technology",
+        "euphoriaId": "EUPH-26-B9EC0C"
+      }
+    ]
+  },
+  {
+    "teamNumber": 74,
+    "teamName": "TechNoVA",
+    "problemStatement": {
+      "number": "W0065",
+      "title": "Smart Building Energy Micro Grid"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "S.Lakshmi Prabha",
+        "college": "Kamaraj college of engineering and technology",
+        "euphoriaId": "EUPH-26-EBED1A",
+        "email": "prabhalakshmi463@gmail.com",
+        "contactNumber": "9345708923"
+      },
+      {
+        "memberNumber": 2,
+        "name": "A.Harini",
+        "college": "Kamaraj college of engineering and technology",
+        "euphoriaId": "EUPH-26-1B8F6B"
+      },
+      {
+        "memberNumber": 3,
+        "name": "aishwarya",
+        "college": "kamaraj college of engineering and technology",
+        "euphoriaId": "EUPH-26-5C915A"
+      },
+      {
+        "memberNumber": 4,
+        "name": "sophia",
+        "college": "Kamaraj college of engineering and technology",
+        "euphoriaId": "EUPH-26-I2A1ED"
+      },
+      {
+        "memberNumber": 5,
+        "name": "DIVYA",
+        "college": "Kamaraj college of engineering and technology",
+        "euphoriaId": "EUPH-26-8D7965"
+      }
+    ]
+  },
+  {
+    "teamNumber": 95,
+    "teamName": "InnovateX",
+    "problemStatement": {
+      "number": "W0096",
+      "title": "AI EXAM PREPARATION ENGINE"
+    },
+    "members": [
+      {
+        "memberNumber": 1,
+        "name": "Rajeshwari R",
+        "college": "PSNA COLLEGE OF ENGINEERING AND TECHNOLOGY",
+        "euphoriaId": "EUPH-26-998DBA",
+        "email": "rajeshwarir1407@gmail.com",
+        "contactNumber": "9345653484"
+      },
+      {
+        "memberNumber": 2,
+        "name": "Rathi M",
+        "college": "PSNA COLLEGE OF ENGINEERING AND TECHNOLOGY",
+        "euphoriaId": "EUPH-26-3A7BCB"
+      },
+      {
+        "memberNumber": 3,
+        "name": "Dharshini G",
+        "college": "PSNA COLLEGE OF ENGINEERING AND TECHNOLOGY",
+        "euphoriaId": "EUPH-26-D6A5BA"
+      },
+      {
+        "memberNumber": 4,
+        "name": "ponveerammal R",
+        "college": "PSNA COLLEGE OF ENGINEERING AND TECHNOLOGY",
+        "euphoriaId": "EUPH-26-E4A2D5"
+      }
+    ]
   }
 ]

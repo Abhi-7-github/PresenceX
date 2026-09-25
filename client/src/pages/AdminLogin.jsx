@@ -13,7 +13,7 @@ export default function AdminLogin({ onLogin }) {
 
     const cleanKey = key.trim();
     if (!cleanKey) {
-      setError('Please enter the admin key');
+      setError('Please enter the admin security key');
       return;
     }
 
@@ -49,98 +49,79 @@ export default function AdminLogin({ onLogin }) {
   };
 
   return (
-    <div className="admin-login-page">
-      {/* Background ambient light mesh */}
-      <div className="glow-orb glow-orb-1" aria-hidden="true"></div>
-      <div className="glow-orb glow-orb-2" aria-hidden="true"></div>
+    <div className="tara-login-page">
+      <div className="tara-login-container">
+        {/* Editorial Wordmark Header */}
+        <div className="tara-brand-center">
+          <span className="tara-wordmark">TARA</span>
+          <span className="tara-brand-sub">OPERATIONS & ATTENDANCE PLATFORM</span>
+        </div>
 
-      <div className="admin-login-container">
-        <div className="admin-login-card">
-          <div className="admin-brand-header">
-            <div className="brand-icon-wrapper">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-              </svg>
-            </div>
-            <h1 className="brand-title">Presence<span className="brand-highlight">X</span> Admin</h1>
+        {/* Solid Panel */}
+        <div className="tara-login-panel">
+          <div className="tara-panel-header">
+            <h2 className="tara-panel-title">ADMIN ACCESS</h2>
+            <p className="tara-panel-desc">Enter your administrative security key to access the control dashboard.</p>
           </div>
 
-          <p className="subtitle">Enter your security key to access the management dashboard.</p>
-
-          <form onSubmit={handleSubmit} className="login-form">
-            <div className="input-group">
-              <label htmlFor="admin-key-input" className="input-label">Admin Security Key</label>
-              <div className="input-wrapper">
-                <span className="input-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M21 2l-2 2m-2-2l2 2m7 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                  </svg>
-                </span>
+          <form onSubmit={handleSubmit} className="tara-login-form">
+            <div className="tara-form-group">
+              <label htmlFor="admin-key-input" className="tara-form-label">
+                SECURITY KEY
+              </label>
+              <div className="tara-input-row">
                 <input
                   id="admin-key-input"
                   type={showKey ? 'text' : 'password'}
-                  placeholder="••••••••••••"
+                  placeholder="Enter administrator key..."
                   value={key}
                   onChange={(e) => setKey(e.target.value)}
                   disabled={loading}
-                  className="styled-input"
+                  className="tara-solid-input"
                   autoFocus
+                  autoComplete="current-password"
                 />
                 <button
                   type="button"
                   onClick={() => setShowKey(!showKey)}
-                  className="toggle-key-btn"
+                  className="tara-input-addon-btn"
                   title={showKey ? 'Hide key' : 'Show key'}
+                  aria-label={showKey ? 'Hide key' : 'Show key'}
                 >
-                  {showKey ? '🔒' : '👁️'}
+                  {showKey ? 'HIDE' : 'SHOW'}
                 </button>
               </div>
             </div>
 
             {error && (
-              <div className="error-alert">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <line x1="12" y1="8" x2="12" y2="12"></line>
-                  <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                </svg>
-                <span>{error}</span>
+              <div className="tara-error-banner" role="alert">
+                <span className="tara-error-tag">ERROR</span>
+                <span className="tara-error-text">{error}</span>
               </div>
             )}
 
             <button
               type="submit"
               disabled={loading || !key.trim()}
-              className="btn-glow-primary"
+              className="tara-btn-primary"
             >
-              {loading ? (
-                <span className="btn-flex">
-                  <span className="spinner"></span>
-                  Authenticating...
-                </span>
-              ) : (
-                <span className="btn-flex">
-                  Access Admin Dashboard
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </span>
-              )}
+              {loading ? 'AUTHENTICATING...' : 'ENTER DASHBOARD'}
             </button>
 
             <button
               type="button"
               onClick={handleBackToMain}
-              className="btn-outline-secondary"
+              className="tara-btn-secondary"
             >
-              ← Back to Student Check-in
+              ← RETURN TO ATTENDANCE
             </button>
           </form>
+
+          <div className="tara-panel-footer">
+            <span>TARA &bull; SECURE ATTENDANCE INFRASTRUCTURE</span>
+          </div>
         </div>
       </div>
     </div>
   );
 }
-

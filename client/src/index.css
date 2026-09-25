@@ -5,9 +5,28 @@
 }
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* TARA Visual Identity System */
+  --tara-navy: #283845;
+  --tara-navy-dark: #1D2933;
+  --tara-orange: #FFA649;
+  --tara-cream: #F5F1EA;
+  --tara-white: #FFFFFF;
+  --tara-black: #111111;
+  --tara-slate: #5F6870;
+  --tara-border: #D8D2C5;
+  --tara-border-dark: #3B4B59;
+
+  /* Typography */
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-heading: 'Syne', -apple-system, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', Courier, monospace;
+
+  font-family: var(--font-sans);
   line-height: 1.5;
   font-weight: 400;
+  color: var(--tara-navy);
+  background-color: var(--tara-cream);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -21,8 +40,7 @@ html {
   width: 100%;
   min-height: 100%;
   overflow-x: hidden;
-  overflow-y: auto;
-  scroll-behavior: smooth;
+  background-color: var(--tara-cream);
 }
 
 body {
@@ -30,29 +48,31 @@ body {
   padding: 0;
   width: 100%;
   min-height: 100vh;
-  overflow: visible;
+  background-color: var(--tara-cream);
+  color: var(--tara-navy);
+  font-family: var(--font-sans);
 }
 
 #root {
   width: 100%;
   min-height: 100vh;
-  overflow: visible;
 }
 
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+::-webkit-scrollbar-track {
+  background: var(--tara-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--tara-slate);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--tara-navy);
 }

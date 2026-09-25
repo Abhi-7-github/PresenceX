@@ -26,8 +26,6 @@ function App() {
   }
 
   const handleAdminLogin = (key) => {
-    // Here you could validate the key against the backend
-    // For now, we store it locally (in production, use a proper auth token)
     localStorage.setItem('adminKey', key)
     setAdminKey(key)
   }
@@ -38,7 +36,9 @@ function App() {
     navigateTo('/')
   }
 
-  if (route === '/hero/master') {
+  const isAdminRoute = route === '/admin' || route === '/hero/master'
+
+  if (isAdminRoute) {
     if (!adminKey) {
       return <AdminLogin onLogin={handleAdminLogin} />
     }
