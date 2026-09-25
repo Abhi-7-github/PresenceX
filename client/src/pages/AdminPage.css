@@ -334,6 +334,26 @@
   border-color: var(--tara-orange);
 }
 
+.tara-action-btn-absent {
+  background: var(--tara-navy-dark);
+  color: var(--tara-orange);
+  border: 1.5px solid var(--tara-orange);
+  border-radius: 4px;
+  padding: 8px 14px;
+  font-family: var(--font-heading);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.tara-action-btn-absent:hover {
+  background: var(--tara-orange);
+  color: var(--tara-navy);
+}
+
 /* Dashboard Body Content */
 .tara-dashboard-content {
   padding: 28px 32px;
@@ -390,6 +410,35 @@
 .stat-card-sub {
   font-size: 12px;
   color: var(--tara-slate);
+}
+
+.stat-card-footer-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 4px;
+  flex-wrap: wrap;
+}
+
+.tara-card-action-btn {
+  background: var(--tara-cream);
+  color: var(--tara-navy);
+  border: 1px solid var(--tara-border);
+  border-radius: 3px;
+  padding: 3px 8px;
+  font-family: var(--font-heading);
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.tara-card-action-btn:hover {
+  background: var(--tara-orange);
+  color: var(--tara-navy);
+  border-color: var(--tara-orange);
 }
 
 .tara-rate-track {
@@ -566,79 +615,102 @@
 }
 
 /* Export Dropdown Menu */
-.export-menu-wrapper {
-  position: relative;
-}
-
-.solid-dropdown-menu {
-  position: absolute;
-  top: calc(100% + 6px);
-  right: 0;
-  width: 280px;
-  background: var(--tara-navy);
-  border: 1px solid var(--tara-border-dark);
-  border-radius: 6px;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
-  z-index: 50;
-  padding: 10px 0;
-}
-
-.dropdown-label-head {
-  padding: 8px 16px;
-  font-family: var(--font-heading);
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  color: var(--tara-orange);
-  border-bottom: 1px solid var(--tara-border-dark);
-  margin-bottom: 6px;
-}
-
-.dropdown-action-btn {
-  width: 100%;
+/* ==========================================================================
+   3 DEDICATED EXCEL EXPORT BUTTONS
+   ========================================================================== */
+.tara-excel-btn-group {
   display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 10px 16px;
-  background: transparent;
-  border: none;
-  color: var(--tara-white);
-  cursor: pointer;
-  text-align: left;
-  transition: background 0.15s ease;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
-.dropdown-action-btn:hover {
-  background: var(--tara-navy-dark);
-}
-
-.dropdown-action-btn .dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--tara-slate);
-  margin-top: 5px;
-}
-
-.dropdown-action-btn .dot.orange {
-  background: var(--tara-orange);
-}
-
-.btn-text-col {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.btn-text-col strong {
+/* 1. All Participants Attendance (Primary Warm Orange) */
+.tara-btn-excel-all {
+  background-color: var(--tara-orange);
+  color: var(--tara-navy);
+  border: 1.5px solid var(--tara-orange);
+  border-radius: 4px;
+  padding: 8px 14px;
   font-family: var(--font-heading);
-  font-size: 11.5px;
-  letter-spacing: 0.5px;
-}
-
-.btn-text-col span {
   font-size: 11px;
-  color: #A0AAB2;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tara-btn-excel-all:hover {
+  background-color: #FFB76E;
+  border-color: #FFB76E;
+  transform: translateY(-1px);
+}
+
+.tara-btn-excel-all:active {
+  transform: translateY(0);
+}
+
+/* 2. Only Absent (Dark Navy with Warm Orange border/text) */
+.tara-btn-excel-absent {
+  background-color: var(--tara-navy);
+  color: var(--tara-orange);
+  border: 1.5px solid var(--tara-orange);
+  border-radius: 4px;
+  padding: 8px 14px;
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tara-btn-excel-absent:hover {
+  background-color: var(--tara-orange);
+  color: var(--tara-navy);
+  transform: translateY(-1px);
+}
+
+.tara-btn-excel-absent:active {
+  transform: translateY(0);
+}
+
+/* 3. Only Present (Dark Navy with Slate/Border accent) */
+.tara-btn-excel-present {
+  background-color: var(--tara-navy);
+  color: var(--tara-white);
+  border: 1.5px solid var(--tara-border-dark);
+  border-radius: 4px;
+  padding: 8px 14px;
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tara-btn-excel-present:hover {
+  background-color: var(--tara-navy-dark);
+  color: var(--tara-orange);
+  border-color: var(--tara-orange);
+  transform: translateY(-1px);
+}
+
+.tara-btn-excel-present:active {
+  transform: translateY(0);
 }
 
 /* ==========================================================================
@@ -1190,19 +1262,21 @@
     width: 100%;
   }
 
-  .export-dropdown-wrapper {
+  /* 3 Excel Download Buttons stack on mobile */
+  .tara-excel-btn-group {
     width: 100%;
+    flex-direction: column;
+    gap: 8px;
   }
 
-  .tara-export-btn {
+  .tara-btn-excel-all,
+  .tara-btn-excel-absent,
+  .tara-btn-excel-present {
     width: 100%;
+    text-align: center;
     justify-content: center;
-  }
-
-  .solid-dropdown-menu {
-    width: 100%;
-    left: 0;
-    right: 0;
+    padding: 10px 14px;
+    font-size: 11px;
   }
 
   /* Breakdown bar chips wrap vertically */

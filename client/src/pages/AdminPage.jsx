@@ -1,4 +1,5 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
+import * as XLSX from 'xlsx';
 import { presenceAPI } from '../services/presenceAPI.js';
 import './AdminPage.css';
 
@@ -9,7 +10,6 @@ export default function AdminPage({ onLogout }) {
   const [activeTab, setActiveTab] = useState('dashboard'); // 'dashboard', 'attendance', 'teams', 'history'
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState('all'); // 'all', 'fully_present', 'partially_present', 'no_attendance'
-  const [dropdownOpen, setDropdownOpen] = useState(false);
   const [toastMessage, setToastMessage] = useState(null);
   const [isAttendanceOpen, setIsAttendanceOpen] = useState(true);
   const [togglingAttendance, setTogglingAttendance] = useState(false);
@@ -19,23 +19,9 @@ export default function AdminPage({ onLogout }) {
   const [expandedTeams, setExpandedTeams] = useState(new Set());
   const [updatingTeamNum, setUpdatingTeamNum] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const dropdownRef = useRef(null);
 
   useEffect(() => {
     fetchAdminData();
-  }, []);
-
-  // Close dropdown on outside click
-  useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-        setDropdownOpen(false);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
   }, []);
 
   const showToast = (content, type = 'info', icon = '•') => {
@@ -174,11 +160,137 @@ export default function AdminPage({ onLogout }) {
     window.dispatchEvent(new Event('popstate'));
   };
 
-  const downloadCSV = (type = 'present') => {
-    const url = presenceAPI.getExportCSVUrl(type);
-    window.open(url, '_blank');
-    setDropdownOpen(false);
-    showToast(`Downloading ${type.toUpperCase()} CSV export...`, 'info', '↓');
+  const downloadExcel = (type = 'all') => {
+    try {
+      showToast(`Generating ${type.toUpperCase()} Excel spreadsheet...`, 'info', '⏳');
+
+      const allTeams = data?.teams || [];
+      if (!allTeams || allTeams.length === 0) {
+        showToast('No team data available to export', 'error', '✕');
+        return;
+      }
+
+      let filename = 'TARA_All_Participants_Attendance.xlsx';
+      let sheetTitle = 'All Participants';
+      let rows = [];
+
+      if (type === 'all') {
+        filename = 'TARA_All_Participants_Attendance.xlsx';
+        sheetTitle = 'All Participants';
+        rows.push([
+          'Team Number',
+          'Team Name',
+          'Problem Statement Number',
+          'Problem Statement Title',
+          'Member Name',
+          'Euphoria ID',
+          'College',
+          'Attendance Status',
+        ]);
+
+        for (const team of allTeams) {
+          for (const m of (team.members || [])) {
+            rows.push([
+              team.teamNumber,
+              team.teamName || '',
+              team.problemStatement?.number || 'N/A',
+              team.problemStatement?.title || 'N/A',
+              m.name || '',
+              m.euphoriaId || '',
+              m.college || 'N/A',
+              m.status === 'present' ? 'PRESENT' : 'ABSENT',
+            ]);
+          }
+        }
+      } else if (type === 'absent') {
+        filename = 'TARA_Only_Absent_Attendance.xlsx';
+        sheetTitle = 'Absent Participants';
+        rows.push(['S.No', 'Team Number', 'Team Name', 'Member Name', 'Euphoria ID', 'College', 'Status']);
+
+        let count = 1;
+        for (const team of allTeams) {
+          for (const m of (team.members || [])) {
+            if (m.status !== 'present') {
+              rows.push([
+                count++,
+                team.teamNumber,
+                team.teamName || '',
+                m.name || '',
+                m.euphoriaId || '',
+                m.college || 'N/A',
+                'ABSENT',
+              ]);
+            }
+          }
+        }
+      } else if (type === 'present') {
+        filename = 'TARA_Only_Present_Attendance.xlsx';
+        sheetTitle = 'Present Participants';
+        rows.push(['S.No', 'Team Number', 'Team Name', 'Member Name', 'Euphoria ID', 'College', 'Status']);
+
+        let count = 1;
+        for (const team of allTeams) {
+          for (const m of (team.members || [])) {
+            if (m.status === 'present') {
+              rows.push([
+                count++,
+                team.teamNumber,
+                team.teamName || '',
+                m.name || '',
+                m.euphoriaId || '',
+                m.college || 'N/A',
+                'PRESENT',
+              ]);
+            }
+          }
+        }
+      }
+
+      // Create sheet and workbook
+      const ws = XLSX.utils.aoa_to_sheet(rows);
+
+      // Auto-fit column widths
+      if (rows.length > 0 && rows[0]) {
+        const colWidths = rows[0].map((_, colIdx) => {
+          let maxLen = 10;
+          for (let r = 0; r < Math.min(rows.length, 100); r++) {
+            const val = rows[r][colIdx];
+            if (val) maxLen = Math.max(maxLen, String(val).length);
+          }
+          return { wch: Math.min(maxLen + 3, 50) };
+        });
+        ws['!cols'] = colWidths;
+      }
+
+      const wb = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(wb, ws, sheetTitle);
+
+      // Write array buffer and create an explicit application/vnd.openxmlformats-officedocument.spreadsheetml.sheet Blob
+      const excelBuffer = XLSX.write(wb, { bookType: 'xlsx', type: 'array' });
+      const blob = new Blob([excelBuffer], {
+        type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+      });
+
+      const blobUrl = window.URL.createObjectURL(blob);
+      const downloadAnchor = document.createElement('a');
+      downloadAnchor.style.display = 'none';
+      downloadAnchor.href = blobUrl;
+      downloadAnchor.download = filename;
+      document.body.appendChild(downloadAnchor);
+      downloadAnchor.click();
+
+      setTimeout(() => {
+        if (downloadAnchor.parentNode) {
+          downloadAnchor.parentNode.removeChild(downloadAnchor);
+        }
+        window.URL.revokeObjectURL(blobUrl);
+      }, 500);
+
+      showToast(`Downloaded: ${filename}`, 'success', '↓');
+    } catch (err) {
+      console.error('Excel generation error:', err);
+      showToast(`Export error: ${err.message}`, 'error', '✕');
+    }
   };
 
   if (loading && !data) {
@@ -441,7 +553,16 @@ export default function AdminPage({ onLogout }) {
             <div className="tara-stat-card">
               <span className="stat-card-title">ABSENT MEMBERS</span>
               <div className="stat-card-value">{stats.totalAbsentMembers}</div>
-              <span className="stat-card-sub">Pending check-in</span>
+              <div className="stat-card-footer-flex">
+                <span className="stat-card-sub">Pending check-in</span>
+                <button
+                  onClick={() => downloadExcel('absent')}
+                  className="tara-card-action-btn"
+                  title="Download Excel spreadsheet of absent participants"
+                >
+                  EXCEL ↓
+                </button>
+              </div>
             </div>
 
             <div className="tara-stat-card">
@@ -533,41 +654,31 @@ export default function AdminPage({ onLogout }) {
                   COLLAPSE ALL
                 </button>
 
-                {/* Export CSV Dropdown */}
-                <div className="export-menu-wrapper" ref={dropdownRef}>
+                {/* 3 Dedicated Excel Download Buttons */}
+                <div className="tara-excel-btn-group">
                   <button
-                    onClick={() => setDropdownOpen(!dropdownOpen)}
-                    className="tara-btn-orange small"
+                    onClick={() => downloadExcel('all')}
+                    className="tara-btn-excel-all small"
+                    title="Download Excel spreadsheet with all participants attendance"
                   >
-                    EXPORT CSV ▾
+                    1. ALL PARTICIPANTS ATTENDANCE ↓
                   </button>
 
-                  {dropdownOpen && (
-                    <div className="solid-dropdown-menu">
-                      <div className="dropdown-label-head">CSV DOWNLOAD OPTIONS</div>
-                      <button onClick={() => downloadCSV('all')} className="dropdown-action-btn">
-                        <span className="dot"></span>
-                        <div className="btn-text-col">
-                          <strong>COMPLETE MASTER SHEET</strong>
-                          <span>All teams & members (Present + Absent)</span>
-                        </div>
-                      </button>
-                      <button onClick={() => downloadCSV('present')} className="dropdown-action-btn">
-                        <span className="dot orange"></span>
-                        <div className="btn-text-col">
-                          <strong>PRESENT PARTICIPANTS</strong>
-                          <span>{stats.totalPresentMembers} verified present members</span>
-                        </div>
-                      </button>
-                      <button onClick={() => downloadCSV('absent')} className="dropdown-action-btn">
-                        <span className="dot"></span>
-                        <div className="btn-text-col">
-                          <strong>ABSENTEE ROSTER</strong>
-                          <span>{stats.totalAbsentMembers} pending / absent members</span>
-                        </div>
-                      </button>
-                    </div>
-                  )}
+                  <button
+                    onClick={() => downloadExcel('absent')}
+                    className="tara-btn-excel-absent small"
+                    title="Download Excel spreadsheet of only absent participants"
+                  >
+                    2. ONLY ABSENT ↓
+                  </button>
+
+                  <button
+                    onClick={() => downloadExcel('present')}
+                    className="tara-btn-excel-present small"
+                    title="Download Excel spreadsheet of only present participants"
+                  >
+                    3. ONLY PRESENT ↓
+                  </button>
                 </div>
               </div>
             </div>
